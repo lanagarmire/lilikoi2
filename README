@@ -1,1 +1,186 @@
-//
+#Lilikoi V2
+##featuresSelection A featuresSelection Function
+###Description
+This function allows you to reduce the pathway diemsion using xxxx
+###Usage
+featuresSelection(PDSmatrix, threshold = 0.5, method = "info")
+###Arguments
+PDSmatrix from PDSfun function
+###Examples
+selected_Pathways_Weka= featuresSelection(PDSmatrix)
+
+##featuresSelection(PDSmatrix)
+###Description
+lilikoi_pathway
+###Arguments
+gene.data gene expression dataset
+cpd.data metabolite compounds dataset
+pathway.id pathway id
+###Value
+Pathview visualization output
+###Examples
+##lilikoi_pathview(gene.data, cpd.data, pathway.id)
+lilikoi_preproc 3
+lilikoi_preproc A preprocessing function.
+###Description
+This function is used to preprocess data via normalization and imputation. It provides three normalization
+methods: standard normalization, quantile normalization and median fold normalization. It
+also enables KNN imputation.
+###Usage
+lilikoi_preproc(
+inputdata = Metadata,
+method = c("standard", "quantile", "median", "knn")
+)
+###Arguments
+inputdata An expression data frame with samples in the rows, metabolites in the columns
+method The method to be used to process data, including
+###Value
+a processed dataset with samples in the rows, metabolites in the columns.
+###Examples
+preproc(inputdata=Metadata, method="standard")
+lilikoi_prognosis Pathway-based prognosis model
+Description
+Pathway-based prognosis model
+Usage
+lilikoi_prognosis(
+PDSmatrix,
+event,
+time,
+exprdata,
+percent,
+alpha,
+nfold,
+method
+)
+4 lilikoi_regression
+Arguments
+PDSmatrix Pathway deregulation score matrix‘1àQDF‘
+event survival event
+time survival time
+exprdata dataset for penalization
+percent train-test separation percentage
+alpha denote which penalization method to use.
+nfold fold number for cross validation
+method determine the prognosis index
+Examples
+lilikoi_prognosis(PDSmatrix, event, time, exprdata, percent, alpha, nfold, method)
+lilikoi_regression Metabolite-pathway regression
+Description
+Perform single variate linear regression between selected pathways and each of their metabolites.
+Usage
+lilikoi_regression(
+input = "Aminoacyl-tRNA Biosynthesis",
+PDSmatrix,
+selected_Pathways_Weka,
+Metabolite_pathway_table
+)
+Arguments
+input Pathway name
+PDSmatrix Pathway deregulation score matrix
+selected_Pathways_Weka
+Selected top pathways from the featureSelection function
+Metabolite_pathway_table
+Metabolites mapping table
+Value
+A list of regression summaries.
+Examples
+lilikoi_regression(input="Aminoacyl-tRNA Biosynthesis", PDSmatrix, selected_Pathways_Weka, Metabolite_pathway_
+Loaddata 5
+Loaddata A Loaddata Function
+Description
+This function allows you to load your metabolomics data.
+Usage
+Loaddata(filename)
+Arguments
+Your file name.
+Examples
+Loaddata("data_format.csv")
+Loaddata()
+machine_learning A machine learning Function
+Description
+This function for classification using 8 different machine learning algorithms and it plot the ROC
+curves and the AUC, SEN, and specificty
+Usage
+machine_learning(PDSmatrix, selected_Pathways_Weka)
+Arguments
+PDSmatrix from PDSfun function and selected_Pathways_Weka from featuresSelection function
+Examples
+machine_learning(PDSmatrix,selected_Pathways_Weka)
+machine_learning(PDSmatrix,selected_Pathways_Weka)
+6 model_adjustment
+MetaTOpathway A MetaTOpathway Function
+Description
+This function allows you to convert your metabolites id such as names, kegg ids, pubchem ids.
+into pathways. Metabolites which have not pathways will be excluded from any downstream analysis
+make sure that you have three database files which are used for exact and fuzzy matching:
+cmpd_db.rda, syn_nms_db.rda and Sijia_pathway.rda This function was modified version of the
+name.match function in the below link: https://github.com/cangfengzhe/Metabo/blob/master/MetaboAnalyst/website/name_Usage
+MetaTOpathway(q.type, hmdb = T, pubchem = T, chebi = F, kegg = T, metlin = F)
+Arguments
+q.type The type of the metabolites id such as ’name’, ’kegg’, ’hmdb’,’pubchem’
+Examples
+Metabolite_pathway_table=MetaTOpathway('name')
+MetaTOpathway()
+model_adjustment Model Adjustemnt function using clinical factors
+Description
+This function for adjusted the best performed model using the clinical factors inserted by the user
+It plots ROC for three models: model1 build using only seelcted pathways, model2 build using
+clinical factors and model3 build using selected pathways and the clinical factors
+Usage
+model_adjustment(
+result,
+PDSmatrix,
+selected_Pathways_Weka,
+clinical_factors_data,
+factors
+)
+PDSfun 7
+Arguments
+PDSmatrix the PDS matrix geneerated using PDSfun function
+selected_Pathways_Weka
+selected pathway using WEKA algorithm geneerated from featuresSelection
+function
+clinical_factors_data
+the metadata for the samples
+factors which the users want to add to the model
+Examples
+model_adjustment(result,PDSmatrix,selected_Pathways_Weka,clinical_factors_data,factors=c('Age','Race'))
+model_adjustment(result,PDSmatrix,selected_Pathways_Weka,clinical_factors_data,factors=c('Age','Race'))
+PDSfun A PDSfun Function
+Description
+This function allows you to compute Pathway Desregulation Score deriving make sure that you
+have the below database for the metabolites and pathway list: meta_path.RData
+Usage
+PDSfun(qvec)
+Arguments
+qvec This is the Metabolite_pathway_table from MetaTOpathway function. This table
+includes the metabolites ids and the its corssponding hmdb ids
+Examples
+PDSmatrix= PDSfun(Metabolite_pathway_table)
+PDSfun(Metabolite_pathway_table)
+Index
+Topic Load
+Loaddata, 5
+Topic Match
+MetaTOpathway, 6
+Topic PDS
+PDSfun, 7
+Topic adjustment
+model_adjustment, 6
+Topic classifcation
+machine_learning, 5
+Topic features
+featuresSelection, 2
+Topic selection
+featuresSelection, 2
+featuresSelection, 2
+lilikoi_pathway, 2
+lilikoi_preproc, 3
+lilikoi_prognosis, 3
+lilikoi_regression, 4
+Loaddata, 5
+machine_learning, 5
+MetaTOpathway, 6
+model_adjustment, 6
+PDSfun, 7
+8
