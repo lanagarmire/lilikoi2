@@ -19,12 +19,12 @@
 #' @export
 #' @examples
 #' \donttest{
-#' dt <- Loaddata(file=system.file("extdata", "plasma_breast_cancer.csv", package = "lilikoi2"))
+#' dt <- lilikoi.Loaddata(file=system.file("extdata",
+#'   "plasma_breast_cancer.csv", package = "lilikoi"))
 #' Metadata <- dt$Metadata
 #' dataSet <- dt$dataSet
 #' Metabolite_pathway_table=lilikoi.MetaTOpathway('name')
 #' }
-#'
 #'
 lilikoi.MetaTOpathway<- function(q.type, hmdb=TRUE, pubchem=TRUE, chebi=FALSE, kegg=TRUE, metlin=FALSE){
 

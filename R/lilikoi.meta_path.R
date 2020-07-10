@@ -11,7 +11,12 @@
 #' @import scales RCy3
 #' @return A bipartite graph of the relationships between pathways and their corresponding metabolites.
 #' @export
-
+#' @examples
+#' \donttest{
+#'  lilikoi.meta_path(PDSmatrix = PDSmatrix,
+#'    selected_Pathways_Weka = selected_Pathways_Weka,
+#'    Metabolite_pathway_table = Metabolite_pathway_table)
+#' }
 
 lilikoi.meta_path <- function(PDSmatrix, selected_Pathways_Weka, Metabolite_pathway_table, pathway="Alanine, Aspartate And Glutamate Metabolism"){
 

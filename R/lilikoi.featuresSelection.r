@@ -11,18 +11,19 @@
 #' @export
 #' @examples
 #' \donttest{
-#' dt <- Loaddata(file=system.file("extdata", "plasma_breast_cancer.csv", package = "lilikoi2"))
+#' dt <- lilikoi.Loaddata(file=system.file("extdata",
+#'   "plasma_breast_cancer.csv", package = "lilikoi"))
 #' Metadata <- dt$Metadata
 #' dataSet <- dt$dataSet
-#' Metabolite_pathway_table=MetaTOpathway('name')
-#' PDSmatrix= PDSfun(Metabolite_pathway_table)
+#' Metabolite_pathway_table=lilikoi.MetaTOpathway('name')
+#' PDSmatrix= lilikoi.PDSfun(Metabolite_pathway_table)
 #' selected_Pathways_Weka= lilikoi.featuresSelection(PDSmatrix,threshold= 0.54,method="gain")
 #' }
-#'
 #'
 lilikoi.featuresSelection <- function(PDSmatrix,threshold= 0.5,method="info"){
 
   pds_matrix=(as.data.frame(cbind(t(PDSmatrix),Label=Metadata$Label)))
+  pds_matrix$Label <- as.factor(pds_matrix$Label)
   #head(pds_matrix)
   set.seed(2000)
   training_ID <- createDataPartition(pds_matrix$Label, p = .8,list = FALSE,times = 1)

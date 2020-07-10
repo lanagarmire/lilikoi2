@@ -8,7 +8,7 @@
 #' @export
 #' @examples
 #' \donttest{
-#'  Loaddata(file=system.file("extdata", "plasma_breast_cancer.csv", package = "lilikoi"))
+#'  lilikoi.Loaddata(file=system.file("extdata", "plasma_breast_cancer.csv", package = "lilikoi"))
 #' }
 
 lilikoi.Loaddata<-function(filename){

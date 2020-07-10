@@ -1,4 +1,4 @@
-#' KEGGplot
+#' lilikoi.KEGGplot
 #'
 #' Visualizes selected pathways based on their metabolites expression data.
 #'
@@ -18,7 +18,8 @@
 #' @export
 #' @examples
 #' \donttest{
-#' dt <- Loaddata(file=system.file("extdata", "plasma_breast_cancer.csv", package = "lilikoi"))
+#' dt <- lilikoi.Loaddata(file=system.file("extdata",
+#'   "plasma_breast_cancer.csv", package = "lilikoi"))
 #' Metadata <- dt$Metadata
 #' dataSet <- dt$dataSet
 #'
@@ -27,19 +28,13 @@
 #' names(sampleinfo) <- rownames(Metadata)
 #' grouporder <- unique(Metadata$Label)
 #' lilikoi.KEGGplot(metamat, sampleinfo, grouporder, pathid = '00250',
-#' specie = 'hsa',filesuffix = 'GSE16873',
-#' Metabolite_pathway_table = Metabolite_pathway_table)
+#'   specie = 'hsa',filesuffix = 'GSE16873')
 #' }
 
 lilikoi.KEGGplot <- function(metamat, sampleinfo, grouporder, pathid = '00250', specie = 'hsa',
                              filesuffix = 'GSE16873',
                              Metabolite_pathway_table = Metabolite_pathway_table){
 
-  #Convert to KEGG ID#####
-
-  # Loaddata(file=system.file("extdata", "plasma_breast_cancer.csv", package = "lilikoi"))
-  #
-  # Metabolite_pathway_table <- MetaTOpathway('name')
   meta_table <- Metabolite_pathway_table[, c("Query", "KEGG", "pathway")]
 
   for(i in 1:ncol(meta_table)){

@@ -1,4 +1,4 @@
-#' A imputation function.
+#' An imputation function.
 #'
 #' This function is used to preprocess data via knn imputation.
 #'
@@ -9,10 +9,11 @@
 #' @export
 #' @examples
 #' \donttest{
-#' dt <- Loaddata(file=system.file("extdata", "plasma_breast_cancer.csv", package = "lilikoi2"))
+#' dt <- lilikoi.Loaddata(file=system.file("extdata",
+#'   "plasma_breast_cancer.csv", package = "lilikoi"))
 #' Metadata <- dt$Metadata
 #' dataSet <- dt$dataSet
-#' lilikoi.preproc_norm(inputdata=Metadata, method="standard")
+#' lilikoi.preproc_knn(inputdata=Metadata, method="standard")
 #' }
 
 
@@ -25,9 +26,9 @@ lilikoi.preproc_knn <-function(inputdata=Metadata,
     stop("Invalid process method")
   }
 
-  # vals <- inputdata[2:ncol(inputdata)]
+  vals <- inputdata[2:ncol(inputdata)]
 
-  vals <- inputdata
+  # vals <- inputdata
 
   # KNN Imputation ####
   if (method == "knn"){
@@ -41,7 +42,8 @@ lilikoi.preproc_knn <-function(inputdata=Metadata,
 
 
   # Combine label information back to output ####
-  # output$Label<- inputdata$Label
+  output <- as.data.frame(output)
+  output$Label<- as.data.frame(inputdata$Label)
 
 
   return(output)

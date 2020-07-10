@@ -12,6 +12,10 @@
 #' @importFrom stats as.formula
 #' @importFrom car Anova
 #' @export
+#' @examples
+#' \donttest{
+#' lilikoi.explr(data, demo.data, pca=TRUE, tsne=FALSE)
+#' }
 
 
 lilikoi.explr <- function(data, demo.data, pca=FALSE, tsne=FALSE){
@@ -142,20 +146,25 @@ lilikoi.explr <- function(data, demo.data, pca=FALSE, tsne=FALSE){
 
   # return(c(Fmean,plot))
 
-  print(plot)
+  # print(plot)
 
-  return(Fmean)
+  returnList <- list()
+  returnList$sovplot <- plot
+  returnList$Fmean <- Fmean
+
+  # return(Fmean)
 
   if (pca == TRUE){
     pca.plot <- pca(data)
-    return(pca.plot)
+    returnList$pca.plot <- pca.plot
   }
 
   if (tsne == TRUE){
     tsne.plot <- tsne(data)
-    return(tsne.plot)
+    returnList$tsne.plot <- tsne.plot
   }
 
+  return(returnList)
 
 }
 

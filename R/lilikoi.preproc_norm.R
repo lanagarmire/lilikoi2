@@ -13,12 +13,12 @@
 #' @importFrom preprocessCore normalize.quantiles
 #' @examples
 #' \donttest{
-#' dt <- Loaddata(file=system.file("extdata", "plasma_breast_cancer.csv", package = "lilikoi2"))
+#' dt <- lilikoi.Loaddata(file=system.file("extdata",
+#'  "plasma_breast_cancer.csv", package = "lilikoi"))
 #' Metadata <- dt$Metadata
 #' dataSet <- dt$dataSet
 #' lilikoi.preproc_norm(inputdata=Metadata, method="standard")
 #' }
-#'
 
 
 lilikoi.preproc_norm <-function(inputdata=Metadata,
@@ -30,9 +30,9 @@ lilikoi.preproc_norm <-function(inputdata=Metadata,
     stop("Invalid process method")
   }
 
-  # vals <- inputdata[2:ncol(inputdata)]
+  vals <- inputdata[2:ncol(inputdata)]
 
-  vals <- inputdata # Metadata = inputdata
+  # vals <- inputdata # Metadata = inputdata
 
   # Standard normalization ####
   if (method == "standard"){
@@ -44,9 +44,7 @@ lilikoi.preproc_norm <-function(inputdata=Metadata,
 
       return(colstandard)
     }
-    vals <- t(vals)
     normvals <- apply(X = vals, MARGIN = 2, FUN = standardnorm)
-    normvals <- t(normvals)
     output <- as.data.frame(normvals)
   }
 
@@ -55,7 +53,7 @@ lilikoi.preproc_norm <-function(inputdata=Metadata,
 
     samplenames <- rownames(vals)
     metabolitenames <- colnames(vals)
-    output <- normalize.quantiles((t(vals))) ### It's working on cols or rows?????
+    output <- normalize.quantiles(as.matrix(t(vals)),copy=F)
     output <- t(output)
     rownames(output) <- samplenames
     colnames(output) <- metabolitenames
@@ -64,7 +62,6 @@ lilikoi.preproc_norm <-function(inputdata=Metadata,
 
   # Median fold normalization ####
   if (method == "median"){
-    vals <- t(vals)
     medianfoldnorm <- function(mat) {
       # Perform median fold change normalisation
       #          X - data set [Variables & Samples]
@@ -78,12 +75,12 @@ lilikoi.preproc_norm <-function(inputdata=Metadata,
       return (mat)
     }
     output <- medianfoldnorm(vals)
-    output <- t(output)
   }
 
 
   # Combine label information back to output ####
-  # output$Label<- inputdata$Label
+  output <- as.data.frame(output)
+  output$Label<- as.data.frame(inputdata$Label)
 
 
   return(output)

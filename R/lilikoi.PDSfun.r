@@ -10,10 +10,11 @@
 #' @export
 #' @examples
 #' \donttest{
-#' dt <- Loaddata(file=system.file("extdata", "plasma_breast_cancer.csv", package = "lilikoi2"))
+#' dt <- lilikoi.Loaddata(file=system.file("extdata",
+#'   "plasma_breast_cancer.csv", package = "lilikoi"))
 #' Metadata <- dt$Metadata
 #' dataSet <- dt$dataSet
-#' convertResults=MetaTOpathway('name')
+#' convertResults=lilikoi.MetaTOpathway('name')
 #' Metabolite_pathway_table = convertResults$table
 #' PDSmatrix= lilikoi.PDSfun(Metabolite_pathway_table)
 #' }
