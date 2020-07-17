@@ -1,0 +1,222 @@
+---
+title: "Lilikoi2 Vignette"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Put the title of your vignette here}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Lilikoi2: a Deep-learning enabled, personalized pathway-based R package for diagnosis and prognosis predictions using metabolomics data
+
+Previously we developed Lilikoi, a personalized pathway-based method to classify diseases using metabolomics data. Given the new trends of computation in the metabolomics field, here we report the next version of Lilikoi as a significant upgrade. The new Lilikoi v2 R package has implemented a deep-learning method for classification, in addition to popular machine learning methods. It also has several new modules, including the most significant addition of prognosis prediction, implemented by Cox-PH model and the deep-learning based Cox-nnet model. Additionally, Lilikoi v2 supports data preprocessing, exploratory analysis, pathway visualization and metabolite-pathway regression. In summary, Lilikoi v2 is a modern, comprehensive package to enable metabolomics analysis in R programming environment.
+
+## Install Lilikoi
+
+```{r message=FALSE, warning=FALSE}
+# github install
+
+# install
+# install.packages("~/Documents/GitHub/lilikoi2_0.1.0.tar.gz", repos = NULL, type = "source")
+library(lilikoi)
+```
+
+## Data description
+
+### Plasma breast cancer dataset
+
+### dataset2
+
+## Load the data with Loaddata function
+The recommended format of dataset is csv. Columns are metabolites and rows are samples. Case and control labels should be saved in the second column. 
+
+The Loaddata function will load the dataset. For the convenience of further analysis, we extract the output to be a dataset called "Metadata" and a list of compound names called "dataSet". 
+
+```{r}
+dt <- lilikoi.Loaddata(file=system.file("extdata", "plasma_breast_cancer.csv", package = "lilikoi"))
+Metadata <- dt$Metadata
+dataSet <- dt$dataSet
+```
+ 
+ 
+## Transform the metabolite names to the HMDB ids using Lilikoi MetaTOpathway function
+
+Lilikoi allows the user to input any kind of metabolite IDs including metabolites names ('name') along with synonyms, KEGG IDs ('kegg'), HMDB IDs ('hmdb') and PubChem IDs ('pubchem').
+if the metabolites have a standard names as ID, Lilikoi will match these names among 100k saved database, if there are not any hits, Lilikoi will perform fuzzy matching to find the closest matching for this metabolite.
+The below table will explain this matching process in more details.
+
+```{r}
+convertResults=lilikoi.MetaTOpathway('name')
+Metabolite_pathway_table = convertResults$table
+head(Metabolite_pathway_table)
+```
+
+
+## Transform metabolites into pathway using Pathifier algorithm
+
+A specific pathway dysregulation score (PDS) is inferred to measure the abnormity for each sample in each pathway. For each pathway, the samples are mapped in a high dimensional principal component space and a principal curve is constructed along the samples and smoothed. The PDS score measures the distance from the projected dot along the curve to the centroid of normal samples (origin point of the curve).
+
+```{r}
+PDSmatrix= lilikoi.PDSfun(Metabolite_pathway_table)
+```
+
+
+Using PDSfun, we generate a new matrix which has pathways as columns instead of metaboltes.
+
+```{r}
+# head(t(PDSmatrix))
+dim(t(PDSmatrix))
+```
+
+
+## Select the most signficant pathway related to phenotype.
+
+```{r}
+
+selected_Pathways_Weka= lilikoi.featuresSelection(PDSmatrix,threshold= 0.54,method="gain")
+selected_Pathways_Weka=readRDS("selected_Pathways_Weka.rds")
+```
+
+
+## Metabolites-pathway regression
+
+```{r}
+lilikoi.meta_path(PDSmatrix = PDSmatrix, selected_Pathways_Weka = selected_Pathways_Weka, Metabolite_pathway_table = Metabolite_pathway_table)
+```
+
+
+## Machine learning
+
+Datasets below are available on the GitHub Site: https://github.com/lanagarmire/lilikoi2/tree/master/inst/extdata.
+
+We updated the lilikoi.machine_learning function so that users can choose which methods they would like to use. The new function of lilikoi.machine_learning is available at: https://github.com/lanagarmire/lilikoi2/blob/master/R/lilikoi.machine_learning.r
+
+```{r}
+dt = lilikoi.Loaddata(file="er_162.csv")
+Metadata <- dt$Metadata
+dataSet <- dt$dataSet
+lilikoi.machine_learning(MLmatrix = Metadata, measurementLabels = Metadata$Label,
+                              significantPathways = 0,
+                              trainportion = 0.8, cvnum = 10, dlround=50,Rpart=TRUE,
+                              LDA=TRUE,SVM=TRUE,RF=TRUE,GBM=TRUE,PAM=FALSE,LOG=TRUE,DL=TRUE)
+```
+
+
+
+## Prognosis
+
+
+```{r}
+dt <- lilikoi.Loaddata(file = "JCI71180sd2_processed_lilikoi.csv")
+
+Metadata <- dt$Metadata
+dataSet <- dt$dataSet
+
+convertResults=lilikoi.MetaTOpathway('name')
+Metabolite_pathway_table = convertResults$table
+```
+
+```{r}
+
+## Pathway prognosis results - CoxPH
+PDSmatrix= lilikoi.PDSfun(Metabolite_pathway_table)
+
+# Extract event and survival time information from the dataset
+library(readxl)
+jc = read_excel("/Users/rrrrrita/Desktop/lilikoi.temp/JCI71180sd2_processed_tumor.xlsx")
+
+jc <- jc[-27,]
+jctime<-jc$TIME
+jcevent<-as.numeric(as.factor(jc$EVENT)) - 1
+
+# Pathway deregulation score information
+exprdata = t(as.matrix(PDSmatrix))
+exprdata_tumor = exprdata[66:132, ]
+exprdata_tumor = exprdata_tumor[-27, ] # The subtracted subject has survival time to be 0, so we deleted it.
+
+# Set up prognosis function arguments
+event = jcevent
+time = jctime
+percent = NULL
+exprdata = exprdata_tumor
+alpha = 0
+nfold = 5
+method = "quantile"
+cvlambda = "lambda.1se"
+
+library(survival)
+library(glmnet)
+library(survminer)
+lilikoi.prognosis(event, time, exprdata, percent=percent, alpha=0, nfold=5, method="quantile",
+          cvlambda=cvlambda,python.path=NULL,coxnnet=FALSE,coxnnet_method="gradient")
+```
+
+
+```{r}
+
+## Pathway prognosis results - CoxNNET
+
+# Before running Cox-nnet, users need to provide the directory for python3 and the inst file in lilikoi
+path = path.package('lilikoi', quiet = FALSE) # path = "lilikoi/inst/", use R to run
+# path = file.path(path, 'inst')
+
+python.path = "/Library/Frameworks/Python.framework/Versions/3.8/bin/python3"
+
+
+event = jcevent
+time = jctime
+percent = NULL
+exprdata = exprdata_tumor
+alpha = 0
+nfold = 5
+method = "quantile"
+cvlambda = NULL
+coxnnet = TRUE
+coxnnet_method = "gradient"
+
+library(reticulate)
+
+lilikoi.prognosis(event, time, exprdata, percent=percent, alpha=0, nfold=5, method="quantile",
+          cvlambda=cvlambda,python.path=python.path,path=path,coxnnet=TRUE,coxnnet_method="gradient")
+
+
+```
+
+
+
+
+## KEGG plot
+
+```{r}
+# ER162 dataset
+
+dt = lilikoi.Loaddata(file="er_162.csv")
+Metadata <- dt$Metadata
+dataSet <- dt$dataSet
+convertResults=lilikoi.MetaTOpathway('name')
+Metabolite_pathway_table = convertResults$table
+```
+
+
+```{r}
+metamat <- t(t(Metadata[, -1]))
+metamat <- log2(metamat)
+sampleinfo <- Metadata$Label
+names(sampleinfo) <- rownames(Metadata)
+grouporder <- unique(Metadata$Label)
+
+# data("bods", package = "pathview")
+lilikoi.KEGGplot(metamat = metamat, sampleinfo = sampleinfo, grouporder = grouporder,
+                 pathid = '00250', specie = 'hsa',
+                 filesuffix = 'GSE16873', 
+                 Metabolite_pathway_table = Metabolite_pathway_table)
+```
+
+Thus, from the KEGGplot function, a graph called "hsa00250.GSE16873.png" has been saved at your working direction.
+
+
+
