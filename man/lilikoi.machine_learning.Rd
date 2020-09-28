@@ -9,7 +9,16 @@ lilikoi.machine_learning(
   measurementLabels = Label,
   significantPathways = selected_Pathways_Weka,
   trainportion = 0.8,
-  cvnum = 10
+  cvnum = 10,
+  dlround = 50,
+  Rpart = TRUE,
+  LDA = TRUE,
+  SVM = TRUE,
+  RF = TRUE,
+  GBM = TRUE,
+  PAM = TRUE,
+  LOG = TRUE,
+  DL = TRUE
 )
 }
 \arguments{
@@ -22,6 +31,24 @@ lilikoi.machine_learning(
 \item{trainportion}{train percentage of the total sample size}
 
 \item{cvnum}{number of folds}
+
+\item{dlround}{epoch number for the deep learning method}
+
+\item{Rpart}{TRUE if run Rpart method}
+
+\item{LDA}{TRUE if run LDA method}
+
+\item{SVM}{TRUE if run SVM method}
+
+\item{RF}{TRUE if run random forest method}
+
+\item{GBM}{TRUE if run GBM method}
+
+\item{PAM}{TRUE if run PAM method}
+
+\item{LOG}{TRUE if run LOG method}
+
+\item{DL}{TRUE if run deep learning method}
 }
 \value{
 Evaluation results and plots of all 8 machine learning algorithms, along with variable importance plots.
@@ -32,13 +59,10 @@ and it plots the ROC curves and the AUC, SEN, and specificty
 }
 \examples{
 \donttest{
- measurementLabels = Metadata$Label
- MLmatrix = Metadata
- significantPathways = 0
- lilikoi.machine_learning(tPDSmatrix, measurementLabels,significantPathways,trainportion = 0.8,
-    cvnum = 10)
+lilikoi.machine_learning(MLmatrix = Metadata, measurementLabels = Metadata$Label,
+significantPathways = 0,
+trainportion = 0.8, cvnum = 10, dlround=50,Rpart=TRUE,
+LDA=TRUE,SVM=TRUE,RF=TRUE,GBM=TRUE,PAM=TRUE,LOG=TRUE,DL=TRUE)
 }
-
-
 }
 \keyword{classifcation}

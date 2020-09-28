@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<meta name="author" content="Xinying" />
+
+<meta name="date" content="2020-06-30" />
+
+<title>Lilikoi V2.0</title>
+
+
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    for (var j = 0; j < rules.length; j++) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') continue;
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+
+
+
+<link href="data:text/css;charset=utf-8,body%20%7B%0Abackground%2Dcolor%3A%20%23fff%3B%0Amargin%3A%201em%20auto%3B%0Amax%2Dwidth%3A%20700px%3B%0Aoverflow%3A%20visible%3B%0Apadding%2Dleft%3A%202em%3B%0Apadding%2Dright%3A%202em%3B%0Afont%2Dfamily%3A%20%22Open%20Sans%22%2C%20%22Helvetica%20Neue%22%2C%20Helvetica%2C%20Arial%2C%20sans%2Dserif%3B%0Afont%2Dsize%3A%2014px%3B%0Aline%2Dheight%3A%201%2E35%3B%0A%7D%0A%23TOC%20%7B%0Aclear%3A%20both%3B%0Amargin%3A%200%200%2010px%2010px%3B%0Apadding%3A%204px%3B%0Awidth%3A%20400px%3B%0Aborder%3A%201px%20solid%20%23CCCCCC%3B%0Aborder%2Dradius%3A%205px%3B%0Abackground%2Dcolor%3A%20%23f6f6f6%3B%0Afont%2Dsize%3A%2013px%3B%0Aline%2Dheight%3A%201%2E3%3B%0A%7D%0A%23TOC%20%2Etoctitle%20%7B%0Afont%2Dweight%3A%20bold%3B%0Afont%2Dsize%3A%2015px%3B%0Amargin%2Dleft%3A%205px%3B%0A%7D%0A%23TOC%20ul%20%7B%0Apadding%2Dleft%3A%2040px%3B%0Amargin%2Dleft%3A%20%2D1%2E5em%3B%0Amargin%2Dtop%3A%205px%3B%0Amargin%2Dbottom%3A%205px%3B%0A%7D%0A%23TOC%20ul%20ul%20%7B%0Amargin%2Dleft%3A%20%2D2em%3B%0A%7D%0A%23TOC%20li%20%7B%0Aline%2Dheight%3A%2016px%3B%0A%7D%0Atable%20%7B%0Amargin%3A%201em%20auto%3B%0Aborder%2Dwidth%3A%201px%3B%0Aborder%2Dcolor%3A%20%23DDDDDD%3B%0Aborder%2Dstyle%3A%20outset%3B%0Aborder%2Dcollapse%3A%20collapse%3B%0A%7D%0Atable%20th%20%7B%0Aborder%2Dwidth%3A%202px%3B%0Apadding%3A%205px%3B%0Aborder%2Dstyle%3A%20inset%3B%0A%7D%0Atable%20td%20%7B%0Aborder%2Dwidth%3A%201px%3B%0Aborder%2Dstyle%3A%20inset%3B%0Aline%2Dheight%3A%2018px%3B%0Apadding%3A%205px%205px%3B%0A%7D%0Atable%2C%20table%20th%2C%20table%20td%20%7B%0Aborder%2Dleft%2Dstyle%3A%20none%3B%0Aborder%2Dright%2Dstyle%3A%20none%3B%0A%7D%0Atable%20thead%2C%20table%20tr%2Eeven%20%7B%0Abackground%2Dcolor%3A%20%23f7f7f7%3B%0A%7D%0Ap%20%7B%0Amargin%3A%200%2E5em%200%3B%0A%7D%0Ablockquote%20%7B%0Abackground%2Dcolor%3A%20%23f6f6f6%3B%0Apadding%3A%200%2E25em%200%2E75em%3B%0A%7D%0Ahr%20%7B%0Aborder%2Dstyle%3A%20solid%3B%0Aborder%3A%20none%3B%0Aborder%2Dtop%3A%201px%20solid%20%23777%3B%0Amargin%3A%2028px%200%3B%0A%7D%0Adl%20%7B%0Amargin%2Dleft%3A%200%3B%0A%7D%0Adl%20dd%20%7B%0Amargin%2Dbottom%3A%2013px%3B%0Amargin%2Dleft%3A%2013px%3B%0A%7D%0Adl%20dt%20%7B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Aul%20%7B%0Amargin%2Dtop%3A%200%3B%0A%7D%0Aul%20li%20%7B%0Alist%2Dstyle%3A%20circle%20outside%3B%0A%7D%0Aul%20ul%20%7B%0Amargin%2Dbottom%3A%200%3B%0A%7D%0Apre%2C%20code%20%7B%0Abackground%2Dcolor%3A%20%23f7f7f7%3B%0Aborder%2Dradius%3A%203px%3B%0Acolor%3A%20%23333%3B%0Awhite%2Dspace%3A%20pre%2Dwrap%3B%20%0A%7D%0Apre%20%7B%0Aborder%2Dradius%3A%203px%3B%0Amargin%3A%205px%200px%2010px%200px%3B%0Apadding%3A%2010px%3B%0A%7D%0Apre%3Anot%28%5Bclass%5D%29%20%7B%0Abackground%2Dcolor%3A%20%23f7f7f7%3B%0A%7D%0Acode%20%7B%0Afont%2Dfamily%3A%20Consolas%2C%20Monaco%2C%20%27Courier%20New%27%2C%20monospace%3B%0Afont%2Dsize%3A%2085%25%3B%0A%7D%0Ap%20%3E%20code%2C%20li%20%3E%20code%20%7B%0Apadding%3A%202px%200px%3B%0A%7D%0Adiv%2Efigure%20%7B%0Atext%2Dalign%3A%20center%3B%0A%7D%0Aimg%20%7B%0Abackground%2Dcolor%3A%20%23FFFFFF%3B%0Apadding%3A%202px%3B%0Aborder%3A%201px%20solid%20%23DDDDDD%3B%0Aborder%2Dradius%3A%203px%3B%0Aborder%3A%201px%20solid%20%23CCCCCC%3B%0Amargin%3A%200%205px%3B%0A%7D%0Ah1%20%7B%0Amargin%2Dtop%3A%200%3B%0Afont%2Dsize%3A%2035px%3B%0Aline%2Dheight%3A%2040px%3B%0A%7D%0Ah2%20%7B%0Aborder%2Dbottom%3A%204px%20solid%20%23f7f7f7%3B%0Apadding%2Dtop%3A%2010px%3B%0Apadding%2Dbottom%3A%202px%3B%0Afont%2Dsize%3A%20145%25%3B%0A%7D%0Ah3%20%7B%0Aborder%2Dbottom%3A%202px%20solid%20%23f7f7f7%3B%0Apadding%2Dtop%3A%2010px%3B%0Afont%2Dsize%3A%20120%25%3B%0A%7D%0Ah4%20%7B%0Aborder%2Dbottom%3A%201px%20solid%20%23f7f7f7%3B%0Amargin%2Dleft%3A%208px%3B%0Afont%2Dsize%3A%20105%25%3B%0A%7D%0Ah5%2C%20h6%20%7B%0Aborder%2Dbottom%3A%201px%20solid%20%23ccc%3B%0Afont%2Dsize%3A%20105%25%3B%0A%7D%0Aa%20%7B%0Acolor%3A%20%230033dd%3B%0Atext%2Ddecoration%3A%20none%3B%0A%7D%0Aa%3Ahover%20%7B%0Acolor%3A%20%236666ff%3B%20%7D%0Aa%3Avisited%20%7B%0Acolor%3A%20%23800080%3B%20%7D%0Aa%3Avisited%3Ahover%20%7B%0Acolor%3A%20%23BB00BB%3B%20%7D%0Aa%5Bhref%5E%3D%22http%3A%22%5D%20%7B%0Atext%2Ddecoration%3A%20underline%3B%20%7D%0Aa%5Bhref%5E%3D%22https%3A%22%5D%20%7B%0Atext%2Ddecoration%3A%20underline%3B%20%7D%0A%0Acode%20%3E%20span%2Ekw%20%7B%20color%3A%20%23555%3B%20font%2Dweight%3A%20bold%3B%20%7D%20%0Acode%20%3E%20span%2Edt%20%7B%20color%3A%20%23902000%3B%20%7D%20%0Acode%20%3E%20span%2Edv%20%7B%20color%3A%20%2340a070%3B%20%7D%20%0Acode%20%3E%20span%2Ebn%20%7B%20color%3A%20%23d14%3B%20%7D%20%0Acode%20%3E%20span%2Efl%20%7B%20color%3A%20%23d14%3B%20%7D%20%0Acode%20%3E%20span%2Ech%20%7B%20color%3A%20%23d14%3B%20%7D%20%0Acode%20%3E%20span%2Est%20%7B%20color%3A%20%23d14%3B%20%7D%20%0Acode%20%3E%20span%2Eco%20%7B%20color%3A%20%23888888%3B%20font%2Dstyle%3A%20italic%3B%20%7D%20%0Acode%20%3E%20span%2Eot%20%7B%20color%3A%20%23007020%3B%20%7D%20%0Acode%20%3E%20span%2Eal%20%7B%20color%3A%20%23ff0000%3B%20font%2Dweight%3A%20bold%3B%20%7D%20%0Acode%20%3E%20span%2Efu%20%7B%20color%3A%20%23900%3B%20font%2Dweight%3A%20bold%3B%20%7D%20%0Acode%20%3E%20span%2Eer%20%7B%20color%3A%20%23a61717%3B%20background%2Dcolor%3A%20%23e3d2d2%3B%20%7D%20%0A" rel="stylesheet" type="text/css" />
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+<h1 class="title toc-ignore">Lilikoi V2.0</h1>
+<h4 class="author">Xinying</h4>
+<h4 class="date">2020-06-30</h4>
+
+
+
+<div id="introduction" class="section level2">
+<h2>Introduction</h2>
+<p>Previously we developed Lilikoi, a personalized pathway-based method to classify diseases using metabolomics data. Given the new trends of computation in the metabolomics field, here we report the next version of Lilikoi as a significant upgrade. The new Lilikoi v2.0 R package has implemented a deep-learning method for classification, in addition to popular machine learning methods. It also has several new modules, including the most significant addition of prognosis prediction, implemented by Cox-PH model and the deep-learning based Cox-nnet model. Additionally, Lilikoi v2.0 supports data preprocessing, exploratory analysis, pathway visualization and metabolite-pathway regression. In summary, Lilikoi v2.0 is a modern, comprehensive package to enable metabolomics analysis in R programming environment.</p>
+</div>
+<div id="installation" class="section level2">
+<h2>Installation</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;lilikoi&quot;</span>)
+<span class="kw">library</span>(lilikoi)</code></pre></div>
+</div>
+<div id="load-data" class="section level2">
+<h2>Load data</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dt &lt;-<span class="st"> </span><span class="kw">lilikoi.Loaddata</span>(<span class="dt">file=</span><span class="kw">system.file</span>(<span class="st">&quot;extdata&quot;</span>, <span class="st">&quot;plasma_breast_cancer.csv&quot;</span>, <span class="dt">package =</span> <span class="st">&quot;lilikoi2&quot;</span>))
+Metadata &lt;-<span class="st"> </span>dt<span class="op">$</span>Metadata
+dataSet &lt;-<span class="st"> </span>dt<span class="op">$</span>dataSet</code></pre></div>
+</div>
+<div id="transform-the-metabolite-names-to-the-hmdb-ids-using-lilikoi-metatopathway-function" class="section level2">
+<h2>Transform the metabolite names to the HMDB ids using Lilikoi MetaTOpathway function</h2>
+<p>Lilikoi allows the user to input any kind of metabolite IDs including metabolites names (‘name’) along with synonyms, KEGG IDs (‘kegg’), HMDB IDs (‘hmdb’) and PubChem IDs (‘pubchem’). If the metabolites have a standard names as ID, Lilikoi will match these names among 100 k saved database, if there are not any hits, Lilikoi will perform fuzzy matching to find the closest matching for this metabolite.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">convertResults=<span class="kw">lilikoi.MetaTOpathway</span>(<span class="st">'name'</span>)
+Metabolite_pathway_table =<span class="st"> </span>convertResults<span class="op">$</span>table
+<span class="kw">head</span>(Metabolite_pathway_table)</code></pre></div>
+</div>
+<div id="select-the-most-signficant-pathway-related-to-phenotype." class="section level2">
+<h2>Select the most signficant pathway related to phenotype.</h2>
+<p>A specific pathway dysregulation score (PDS) is inferred to measure the abnormity for each sample in each pathway. For each pathway, the samples are mapped in a high dimensional principal component space and a principal curve is constructed along the samples and smoothed. The PDS score measures the distance from the projected dot along the curve to the centroid of normal samples (origin point of the curve).</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">selected_Pathways_Weka=<span class="st"> </span><span class="kw">lilikoi.featuresSelection</span>(PDSmatrix,<span class="dt">threshold=</span> <span class="fl">0.54</span>,<span class="dt">method=</span><span class="st">&quot;gain&quot;</span>)
+selected_Pathways_Weka</code></pre></div>
+</div>
+<div id="data-preprocessing" class="section level2">
+<h2>Data preprocessing</h2>
+<p>Lilikoi v2.0 enables users to perform three normalization methods (standard normalization, quantile normalization and median-fold normalization) and imputation for missing metabolic expressions.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Standard Normalization</span>
+<span class="kw">lilikoi.preproc_norm</span>(<span class="dt">inputdata=</span>Metadata, <span class="dt">method=</span><span class="st">&quot;standard&quot;</span>)
+<span class="kw">lilikoi.preproc_norm</span>(<span class="dt">inputdata=</span>Metadata, <span class="dt">method=</span><span class="st">&quot;quantile&quot;</span>)
+<span class="kw">lilikoi.preproc_norm</span>(<span class="dt">inputdata=</span>Metadata, <span class="dt">method=</span><span class="st">&quot;median&quot;</span>)</code></pre></div>
+<p>We also implemented imputation function using the K-Nearest Neighbors method.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># KNN Imputation</span>
+<span class="kw">lilikoi.preproc_knn</span>(<span class="dt">inputdata=</span>Metadata,<span class="dt">method=</span><span class="kw">c</span>(<span class="st">&quot;knn&quot;</span>))</code></pre></div>
+</div>
+<div id="exploration-analysis" class="section level2">
+<h2>Exploration analysis</h2>
+<p>The exploration analysis in lilikoi v2.0 performs source of variation analysis with the metabolites data frame and demographic data frame provided by users. Users can choose to implement Principal Component Analysis(PCA) to extract the most important information in high-dimensional datasets and the t-SNE plot to visualize the metabolites data. The PCA and t-SNE plots can be enabled by setting those flags values to TRUE.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">lilikoi.explr</span>(data, demo.data, <span class="dt">pca=</span><span class="ot">TRUE</span>, <span class="dt">tsne=</span><span class="ot">FALSE</span>)</code></pre></div>
+</div>
+<div id="machine-learning" class="section level2">
+<h2>Machine learning</h2>
+<p>We include deep learning for classifciation in this version of lilikoi based on the h2o package.It used multi-layer Neural Network and Stochastic Gradient Descent to predict the diagnosis results. In order to reduce redundancy in setting parameters, we only open the configuration for general machine learning setting. If users want to change the settings of the deep learning feature, they would need to change it in the source code.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">lilikoi.machine_learning</span>(<span class="dt">MLmatrix =</span> Metadata, <span class="dt">measurementLabels =</span> Metadata<span class="op">$</span>Label,
+                              <span class="dt">significantPathways =</span> <span class="dv">0</span>,
+                              <span class="dt">trainportion =</span> <span class="fl">0.8</span>, <span class="dt">cvnum =</span> <span class="dv">10</span>)</code></pre></div>
+</div>
+<div id="prognosis-prediction" class="section level2">
+<h2>Prognosis prediction</h2>
+<p>Prognosis prediction is enabled in Lilikoi v2. It is implemented in both metabolite level and pathway level with Cox-PH model or Cox-NNET model. Users should provide vectors of survival results and survival time. “percent” automatically split the dataset to be training and testing datasets. “alpha” gives users choices for Lasso, Ridge or Elastic net penalizations. “nfold” indicates the fold number for cross validation. “cvlambda” determines the lambda for prediction, “lambda.min” or “lambda.1se”. “method” determines the prognosis index, “quantile”, “quantile” or “ratio”.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Set up prognosis function arguments</span>
+<span class="co"># Before running Cox-nnet, users need to provide the directory for python3 and the inst file in lilikoi</span>
+path =<span class="st"> </span><span class="kw">path.package</span>(<span class="st">'lilikoi'</span>, <span class="dt">quiet =</span> <span class="ot">FALSE</span>) <span class="co"># path = &quot;lilikoi/inst/&quot;, use R to run</span>
+path =<span class="st"> </span><span class="kw">file.path</span>(path, <span class="st">'inst'</span>)
+
+python.path =<span class="st"> &quot;/Library/Frameworks/Python.framework/Versions/3.8/bin/python3&quot;</span>
+
+
+event =<span class="st"> </span>jcevent
+time =<span class="st"> </span>jctime
+percent =<span class="st"> </span><span class="ot">NULL</span>
+exprdata =<span class="st"> </span>exprdata_tumor
+alpha =<span class="st"> </span><span class="dv">0</span>
+nfold =<span class="st"> </span><span class="dv">5</span>
+method =<span class="st"> &quot;quantile&quot;</span>
+cvlambda =<span class="st"> </span><span class="ot">NULL</span>
+coxnnet =<span class="st"> </span><span class="ot">TRUE</span>
+coxnnet_method =<span class="st"> &quot;gradient&quot;</span>
+
+<span class="kw">library</span>(reticulate)
+
+<span class="kw">lilikoi.prognosis</span>(event, time, exprdata, <span class="dt">percent=</span>percent, <span class="dt">alpha=</span><span class="dv">0</span>, <span class="dt">nfold=</span><span class="dv">5</span>, <span class="dt">method=</span><span class="st">&quot;quantile&quot;</span>,
+          <span class="dt">cvlambda=</span>cvlambda,<span class="dt">python.path=</span>python.path,<span class="dt">path=</span>path,<span class="dt">coxnnet=</span><span class="ot">TRUE</span>,<span class="dt">coxnnet_method=</span><span class="st">&quot;gradient&quot;</span>)</code></pre></div>
+</div>
+<div id="pathway-level-analysis" class="section level2">
+<h2>Pathway level analysis</h2>
+<div id="pathview-plot" class="section level3">
+<h3>Pathview plot</h3>
+<p>The selected pathway features from classification pf prognosis prediction can be visualized in Lilikoi. Any KEGG pathway can be used as the inout to render pathway graphs. “metamat” is the metabolites expression data matrix. “sampleinfo” is a vector of sample group, with element names as sample IDs. “grouporder” is a vector with 2 elements of reference and experimental group names.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">metamat &lt;-<span class="st"> </span><span class="kw">t</span>(<span class="kw">t</span>(Metadata[, <span class="op">-</span><span class="dv">1</span>]))
+metamat &lt;-<span class="st"> </span><span class="kw">log2</span>(metamat)
+sampleinfo &lt;-<span class="st"> </span>Metadata<span class="op">$</span>Label
+<span class="kw">names</span>(sampleinfo) &lt;-<span class="st"> </span><span class="kw">rownames</span>(Metadata)
+grouporder &lt;-<span class="st"> </span><span class="kw">unique</span>(Metadata<span class="op">$</span>Label)
+
+<span class="kw">lilikoi.KEGGplot</span>(<span class="dt">metamat =</span> metamat, <span class="dt">sampleinfo =</span> sampleinfo, <span class="dt">grouporder =</span> grouporder,
+                 <span class="dt">pathid =</span> <span class="st">'00250'</span>, <span class="dt">specie =</span> <span class="st">'hsa'</span>,
+                 <span class="dt">filesuffix =</span> <span class="st">'GSE16873'</span>, 
+                 <span class="dt">Metabolite_pathway_table =</span> Metabolite_pathway_table)</code></pre></div>
+</div>
+<div id="metabolites-pathway-relationship" class="section level3">
+<h3>Metabolites-pathway relationship</h3>
+<p>We use single variate regression to reveal the relationship between pathways and their corresponding metabolites. All pathway features and their significantly associated metabolites are visualized by a bipartite graph with Cytoscape style.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">lilikoi.meta_path</span>(<span class="dt">PDSmatrix =</span> PDSmatrix, <span class="dt">selected_Pathways_Weka =</span> selected_Pathways_Weka, <span class="dt">Metabolite_pathway_table =</span> Metabolite_pathway_table)</code></pre></div>
+</div>
+</div>
+
+
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

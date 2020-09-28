@@ -27,3 +27,10 @@ A bipartite graph of the relationships between pathways and their corresponding 
 Performs single variate linear regression between selected pathways and each of their metabolites.
 Output the network plot between pathways and metabolties.
 }
+\examples{
+\donttest{
+ lilikoi.meta_path(PDSmatrix = PDSmatrix,
+   selected_Pathways_Weka = selected_Pathways_Weka,
+   Metabolite_pathway_table = Metabolite_pathway_table)
+}
+}

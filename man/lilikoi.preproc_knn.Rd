@@ -2,7 +2,7 @@
 % Please edit documentation in R/lilikoi.preproc_knn.R
 \name{lilikoi.preproc_knn}
 \alias{lilikoi.preproc_knn}
-\title{A imputation function.}
+\title{An imputation function.}
 \usage{
 lilikoi.preproc_knn(inputdata = Metadata, method = c("knn"))
 }
@@ -19,9 +19,10 @@ This function is used to preprocess data via knn imputation.
 }
 \examples{
 \donttest{
-dt <- Loaddata(file=system.file("extdata", "plasma_breast_cancer.csv", package = "lilikoi2"))
+dt <- lilikoi.Loaddata(file=system.file("extdata",
+  "plasma_breast_cancer.csv", package = "lilikoi"))
 Metadata <- dt$Metadata
 dataSet <- dt$dataSet
-lilikoi.preproc_norm(inputdata=Metadata, method="standard")
+lilikoi.preproc_knn(inputdata=Metadata, method="standard")
 }
 }

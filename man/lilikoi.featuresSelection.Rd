@@ -21,14 +21,14 @@ This function allows you to reduce the pathway diemsion using xxxx
 }
 \examples{
 \donttest{
-dt <- Loaddata(file=system.file("extdata", "plasma_breast_cancer.csv", package = "lilikoi2"))
+dt <- lilikoi.Loaddata(file=system.file("extdata",
+  "plasma_breast_cancer.csv", package = "lilikoi"))
 Metadata <- dt$Metadata
 dataSet <- dt$dataSet
-Metabolite_pathway_table=MetaTOpathway('name')
-PDSmatrix= PDSfun(Metabolite_pathway_table)
+Metabolite_pathway_table=lilikoi.MetaTOpathway('name')
+PDSmatrix= lilikoi.PDSfun(Metabolite_pathway_table)
 selected_Pathways_Weka= lilikoi.featuresSelection(PDSmatrix,threshold= 0.54,method="gain")
 }
-
 
 }
 \keyword{features}

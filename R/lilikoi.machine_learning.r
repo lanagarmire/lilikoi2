@@ -18,20 +18,22 @@
 #' @param LOG TRUE if run LOG method
 #' @param DL TRUE if run deep learning method
 #' @keywords classifcation
-#' @import caret gbm scales h2o MLmetrics
+#' @import caret gbm scales
 #' @importFrom graphics legend par
 #' @importFrom utils capture.output
 #' @importFrom pROC auc roc smooth
 #' @importFrom glmnet glmnet
 #' @importFrom reshape melt
 #' @importFrom Metrics accuracy
+#' @importFrom MLmetrics Accuracy AUC Precision Recall Sensitivity Specificity
 #' @return Evaluation results and plots of all 8 machine learning algorithms, along with variable importance plots.
 #' @export
 #' @examples
 #' \donttest{
 #' lilikoi.machine_learning(MLmatrix = Metadata, measurementLabels = Metadata$Label,
 #' significantPathways = 0,
-#' trainportion = 0.8, cvnum = 10)
+#' trainportion = 0.8, cvnum = 10, dlround=50,Rpart=TRUE,
+#' LDA=TRUE,SVM=TRUE,RF=TRUE,GBM=TRUE,PAM=TRUE,LOG=TRUE,DL=TRUE)
 #' }
 
 lilikoi.machine_learning <- function (MLmatrix = PDSmatrix, measurementLabels = Label,
@@ -39,29 +41,6 @@ lilikoi.machine_learning <- function (MLmatrix = PDSmatrix, measurementLabels = 
                               trainportion = 0.8, cvnum = 10, dlround=50,Rpart=TRUE,
                               LDA=TRUE,SVM=TRUE,RF=TRUE,GBM=TRUE,PAM=TRUE,LOG=TRUE,DL=TRUE) {
 
-  MLmatrix <- Metadata
-  measurementLabels <- Metadata$Label
-  significantPathways = 0
-  trainportion = 0.8
-  cvnum = 10
-  Rpart = TRUE
-  LDA = TRUE
-  SVM = TRUE
-  RF=TRUE
-  GBM=TRUE
-  LOG=TRUE
-  PAM=FALSE
-  DL=TRUE
-  dlround=10
-
-  library(caret) # six machine learning algorithms
-  library(h2o) #Deep learning algorithm
-  library(pROC) # AUC plot
-  library(preprocessCore) #Quantile normalization
-  #library(RFmarkerDetector) #Scalling
-  library(ggplot2)# Plot of the AUC
-  library(MLmetrics)
-  library(reshape)
 
   unilabels <- unique(measurementLabels)
   MLmatrix$Label <- as.factor(MLmatrix$Label)
@@ -109,7 +88,7 @@ lilikoi.machine_learning <- function (MLmatrix = PDSmatrix, measurementLabels = 
 
   # model <- list()
 
-  for (k in 1:2){
+  for (k in 1:10){
 
     ###############Shuffle stat first
     rand <- sample(nrow(prostate_df))
@@ -215,15 +194,15 @@ lilikoi.machine_learning <- function (MLmatrix = PDSmatrix, measurementLabels = 
         ldaClasses1 <- predict( fit.lda, newdata = irisTest)
         ldaConfusion=confusionMatrix(data = ldaClasses1, irisTest$subtype)
         lda.ROC <- roc(predictor=ldaClasses[,1],response=irisTest$subtype,levels=rev(levels(irisTest$subtype)))
-        performance_testing[1,2]=as.numeric(lda.ROC$auc)#AUC
-        performance_testing[2,2]=ldaConfusion$byClass[1]#SENS
-        performance_testing[3,2]=ldaConfusion$byClass[2]#SPEC
-        performance_testing[4,2]=ldaConfusion$overall[1]#accuracy
-        performance_testing[5,2]=ldaConfusion$byClass[5]#precision
-        performance_testing[6,2]=ldaConfusion$byClass[6]#recall = sens
-        performance_testing[7,2]=ldaConfusion$byClass[7]#F1
+        performance_testing[1,idx]=as.numeric(lda.ROC$auc)#AUC
+        performance_testing[2,idx]=ldaConfusion$byClass[1]#SENS
+        performance_testing[3,idx]=ldaConfusion$byClass[2]#SPEC
+        performance_testing[4,idx]=ldaConfusion$overall[1]#accuracy
+        performance_testing[5,idx]=ldaConfusion$byClass[5]#precision
+        performance_testing[6,idx]=ldaConfusion$byClass[6]#recall = sens
+        performance_testing[7,idx]=ldaConfusion$byClass[7]#F1
         if(length(unilabels) == 2){
-          performance_testing[8,2]=ldaConfusion$byClass[11]#BALANCED ACCURACY
+          performance_testing[8,idx]=ldaConfusion$byClass[11]#BALANCED ACCURACY
         }
       }
 

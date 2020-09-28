@@ -23,7 +23,6 @@
 lilikoi.featuresSelection <- function(PDSmatrix,threshold= 0.5,method="info"){
 
   pds_matrix=(as.data.frame(cbind(t(PDSmatrix),Label=Metadata$Label)))
-  pds_matrix$Label <- as.factor(pds_matrix$Label)
   #head(pds_matrix)
   set.seed(2000)
   training_ID <- createDataPartition(pds_matrix$Label, p = .8,list = FALSE,times = 1)
@@ -36,14 +35,15 @@ lilikoi.featuresSelection <- function(PDSmatrix,threshold= 0.5,method="info"){
     GainRatioAttributeEval(as.logical(training_diagnosis$Label-1) ~ . , data = training_diagnosis)->infogainfeatures
     selected_pathways<-names(infogainfeatures[infogainfeatures>threshold])}
 
-
   info.paireddiagnosis.R<-discretize(training_diagnosis[,selected_pathways])
   info.paireddiagnosis.R<-cbind(info.paireddiagnosis.R,as.numeric(as.matrix(training_diagnosis[,ncol(training_diagnosis)])))
   I.R <- mutinformation(info.paireddiagnosis.R,method= "emp")
   I.R.paireddiagnosis<-I.R[,ncol(I.R)]
   #I.R.paireddiagnosis
   theTable <- within(as.data.frame(I.R.paireddiagnosis),
-                     I.R.paireddiagnosis <- as.numeric(I.R.paireddiagnosis))
+                     I.R.paireddiagnosis <- as.numeric(I.R.paireddiagnosis,
+                                                       levels=names(sort(table(I.R.paireddiagnosis),
+                                                                         decreasing=TRUE))))
   #theTable
   theTable<-cbind(row.names(theTable),theTable)
   theTable<-theTable[-ncol(I.R),]
@@ -60,7 +60,7 @@ lilikoi.featuresSelection <- function(PDSmatrix,threshold= 0.5,method="info"){
   q <- p + aes(stringr::str_wrap(name, 20), I.R.paireddiagnosis) + ylab("Mutual information") +
     xlab("Pathways")
   plot(q + coord_flip())
-  #legend("topright",legend=names(I.R.paireddiagnosis[order(I.R.paireddiagnosis,decreasing=TRUE)])[-1], border=FALSE, cex=0.7)
+  #legend("topright",legend=names(I.R.paireddiagnosis[order(I.R.paireddiagnosis,decreasing=T)])[-1], border=FALSE, cex=0.7)
 
   return(selected_pathways)
 }

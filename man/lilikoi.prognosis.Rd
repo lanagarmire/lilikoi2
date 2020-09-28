@@ -9,10 +9,10 @@ lilikoi.prognosis(
   time,
   exprdata,
   percent = NULL,
-  alpha = 0,
+  alpha = 1,
   nfold = 5,
   method = "median",
-  cvlambda = NULL,
+  cvlambda = "lambda.1se",
   python.path = NULL,
   path = NULL,
   coxnnet = FALSE,
@@ -56,7 +56,10 @@ to predict survival results.
 \examples{
 \donttest{
 inst.path = path.package('lilikoi2', quiet = FALSE) # path = "lilikoi/inst/", use R to run
+inst.path = file.path(inst.path, 'inst')
+python.path = "/Library/Frameworks/Python.framework/Versions/3.8/bin/python3"
 lilikoi.prognosis(event, time, exprdata, percent=NULL, alpha=0, nfold=5, method="median",
-  cvlambda=NULL,python.path=NULL, inst.path=inst.path,coxnnet=FALSE,coxnnet_method="gradient")
+  cvlambda=NULL,python.path=NULL, path=inst.path, python.path=python.path,
+  coxnnet=FALSE,coxnnet_method="gradient")
 }
 }

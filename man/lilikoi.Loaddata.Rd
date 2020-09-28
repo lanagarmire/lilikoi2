@@ -17,7 +17,7 @@ This function allows you to load your metabolomics data.
 }
 \examples{
 \donttest{
- Loaddata(file=system.file("extdata", "plasma_breast_cancer.csv", package = "lilikoi"))
+ lilikoi.Loaddata(file=system.file("extdata", "plasma_breast_cancer.csv", package = "lilikoi"))
 }
 }
 \keyword{Load}

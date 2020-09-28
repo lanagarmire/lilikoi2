@@ -5,20 +5,14 @@
 #' @param PDSmatrix Pathway deregulation score matrix
 #' @param selected_Pathways_Weka Selected top pathways from the featureSelection function
 #' @param Metabolite_pathway_table Metabolites mapping table
-#' @param pathway interested pathway name
 #' @importFrom stats lm
 #' @importFrom utils type.convert
 #' @import scales RCy3
 #' @return A bipartite graph of the relationships between pathways and their corresponding metabolites.
 #' @export
-#' @examples
-#' \donttest{
-#'  lilikoi.meta_path(PDSmatrix = PDSmatrix,
-#'    selected_Pathways_Weka = selected_Pathways_Weka,
-#'    Metabolite_pathway_table = Metabolite_pathway_table)
-#' }
 
-lilikoi.meta_path <- function(PDSmatrix, selected_Pathways_Weka, Metabolite_pathway_table, pathway="Alanine, Aspartate And Glutamate Metabolism"){
+
+meta_path <- function(PDSmatrix, selected_Pathways_Weka, Metabolite_pathway_table){
 
   regression <- function(input, PDSmatrix, selected_Pathways_Weka, Metabolite_pathway_table){
     tPDSmatrix <- t(PDSmatrix)
@@ -66,6 +60,7 @@ lilikoi.meta_path <- function(PDSmatrix, selected_Pathways_Weka, Metabolite_path
     resbar <- NULL
     nms <- NULL
     for (i in 1:length(reg)){
+      i=1
       mat <- as.data.frame(reg[[i]]$coefficients)
       temp1 <- rownames(mat)[2]
       nms <- rbind(nms, temp1)
@@ -96,7 +91,6 @@ lilikoi.meta_path <- function(PDSmatrix, selected_Pathways_Weka, Metabolite_path
 
   }
 
-
   edgedat <- y[c(1,3,2)]
   names(edgedat) <- c('source', 'target','weight')
   rownames(edgedat) <- NULL
@@ -119,11 +113,9 @@ lilikoi.meta_path <- function(PDSmatrix, selected_Pathways_Weka, Metabolite_path
     labs(title=pathway, x=NULL, y=NULL)
 
 
-
   ## Bipartite plot
   cytoimage <- function(nodedat, edgedat){
 
-    # library(RCy3)
 
     cytoscapePing()
 
@@ -137,6 +129,49 @@ lilikoi.meta_path <- function(PDSmatrix, selected_Pathways_Weka, Metabolite_path
     names(nodedat)[1] <- 'id'
     names(edgedat)[c(1, 2)] <- c('source', 'target')
     edgedat$interaction <- 1
+
+
+    #New code#########################################################################################
+    improvenodename <- function(nodes = nodedat, edges = edgedat){
+
+      nodeids <- nodes$id
+
+      ids <- gsub(pattern = "\`", replacement = '', x = nodeids, fixed = FALSE)
+      ids <- gsub(pattern = "\"", replacement = '', x = ids, fixed = FALSE)
+      ids <- gsub(pattern = "\'", replacement = '', x = ids, fixed = FALSE)
+
+      nodes$id <- ids
+
+      edgesources <- edges$source
+      edgetargets <- edges$target
+
+      sources <- gsub(pattern = "\`", replacement = '', x = edgesources, fixed = FALSE)
+      sources <- gsub(pattern = "\"", replacement = '', x = sources, fixed = FALSE)
+      sources <- gsub(pattern = "\'", replacement = '', x = sources, fixed = FALSE)
+
+      edges$source <- sources
+
+      targets <- gsub(pattern = "\`", replacement = '', x = edgetargets, fixed = FALSE)
+      targets <- gsub(pattern = "\"", replacement = '', x = targets, fixed = FALSE)
+      targets <- gsub(pattern = "\'", replacement = '', x = targets, fixed = FALSE)
+
+      edges$target <- targets
+
+      return(list(nodedat = nodes, edgedat = edges))
+
+    }
+
+
+    res <- improvenodename(nodes = nodedat, edges = edgedat)
+
+    nodedat <- res$nodedat
+    edgedat <- res$edgedat
+
+    rm(res)
+    ####################################################################################################
+
+
+
 
     createNetworkFromDataFrames(nodedat, edgedat, title = 'lilikoinet', collection = 'lilikoi2')
 
@@ -153,6 +188,9 @@ lilikoi.meta_path <- function(PDSmatrix, selected_Pathways_Weka, Metabolite_path
 
     nodelabel <- mapVisualProperty('node label','id','p')
 
+    nodelabelfontsize <- mapVisualProperty('node label font size', 'info', 'd',
+                                           c('metabolite', 'pathway'), c(10, 10))
+
     nodefill <- mapVisualProperty('node fill color', 'info', 'd',
                                   c('metabolite', 'pathway'), c('cyan', 'yellow'))
 
@@ -164,7 +202,7 @@ lilikoi.meta_path <- function(PDSmatrix, selected_Pathways_Weka, Metabolite_path
 
 
 
-    createVisualStyle(stylename, defaults, list(nodelabel, nodefill, nodeheight, nodewidth))
+    createVisualStyle(stylename, defaults, list(nodelabel, nodelabelfontsize, nodefill, nodeheight, nodewidth))
 
 
     #Implement the network
@@ -199,8 +237,7 @@ lilikoi.meta_path <- function(PDSmatrix, selected_Pathways_Weka, Metabolite_path
 
   }
 
-  nodegraph <- cytoimage(nodedat = nodedat, edgedat = edgedat)
-  #Need write completely as nodedat = nodedat, not just nodedat
+  nodegraph <- cytoimage(nodedat, edgedat)
   # return(nodegraph)
 
   returnList <- list()
@@ -208,6 +245,8 @@ lilikoi.meta_path <- function(PDSmatrix, selected_Pathways_Weka, Metabolite_path
   returnList$node.graph <- nodegraph
   return(returnList)
 }
+
+
 
 
 

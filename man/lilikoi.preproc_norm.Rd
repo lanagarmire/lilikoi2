@@ -26,10 +26,10 @@ from http://www.metabolomics-forum.com/index.php?topic=281.0.
 }
 \examples{
 \donttest{
-dt <- Loaddata(file=system.file("extdata", "plasma_breast_cancer.csv", package = "lilikoi2"))
+dt <- lilikoi.Loaddata(file=system.file("extdata",
+ "plasma_breast_cancer.csv", package = "lilikoi"))
 Metadata <- dt$Metadata
 dataSet <- dt$dataSet
 lilikoi.preproc_norm(inputdata=Metadata, method="standard")
 }
-
 }

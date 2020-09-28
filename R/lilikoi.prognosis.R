@@ -35,8 +35,8 @@
 #' }
 
 
-lilikoi.prognosis <- function(event, time, exprdata, percent=NULL, alpha=0,
-                      nfold=5, method="median", cvlambda=NULL,
+lilikoi.prognosis <- function(event, time, exprdata, percent=NULL, alpha=1,
+                      nfold=5, method="median", cvlambda="lambda.1se",
                       python.path=NULL, path=NULL,coxnnet=FALSE,
                       coxnnet_method="gradient"){
 

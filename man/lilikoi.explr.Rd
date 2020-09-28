@@ -21,3 +21,8 @@ Source of variation test results and PCA and t-SNE plot
 \description{
 Performs source of variation test and build PCA and t-SNE plots to visualize important information.
 }
+\examples{
+\donttest{
+lilikoi.explr(data, demo.data, pca=TRUE, tsne=FALSE)
+}
+}

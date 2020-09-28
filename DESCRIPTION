@@ -1,44 +1,35 @@
 Package: lilikoi
 Type: Package
 Title: Metabolomics Personalized Pathway Analysis Tool
-Version: 2.0.0
+Version: 2.0.1
 Authors@R: c(
- person("Xinying", "Fang", email = "xinyingf@umich.edu", role = c("aut","cre")),
- person("Fadhl", "Alakwaa", email = "falakwaa@hawaii.edu", role = c("aut")),
+ person("Xinying", "Fang", email = "xinyingf@umich.edu", role = c("aut")),
  person("Yu", "Liu", email = "uiluy@umich.edu", role = "aut"),
- person("Zhijie", "Ren", email = "rzj@umich.edu", role = "aut"))
-Maintainer: Xinying Fang <xinyingf@umich.edu>
-Description:  A personalized metabolites and pathway analysis tool. With the metabolites data provided by users, 'lilikoi2' maps the metabolites data into pathways and calculates pathway deregulation scores. It enables users to perform exploratory analysis, classification and prognosis analysis on both metabolites and pathways. References: H. Paul Benton <http://www.metabolomics-forum.com/index.php?topic=281.0> Jeff Xia <https://github.com/cangfengzhe/Metabo/blob/master/MetaboAnalyst/website/name_match.R> Travers Ching, Xun Zhu, Lana X. Garmire (2018) <doi:10.1371/journal.pcbi.1006076>.
+ person("Zhijie", "Ren", email = "rzj@umich.edu", role = "aut"),
+ person("Fadhl", "Alakwaa", email = "falakwaa@hawaii.edu", role = "aut"),
+ person("Sijia", "Huang", email = "scarlettcanny@gmail.com", role = "aut"),
+ person("Lana", "Garmire", email = "lgarmire@med.umich.edu", role = c("aut","cre")))
+Description:  A personalized metabolites and pathway analysis tool. With the metabolites data provided by users, lilikoi maps the metabolites data into pathways and calculates pathway deregulation scores. It enables users to perform exploratory analysis, classification and prognosis analysis on both metabolites and pathways. References: Fadhl M AlAkwaa, Breck Yunits, Sijia Huang, Hassam Alhajaji, Lana X Garmire <doi.org/10.1093/gigascience/giy136> H. Paul Benton <http://www.metabolomics-forum.com/index.php?topic=281.0> Jeff Xia <https://github.com/cangfengzhe/Metabo/blob/master/MetaboAnalyst/website/name_match.R> Travers Ching, Xun Zhu, Lana X. Garmire (2018) <doi:10.1371/journal.pcbi.1006076>.
 Depends: R (>= 3.5.0)
 Imports:
   car,
 	caret,
-  corrplot,
-  devtools,
   dplyr,
-  e1071,
   gbm,
   ggplot2,
   glmnet,
-  h2o,
-  hash,
-  Hmisc,
   impute,
   infotheo,
   limma,
   M3C,
-  Matrix,
   Metrics,
-  pamr,
+  MLmetrics,
   parallel,
   pathifier,
   pathview,
-  R.oo,
   plyr,
   preprocessCore,
-  princurve,
   pROC,
-  randomForest,
   RCy3,
   reticulate,
   reshape,
@@ -52,4 +43,4 @@ Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.0.2
 VignetteBuilder: knitr
-Suggests: knitr, rmarkdown
+Suggests: knitr, rmarkdown, h2o

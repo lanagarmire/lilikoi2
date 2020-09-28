@@ -2,7 +2,7 @@
 % Please edit documentation in R/lilikoi.KEGGplot.R
 \name{lilikoi.KEGGplot}
 \alias{lilikoi.KEGGplot}
-\title{KEGGplot}
+\title{lilikoi.KEGGplot}
 \usage{
 lilikoi.KEGGplot(
   metamat,
@@ -38,7 +38,8 @@ Visualizes selected pathways based on their metabolites expression data.
 }
 \examples{
 \donttest{
-dt <- Loaddata(file=system.file("extdata", "plasma_breast_cancer.csv", package = "lilikoi"))
+dt <- lilikoi.Loaddata(file=system.file("extdata",
+  "plasma_breast_cancer.csv", package = "lilikoi"))
 Metadata <- dt$Metadata
 dataSet <- dt$dataSet
 
@@ -47,7 +48,6 @@ sampleinfo <- Metadata$Label
 names(sampleinfo) <- rownames(Metadata)
 grouporder <- unique(Metadata$Label)
 lilikoi.KEGGplot(metamat, sampleinfo, grouporder, pathid = '00250',
-specie = 'hsa',filesuffix = 'GSE16873',
-Metabolite_pathway_table = Metabolite_pathway_table)
+  specie = 'hsa',filesuffix = 'GSE16873')
 }
 }
