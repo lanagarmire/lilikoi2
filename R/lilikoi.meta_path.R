@@ -5,6 +5,7 @@
 #' @param PDSmatrix Pathway deregulation score matrix
 #' @param selected_Pathways_Weka Selected top pathways from the featureSelection function
 #' @param Metabolite_pathway_table Metabolites mapping table
+#' @param pathway interested pathway name
 #' @importFrom stats lm
 #' @importFrom utils type.convert
 #' @import scales RCy3
@@ -12,7 +13,7 @@
 #' @export
 
 
-meta_path <- function(PDSmatrix, selected_Pathways_Weka, Metabolite_pathway_table){
+meta_path <- function(PDSmatrix, selected_Pathways_Weka, Metabolite_pathway_table, pathway="Alanine, Aspartate And Glutamate Metabolism"){
 
   regression <- function(input, PDSmatrix, selected_Pathways_Weka, Metabolite_pathway_table){
     tPDSmatrix <- t(PDSmatrix)
@@ -60,7 +61,6 @@ meta_path <- function(PDSmatrix, selected_Pathways_Weka, Metabolite_pathway_tabl
     resbar <- NULL
     nms <- NULL
     for (i in 1:length(reg)){
-      i=1
       mat <- as.data.frame(reg[[i]]$coefficients)
       temp1 <- rownames(mat)[2]
       nms <- rbind(nms, temp1)
@@ -80,7 +80,6 @@ meta_path <- function(PDSmatrix, selected_Pathways_Weka, Metabolite_pathway_tabl
   # Output nodedat and edgedat
   y <- NULL
   for (i in 1:length(selected_Pathways_Weka)){
-    # i = 1
     reg <- regression(input=selected_Pathways_Weka[i], PDSmatrix, selected_Pathways_Weka, Metabolite_pathway_table)
     res <- output(reg)
     path <- rep(selected_Pathways_Weka[i], length(reg))
@@ -110,7 +109,7 @@ meta_path <- function(PDSmatrix, selected_Pathways_Weka, Metabolite_pathway_tabl
   p <- ggplot(data=indres, aes(x=reorder(X1, X2, sum), y=X2)) + geom_bar(stat="identity")
   bipartite.plot = p + theme(axis.text.x = element_text(angle = 90, hjust = 1, size=10),
                              plot.title = element_text(color="black", hjust = 0.5)) +
-    labs(title=pathway, x=NULL, y=NULL)
+    labs(title=pathway, x=NULL, y="Meta-path association")
 
 
   ## Bipartite plot
