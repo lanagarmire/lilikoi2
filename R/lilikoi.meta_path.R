@@ -106,6 +106,9 @@ lilikoi.meta_path <- function(PDSmatrix, selected_Pathways_Weka, Metabolite_path
 
   ## individual pathway plot
   indres <- subset(y, path==pathway)
+  ids <- gsub(pattern = "\`", replacement = '', x = indres$X1, fixed = FALSE)
+  indres$X1 <- ids
+
   p <- ggplot(data=indres, aes(x=reorder(X1, X2, sum), y=X2)) + geom_bar(stat="identity")
   bipartite.plot = p + theme(axis.text.x = element_text(angle = 90, hjust = 1, size=10),
                              plot.title = element_text(color="black", hjust = 0.5)) +

@@ -13,7 +13,7 @@
 #'   "plasma_breast_cancer.csv", package = "lilikoi"))
 #' Metadata <- dt$Metadata
 #' dataSet <- dt$dataSet
-#' lilikoi.preproc_knn(inputdata=Metadata, method="standard")
+#' lilikoi.preproc_knn(inputdata=Metadata, method="knn")
 #' }
 
 
