@@ -18,7 +18,7 @@
 #' @param LOG TRUE if run LOG method
 #' @param DL TRUE if run deep learning method
 #' @keywords classifcation
-#' @import caret gbm scales
+#' @import caret gbm scales h2o
 #' @importFrom graphics legend par
 #' @importFrom utils capture.output
 #' @importFrom pROC auc roc smooth
