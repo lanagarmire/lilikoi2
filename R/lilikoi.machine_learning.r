@@ -9,6 +9,7 @@
 #' @param trainportion train percentage of the total sample size
 #' @param cvnum number of folds
 #' @param dlround epoch number for the deep learning method
+#' @param nrun denotes the total number of runs of each method to get their averaged performance metrics
 #' @param Rpart TRUE if run Rpart method
 #' @param LDA TRUE if run LDA method
 #' @param SVM TRUE if run SVM method
@@ -38,7 +39,7 @@
 
 lilikoi.machine_learning <- function (MLmatrix = PDSmatrix, measurementLabels = Label,
                               significantPathways = selected_Pathways_Weka,
-                              trainportion = 0.8, cvnum = 10, dlround=50,Rpart=TRUE,
+                              trainportion = 0.8, cvnum = 10, dlround=50,nrun=10,Rpart=TRUE,
                               LDA=TRUE,SVM=TRUE,RF=TRUE,GBM=TRUE,PAM=TRUE,LOG=TRUE,DL=TRUE) {
 
 
@@ -88,7 +89,7 @@ lilikoi.machine_learning <- function (MLmatrix = PDSmatrix, measurementLabels = 
 
   # model <- list()
 
-  for (k in 1:10){
+  for (k in 1:nrun){
 
     ###############Shuffle stat first
     rand <- sample(nrow(prostate_df))
