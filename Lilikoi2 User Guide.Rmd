@@ -19,9 +19,11 @@ Previously we developed Lilikoi, a personalized pathway-based method to classify
 
 ```{r message=FALSE, warning=FALSE}
 # github install
+library(remotes)
+install_github("lanagarmire/lilikoi2")
 
 # install
-# install.packages("~/Documents/GitHub/lilikoi2_0.1.0.tar.gz", repos = NULL, type = "source")
+# install.packages("lilikoi")
 library(lilikoi)
 ```
 
@@ -41,7 +43,15 @@ dt <- lilikoi.Loaddata(file=system.file("extdata", "plasma_breast_cancer.csv", p
 Metadata <- dt$Metadata
 dataSet <- dt$dataSet
 ```
- 
+
+
+## Check the preprocess functions:
+```{r}
+lilikoi.preproc_norm(inputdata=Metadata, method="standard")
+
+lilikoi.preproc_knn(inputdata=Metadata, method="knn")
+```
+
  
 ## Transform the metabolite names to the HMDB ids using Lilikoi MetaTOpathway function
 
@@ -78,14 +88,19 @@ dim(t(PDSmatrix))
 ```{r}
 
 selected_Pathways_Weka= lilikoi.featuresSelection(PDSmatrix,threshold= 0.54,method="gain")
-selected_Pathways_Weka=readRDS("selected_Pathways_Weka.rds")
+
 ```
 
 
 ## Metabolites-pathway regression
 
 ```{r}
-lilikoi.meta_path(PDSmatrix = PDSmatrix, selected_Pathways_Weka = selected_Pathways_Weka, Metabolite_pathway_table = Metabolite_pathway_table)
+# Before running this function, users need to download Cytoscape from http://www.cytoscape.org/download.php
+# Keep Cytoscape running, then you can connect to R package RCy3
+# For more info, please refer to vignettes of RCy3 
+# If run multiple times, there will be notifications from Cytoscape asking you to overwrite the former graph.
+
+lilikoi.meta_path(PDSmatrix = PDSmatrix, selected_Pathways_Weka = selected_Pathways_Weka, Metabolite_pathway_table = Metabolite_pathway_table, pathway = "Alanine, Aspartate And Glutamate Metabolism")
 ```
 
 
@@ -99,9 +114,10 @@ We updated the lilikoi.machine_learning function so that users can choose which 
 dt = lilikoi.Loaddata(file="er_162.csv")
 Metadata <- dt$Metadata
 dataSet <- dt$dataSet
+library(h2o)
 lilikoi.machine_learning(MLmatrix = Metadata, measurementLabels = Metadata$Label,
                               significantPathways = 0,
-                              trainportion = 0.8, cvnum = 10, dlround=50,Rpart=TRUE,
+                              trainportion = 0.8, cvnum = 10, dlround=50,nrun=10, Rpart=TRUE,
                               LDA=TRUE,SVM=TRUE,RF=TRUE,GBM=TRUE,PAM=FALSE,LOG=TRUE,DL=TRUE)
 ```
 
@@ -113,11 +129,15 @@ lilikoi.machine_learning(MLmatrix = Metadata, measurementLabels = Metadata$Label
 ```{r}
 dt <- lilikoi.Loaddata(file = "JCI71180sd2_processed_lilikoi.csv")
 
+# dt <- lilikoi.Loaddata(file = "JCI71180sd2_processed_tumor.xlsx")
+
 Metadata <- dt$Metadata
 dataSet <- dt$dataSet
 
-convertResults=lilikoi.MetaTOpathway('name')
+convertResults=lilikoi.MetaTOpathway('name', chebi=TRUE)
 Metabolite_pathway_table = convertResults$table
+
+# write.csv(Metabolite_pathway_table, "Lilikoi2_Supplementary_JCI71180sd2_Identifiers.csv")
 ```
 
 ```{r}
@@ -209,7 +229,7 @@ sampleinfo <- Metadata$Label
 names(sampleinfo) <- rownames(Metadata)
 grouporder <- unique(Metadata$Label)
 
-# data("bods", package = "pathview")
+library(pathview)
 lilikoi.KEGGplot(metamat = metamat, sampleinfo = sampleinfo, grouporder = grouporder,
                  pathid = '00250', specie = 'hsa',
                  filesuffix = 'GSE16873', 
