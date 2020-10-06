@@ -32,7 +32,7 @@ library(lilikoi)
 ## Load data
 
 ```{r eval=FALSE, include=TRUE}
-dt <- lilikoi.Loaddata(file=system.file("extdata", "plasma_breast_cancer.csv", package = "lilikoi2"))
+dt <- lilikoi.Loaddata(file=system.file("extdata", "plasma_breast_cancer.csv", package = "lilikoi"))
 Metadata <- dt$Metadata
 dataSet <- dt$dataSet
 ```
