@@ -21,7 +21,7 @@
 lilikoi.explr <- function(data, demo.data, pca=FALSE, tsne=FALSE){
 
 
-  sovdata <- data
+  sovdat <- data
   pd <- demo.data
 
   # Calculate F
