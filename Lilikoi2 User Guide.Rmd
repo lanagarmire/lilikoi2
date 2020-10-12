@@ -18,7 +18,7 @@ Previously we developed Lilikoi, a personalized pathway-based method to classify
 ## Install Lilikoi
 
 ```{r message=FALSE, warning=FALSE}
-# github install
+# github install for most updated version of lilikoi.
 library(remotes)
 install_github("lanagarmire/lilikoi2")
 
@@ -94,12 +94,9 @@ selected_Pathways_Weka= lilikoi.featuresSelection(PDSmatrix,threshold= 0.54,meth
 
 ## Metabolites-pathway regression
 
-```{r}
-# Before running this function, users need to download Cytoscape from http://www.cytoscape.org/download.php
-# Keep Cytoscape running, then you can connect to R package RCy3
-# For more info, please refer to vignettes of RCy3 
-# If run multiple times, there will be notifications from Cytoscape asking you to overwrite the former graph.
+Before running this function, users need to download Cytoscape from http://www.cytoscape.org/download.php. Keep Cytoscape running, then you can connect to R package RCy3. For more info, please refer to vignettes of RCy3. If run multiple times, there will be notifications from Cytoscape asking you to overwrite the former graph.
 
+```{r}
 lilikoi.meta_path(PDSmatrix = PDSmatrix, selected_Pathways_Weka = selected_Pathways_Weka, Metabolite_pathway_table = Metabolite_pathway_table, pathway = "Alanine, Aspartate And Glutamate Metabolism")
 ```
 
@@ -114,7 +111,7 @@ We updated the lilikoi.machine_learning function so that users can choose which 
 dt = lilikoi.Loaddata(file="er_162.csv")
 Metadata <- dt$Metadata
 dataSet <- dt$dataSet
-library(h2o)
+# library(h2o)
 lilikoi.machine_learning(MLmatrix = Metadata, measurementLabels = Metadata$Label,
                               significantPathways = 0,
                               trainportion = 0.8, cvnum = 10, dlround=50,nrun=10, Rpart=TRUE,
@@ -153,7 +150,8 @@ jc <- jc[-27,]
 jctime<-jc$TIME
 jcevent<-as.numeric(as.factor(jc$EVENT)) - 1
 
-# Pathway deregulation score information
+
+# Pathway dysregulation score information
 exprdata = t(as.matrix(PDSmatrix))
 exprdata_tumor = exprdata[66:132, ]
 exprdata_tumor = exprdata_tumor[-27, ] # The subtracted subject has survival time to be 0, so we deleted it.
@@ -209,12 +207,12 @@ lilikoi.prognosis(event, time, exprdata, percent=percent, alpha=0, nfold=5, meth
 
 
 
-## KEGG plot
+## KEGG (pathview) plot
 
 ```{r}
 # ER162 dataset
 
-dt = lilikoi.Loaddata(file="er_162.csv")
+dt = lilikoi.Loaddata(file=system.file("extdata","plasma_breast_cancer.csv", package = "lilikoi"))
 Metadata <- dt$Metadata
 dataSet <- dt$dataSet
 convertResults=lilikoi.MetaTOpathway('name')

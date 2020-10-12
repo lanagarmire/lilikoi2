@@ -13,7 +13,6 @@
 #' @return Pathview visualization output
 #' @import limma
 #' @importFrom plyr ddply
-#' @importFrom pathview pathview
 #' @importFrom stats model.matrix
 #' @export
 #' @examples

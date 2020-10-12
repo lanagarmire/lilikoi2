@@ -11,6 +11,7 @@ lilikoi.machine_learning(
   trainportion = 0.8,
   cvnum = 10,
   dlround = 50,
+  nrun = 10,
   Rpart = TRUE,
   LDA = TRUE,
   SVM = TRUE,
@@ -33,6 +34,8 @@ lilikoi.machine_learning(
 \item{cvnum}{number of folds}
 
 \item{dlround}{epoch number for the deep learning method}
+
+\item{nrun}{denotes the total number of runs of each method to get their averaged performance metrics}
 
 \item{Rpart}{TRUE if run Rpart method}
 

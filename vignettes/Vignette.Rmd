@@ -29,6 +29,8 @@ install.packages("lilikoi")
 library(lilikoi)
 ```
 
+For certain functions, users need to install packages "M3C", 'pathifier' and 'pathview' by themselves.
+
 ## Load data
 
 ```{r eval=FALSE, include=TRUE}
@@ -48,8 +50,15 @@ Metabolite_pathway_table = convertResults$table
 head(Metabolite_pathway_table)
 ```
 
-## Select the most signficant pathway related to phenotype.
+## Calculate the Pathway Dysregulation score
+
 A specific pathway dysregulation score (PDS) is inferred to measure the abnormity for each sample in each pathway. For each pathway, the samples are mapped in a high dimensional principal component space and a principal curve is constructed along the samples and smoothed. The PDS score measures the distance from the projected dot along the curve to the centroid of normal samples (origin point of the curve).
+
+```{r eval=FALSE, include=TRUE}
+PDSmatrix=lilikoi.PDSfun(Metabolite_pathway_table)
+```
+
+## Select the most signficant pathway related to phenotype.
 
 ```{r eval=FALSE, include=TRUE}
 selected_Pathways_Weka= lilikoi.featuresSelection(PDSmatrix,threshold= 0.54,method="gain")
