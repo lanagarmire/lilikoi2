@@ -10,7 +10,7 @@ Lilikoi computes the pathway deregulation score for a given set of metabolites, 
 install.packages("lilikoi")
 
 # Or for the latest dev version:
-devtools::install_github("lanagarmire/lilikoi")
+devtools::install_github("lanagarmire/lilikoi2")
 ```
 
 ## Example
