@@ -102,7 +102,7 @@ lilikoi.KEGGplot <- function(metamat, sampleinfo, grouporder, pathid = '00250', 
   fit1 <- lmFit(mergedat, design)
   fit2 <- eBayes(fit1)
 
-  logfcres <- topTable(fit2, coef = 2, n = nrow(fit2))
+  logfcres <- topTable(fit2, coef = 2, number = nrow(fit2))
   logfcres <- data.frame(samplename = row.names(logfcres), logFC = logfcres$logFC,
                          stringsAsFactors = FALSE)
   row.names(logfcres) <- logfcres$samplename
