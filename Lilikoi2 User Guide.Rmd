@@ -124,7 +124,7 @@ lilikoi.machine_learning(MLmatrix = Metadata, measurementLabels = Metadata$Label
 
 
 ```{r}
-dt <- lilikoi.Loaddata(file = "JCI71180sd2_processed_lilikoi.csv")
+dt <- lilikoi.Loaddata(file = "/Users/rrrrrita/Desktop/lilikoi.temp/JCI71180sd2_processed_lilikoi.csv")
 
 # dt <- lilikoi.Loaddata(file = "JCI71180sd2_processed_tumor.xlsx")
 
@@ -134,7 +134,6 @@ dataSet <- dt$dataSet
 convertResults=lilikoi.MetaTOpathway('name', chebi=TRUE)
 Metabolite_pathway_table = convertResults$table
 
-# write.csv(Metabolite_pathway_table, "Lilikoi2_Supplementary_JCI71180sd2_Identifiers.csv")
 ```
 
 ```{r}
