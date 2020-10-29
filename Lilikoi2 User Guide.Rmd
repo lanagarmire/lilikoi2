@@ -230,6 +230,7 @@ metamat <- t(t(plasma_data[-1]))
 metamat <- log2(metamat)
 grouporder <- c('Normal', 'Cancer')
 
+# install.packages("pathview")
 library(pathview)
 lilikoi.KEGGplot(metamat = metamat, sampleinfo = sampleinfo, grouporder = grouporder,
                  pathid = '00250', specie = 'hsa',

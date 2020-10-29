@@ -23,12 +23,16 @@
 #' convertResults=lilikoi.MetaTOpathway('name')
 #' Metabolite_pathway_table = convertResults$table
 #'
-#' metamat <- Metadata[, -1]
-#' sampleinfo <- Metadata$Label
-#' names(sampleinfo) <- rownames(Metadata)
-#' grouporder <- unique(Metadata$Label)
-#' options(bitmapType='cairo')
-#' lilikoi.KEGGplot(metamat = metamat, sampleinfo = sampleinfo, grouporder = grouporder,
+#'data_dir=system.file("extdata", "plasma_breast_cancer.csv", package = "lilikoi")
+#'plasma_data <- read.csv(data_dir, check.names=F, row.names=1, stringsAsFactors = FALSE)
+#'sampleinfo <- plasma_data$Label
+#'names(sampleinfo) <- row.names(plasma_data)
+#'
+#'metamat <- t(t(plasma_data[-1]))
+#'metamat <- log2(metamat)
+#'grouporder <- c('Normal', 'Cancer')
+#'options(bitmapType='cairo')
+#'lilikoi.KEGGplot(metamat = metamat, sampleinfo = sampleinfo, grouporder = grouporder,
 #' pathid = '00250', specie = 'hsa',filesuffix = 'GSE16873',Metabolite_pathway_table = Metabolite_pathway_table)
 #' }
 
