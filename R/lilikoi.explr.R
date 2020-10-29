@@ -13,7 +13,7 @@
 #' @export
 #' @examples
 #' \donttest{
-#' lilikoi.explr(data, demo.data, pca=TRUE, tsne=FALSE)
+#' # lilikoi.explr(data, demo.data, pca=TRUE, tsne=FALSE)
 #' }
 
 

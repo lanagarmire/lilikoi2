@@ -11,7 +11,7 @@
 #' @param filesuffix output file suffix
 #' @param Metabolite_pathway_table Metabolites mapping table
 #' @return Pathview visualization output
-#' @import limma
+#' @import limma pathview
 #' @importFrom plyr ddply
 #' @importFrom stats model.matrix
 #' @export
@@ -24,16 +24,20 @@
 #' Metabolite_pathway_table = convertResults$table
 #'
 #' data_dir=system.file("extdata", "plasma_breast_cancer.csv", package = "lilikoi")
-#' plasma_data <- read.csv(data_dir, check.names=F, row.names=1, stringsAsFactors = FALSE)
+#' plasma_data <- read.csv(data_dir, check.names=FALSE, row.names=1, stringsAsFactors = FALSE)
 #' sampleinfo <- plasma_data$Label
 #' names(sampleinfo) <- row.names(plasma_data)
 #'
 #' metamat <- t(t(plasma_data[-1]))
 #' metamat <- log2(metamat)
 #' grouporder <- c('Normal', 'Cancer')
+#' # make sure install pathview package first before running the following code.
+#' library(pathview)
+#' data("bods", package = "pathview")
 #' options(bitmapType='cairo')
-#' # lilikoi.KEGGplot(metamat = metamat, sampleinfo = sampleinfo, grouporder = grouporder,
-#'  # pathid = '00250', specie = 'hsa',filesuffix = 'GSE16873',Metabolite_pathway_table = Metabolite_pathway_table)
+#'  lilikoi.KEGGplot(metamat = metamat, sampleinfo = sampleinfo, grouporder = grouporder,
+#'   pathid = '00250', specie = 'hsa',filesuffix = 'GSE16873',
+#'   Metabolite_pathway_table = Metabolite_pathway_table)
 #' }
 
 lilikoi.KEGGplot <- function(metamat, sampleinfo, grouporder, pathid = '00250', specie = 'hsa',

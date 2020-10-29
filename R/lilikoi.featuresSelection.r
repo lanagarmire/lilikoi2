@@ -4,7 +4,7 @@
 #' @param PDSmatrix from PDSfun function
 #' @param threshold to select the top pathways
 #' @param method information gain ("info") or gain ratio ("gain")
-#' @import caret RWeka infotheo ggplot2
+#' @import caret RWeka infotheo ggplot2 pathifier
 #' @importFrom stats reorder
 #' @importFrom graphics plot
 #' @keywords features selection
@@ -17,8 +17,8 @@
 #' Metadata <- dt$Metadata
 #' dataSet <- dt$dataSet
 #' Metabolite_pathway_table=lilikoi.MetaTOpathway('name')
-#' PDSmatrix= lilikoi.PDSfun(Metabolite_pathway_table)
-#' selected_Pathways_Weka= lilikoi.featuresSelection(PDSmatrix,threshold= 0.54,method="gain")
+#' # PDSmatrix= lilikoi.PDSfun(Metabolite_pathway_table)
+#' # selected_Pathways_Weka= lilikoi.featuresSelection(PDSmatrix,threshold= 0.54,method="gain")
 #' }
 #'
 lilikoi.featuresSelection <- function(PDSmatrix,threshold= 0.5,method="info"){

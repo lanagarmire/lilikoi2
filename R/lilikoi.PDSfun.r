@@ -5,7 +5,7 @@
 #' meta_path.RData
 #' @param qvec This is the Metabolite_pathway_table from MetaTOpathway function. This table includes the metabolites ids and the its corssponding hmdb ids
 #' @keywords PDS
-#' @import dplyr
+#' @import dplyr pathifier
 #' @return A large matrix of the pathway deregulation scores for each pathway in different samples.
 #' @export
 #' @examples
