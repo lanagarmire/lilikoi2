@@ -166,9 +166,9 @@ nfold = 5
 method = "quantile"
 cvlambda = "lambda.1se"
 
-library(survival)
-library(glmnet)
-library(survminer)
+# library(survival)
+# library(glmnet)
+# library(survminer)
 lilikoi.prognosis(event, time, exprdata, percent=percent, alpha=0, nfold=5, method="quantile",
           cvlambda=cvlambda,python.path=NULL,coxnnet=FALSE,coxnnet_method="gradient")
 ```
@@ -232,6 +232,7 @@ grouporder <- c('Normal', 'Cancer')
 
 # install.packages("pathview")
 library(pathview)
+options(bitmapType='cairo') # Run this line if in linux
 lilikoi.KEGGplot(metamat = metamat, sampleinfo = sampleinfo, grouporder = grouporder,
                  pathid = '00250', specie = 'hsa',
                  filesuffix = 'GSE16873', 

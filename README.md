@@ -1,8 +1,6 @@
 ## Lilikoi is a novel tool for personalized pathway analysis of metabolomics data.
 
-Lilikoi computes the pathway deregulation score for a given set of metabolites, selects the pathways with the highest mutual information and then uses them to build a classifier.
-
-"Lilikoi: an R package for personalized pathway-based classification modeling using metabolomics data. F. Alakwaa, S. Huang, and L. Garmire (2018) \doi{10.1101/283408}."
+Previously we developed Lilikoi, a personalized pathway-based method to classify diseases using metabolomics data. Given the new trends of computation in the metabolomics field, here we report the next version of Lilikoi as a significant upgrade. The new Lilikoi v2 R package has implemented a deep-learning method for classification, in addition to popular machine learning methods. It also has several new modules, including the most significant addition of prognosis prediction, implemented by Cox-PH model and the deep-learning based Cox-nnet model. Additionally, Lilikoi v2 supports data preprocessing, exploratory analysis, pathway visualization and metabolite-pathway regression. In summary, Lilikoi v2 is a modern, comprehensive package to enable metabolomics analysis in R programming environment.
 
 ## Installation
 
@@ -18,52 +16,54 @@ devtools::install_github("lanagarmire/lilikoi2")
 ```
 # library(lilikoi)
 
-filename <- system.file("extdata", "plasma_breast_cancer.csv", package = "lilikoi")
-metaboliteMeasurements <- read.csv(file = filename, check.names = FALSE, row.names = 1)
-metaboliteNames <- colnames(metaboliteMeasurements)[-1]
-clinicalFactorsData <- read.csv(file = system.file("extdata", "plasma_breast_cancer_Meta.csv",
-  package = "lilikoi"))
+dt <- lilikoi.Loaddata(file=system.file("extdata", "plasma_breast_cancer.csv", package = "lilikoi"))
+Metadata <- dt$Metadata
+dataSet <- dt$dataSet
 
-# The below lines shrink the dataset for faster test runs. Remove them to operate on
-# full dataset
-metaboliteMeasurements <- metaboliteMeasurements[, 1:20]
-metaboliteNames <- colnames(metaboliteMeasurements)[-1]
+# Transform the metabolite names to the HMDB ids using Lilikoi MetaTOpathway function
+convertResults=lilikoi.MetaTOpathway('name')
+Metabolite_pathway_table = convertResults$table
+head(Metabolite_pathway_table)
 
-metabolitePathwayTable <- lilikoi.metab_to_pathway(metaboliteNames, "name")
+# Transform metabolites into pathway using Pathifier algorithm
+PDSmatrix=lilikoi.PDSfun(Metabolite_pathway_table)
 
-# We use a subset of the database to speed up tests.
-# Swap the comments on the below two lines to run on the full database.
-# PDSmatrix <- lilikoi.get_pd_scores(metaboliteMeasurements, metabolitePathwayTable)
-PDSmatrix <- lilikoi.get_pd_scores(metaboliteMeasurements, metabolitePathwayTable,
-  lilikoi::data.smpdb[1:25,])
+# Select the most signficant pathway related to phenotype.
+selected_Pathways_Weka= lilikoi.featuresSelection(PDSmatrix,threshold= 0.54,method="gain")
 
+# Machine learning
+lilikoi.machine_learning(MLmatrix = Metadata, measurementLabels = Metadata$Label,
+                              significantPathways = 0,
+                              trainportion = 0.8, cvnum = 10, dlround=50,nrun=10, Rpart=TRUE,
+                              LDA=TRUE,SVM=TRUE,RF=TRUE,GBM=TRUE,PAM=FALSE,LOG=TRUE,DL=TRUE)
+                              
+# Prognosis model
+lilikoi.prognosis(event, time, exprdata, percent=percent, alpha=0, nfold=5, method="quantile",
+          cvlambda=cvlambda,python.path=NULL,coxnnet=FALSE,coxnnet_method="gradient")
+          
+# Metabolites-pathway regression
+lilikoi.meta_path(PDSmatrix = PDSmatrix, selected_Pathways_Weka = selected_Pathways_Weka, Metabolite_pathway_table = Metabolite_pathway_table, pathway = "Alanine, Aspartate And Glutamate Metabolism")
 
-significantPathways <- lilikoi.select_pathways(PDSmatrix, metaboliteMeasurements,
-  threshold = 0.42, method = "gain")
-
-mlResults <- lilikoi.machine_learning(PDSmatrix, metaboliteMeasurements$Label,
-  significantPathways)
-
-finalModel <- lilikoi.adjust_model(mlResults$mlResults, PDSmatrix, significantPathways,
-  metaboliteMeasurements, clinicalFactorsData, factors = c("Age", "Race"))
+# KEGG plot
+lilikoi.KEGGplot(metamat = metamat, sampleinfo = sampleinfo, grouporder = grouporder,
+                 pathid = '00250', specie = 'hsa',
+                 filesuffix = 'GSE16873', 
+                 Metabolite_pathway_table = Metabolite_pathway_table)
 ```
 
-## Updating the External Databases
 
-Lilikoi depends on data from HMDB, SMPDB, and MetaboAnalyst. This library ships with the latest data as
-of the date of publication. To update to the latest data from these sources, load and run the
-`lilikoi.update_database()` method found in the `lilikoi.update_database.r` file.
-
-Warning: the datasets are large (>5GB) and this step may take greater than 20 minutes.
 
 # Built By
 
+*   Xinying Fang https://github.com/vivid225
+*   Yu Liu 
+*   Zhijie Ren 
+*   Yuheng Du https://github.com/yhdu36
+*   Qianhui Huang
 *   Fadhl Alakwaa https://github.com/FADHLyemen
 *   Sijia Huang https://github.com/scarlettcanny
+*   Lana Garmire https://github.com/lanagarmire
 
 # More Examples
 
-*   Shiny Version: http://lilikoi.garmiregroup.org
-*   https://github.com/lanagarmire/lilikoi/blob/master/lilikoi_example.ipynb
-*   https://github.com/lanagarmire/lilikoi/blob/master/lilikoiExample.r
-*   https://mybinder.org/v2/gh/FADHLyemen/lilikoi_Fadhl/master
+*   https://github.com/lanagarmire/lilikoi2/blob/master/Lilikoi2%20User%20Guide.Rmd

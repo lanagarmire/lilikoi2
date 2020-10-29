@@ -23,24 +23,26 @@
 #' convertResults=lilikoi.MetaTOpathway('name')
 #' Metabolite_pathway_table = convertResults$table
 #'
-#'data_dir=system.file("extdata", "plasma_breast_cancer.csv", package = "lilikoi")
-#'plasma_data <- read.csv(data_dir, check.names=F, row.names=1, stringsAsFactors = FALSE)
-#'sampleinfo <- plasma_data$Label
-#'names(sampleinfo) <- row.names(plasma_data)
+#' data_dir=system.file("extdata", "plasma_breast_cancer.csv", package = "lilikoi")
+#' plasma_data <- read.csv(data_dir, check.names=F, row.names=1, stringsAsFactors = FALSE)
+#' sampleinfo <- plasma_data$Label
+#' names(sampleinfo) <- row.names(plasma_data)
 #'
-#'metamat <- t(t(plasma_data[-1]))
-#'metamat <- log2(metamat)
-#'grouporder <- c('Normal', 'Cancer')
-#'options(bitmapType='cairo')
-#'lilikoi.KEGGplot(metamat = metamat, sampleinfo = sampleinfo, grouporder = grouporder,
-#' pathid = '00250', specie = 'hsa',filesuffix = 'GSE16873',Metabolite_pathway_table = Metabolite_pathway_table)
+#' metamat <- t(t(plasma_data[-1]))
+#' metamat <- log2(metamat)
+#' grouporder <- c('Normal', 'Cancer')
+#' options(bitmapType='cairo')
+#' install.packages("pathview")
+#' library(pathview)
+#' lilikoi.KEGGplot(metamat = metamat, sampleinfo = sampleinfo, grouporder = grouporder,
+#'  pathid = '00250', specie = 'hsa',filesuffix = 'GSE16873',Metabolite_pathway_table = Metabolite_pathway_table)
 #' }
 
 lilikoi.KEGGplot <- function(metamat, sampleinfo, grouporder, pathid = '00250', specie = 'hsa',
                              filesuffix = 'GSE16873',
                              Metabolite_pathway_table = Metabolite_pathway_table){
 
-  meta_table <- Metabolite_pathway_table$table[, c("Query", "KEGG", "pathway")]
+  meta_table <- Metabolite_pathway_table[, c("Query", "KEGG", "pathway")]
 
   for(i in 1:ncol(meta_table)){
 
