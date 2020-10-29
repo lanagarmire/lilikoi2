@@ -1,15 +1,16 @@
 Package: lilikoi
 Type: Package
 Title: Metabolomics Personalized Pathway Analysis Tool
-Version: 2.0.1
+Version: 2.0.3
 Authors@R: c(
  person("Xinying", "Fang", email = "xinyingf@umich.edu", role = c("aut")),
  person("Yu", "Liu", email = "uiluy@umich.edu", role = "aut"),
  person("Zhijie", "Ren", email = "rzj@umich.edu", role = "aut"),
  person("Fadhl", "Alakwaa", email = "falakwaa@hawaii.edu", role = "aut"),
  person("Sijia", "Huang", email = "scarlettcanny@gmail.com", role = "aut"),
- person("Lana", "Garmire", email = "lgarmire@med.umich.edu", role = c("aut","cre")))
+ person("Lana", "Garmire", email = "lana.garmire.group@gmail.com", role = c("aut","cre")))
 Description:  A personalized metabolites and pathway analysis tool. With the metabolites data provided by users, lilikoi maps the metabolites data into pathways and calculates pathway deregulation scores. It enables users to perform exploratory analysis, classification and prognosis analysis on both metabolites and pathways. References: Fadhl M AlAkwaa, Breck Yunits, Sijia Huang, Hassam Alhajaji, Lana X Garmire <doi.org/10.1093/gigascience/giy136> H. Paul Benton <http://www.metabolomics-forum.com/index.php?topic=281.0> Jeff Xia <https://github.com/cangfengzhe/Metabo/blob/master/MetaboAnalyst/website/name_match.R> Travers Ching, Xun Zhu, Lana X. Garmire (2018) <doi:10.1371/journal.pcbi.1006076>.
+biocViews:
 Depends: R (>= 3.5.0)
 Imports:
   car,
@@ -26,7 +27,6 @@ Imports:
   Metrics,
   MLmetrics,
   parallel,
-  pathifier
   plyr,
   preprocessCore,
   pROC,
@@ -37,10 +37,13 @@ Imports:
   scales,
   stringr,
   survminer,
-  survival
+  survival,
+  pathview,
+  M3C,
+  pathifier
 License: GPL-2
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.0.2
 VignetteBuilder: knitr
-Suggests: knitr, rmarkdown, M3C, pathview, pathifier
+Suggests: knitr, rmarkdown
