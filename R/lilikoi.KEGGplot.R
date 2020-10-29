@@ -32,10 +32,8 @@
 #' metamat <- log2(metamat)
 #' grouporder <- c('Normal', 'Cancer')
 #' options(bitmapType='cairo')
-#' install.packages("pathview")
-#' library(pathview)
-#' lilikoi.KEGGplot(metamat = metamat, sampleinfo = sampleinfo, grouporder = grouporder,
-#'  pathid = '00250', specie = 'hsa',filesuffix = 'GSE16873',Metabolite_pathway_table = Metabolite_pathway_table)
+#' # lilikoi.KEGGplot(metamat = metamat, sampleinfo = sampleinfo, grouporder = grouporder,
+#'  # pathid = '00250', specie = 'hsa',filesuffix = 'GSE16873',Metabolite_pathway_table = Metabolite_pathway_table)
 #' }
 
 lilikoi.KEGGplot <- function(metamat, sampleinfo, grouporder, pathid = '00250', specie = 'hsa',

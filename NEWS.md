@@ -1,3 +1,3 @@
-# lilikoi 0.1.0.9000
+# lilikoi 2.0.3
 
-*   first release
+*   second release

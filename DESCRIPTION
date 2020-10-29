@@ -26,6 +26,7 @@ Imports:
   Metrics,
   MLmetrics,
   parallel,
+  pathifier
   plyr,
   preprocessCore,
   pROC,

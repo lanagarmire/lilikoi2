@@ -16,7 +16,7 @@
 #' dataSet <- dt$dataSet
 #' convertResults=lilikoi.MetaTOpathway('name')
 #' Metabolite_pathway_table = convertResults$table
-#' PDSmatrix= lilikoi.PDSfun(Metabolite_pathway_table)
+#' # PDSmatrix= lilikoi.PDSfun(Metabolite_pathway_table)
 #' }
 
 lilikoi.PDSfun<-function(qvec){
