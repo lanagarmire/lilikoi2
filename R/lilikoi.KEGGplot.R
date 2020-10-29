@@ -17,24 +17,26 @@
 #' @export
 #' @examples
 #' \donttest{
-#' dt <- lilikoi.Loaddata(file=system.file("extdata",
-#'   "plasma_breast_cancer.csv", package = "lilikoi"))
+#' dt = lilikoi.Loaddata(file=system.file("extdata","plasma_breast_cancer.csv", package = "lilikoi"))
 #' Metadata <- dt$Metadata
 #' dataSet <- dt$dataSet
+#' convertResults=lilikoi.MetaTOpathway('name')
+#' Metabolite_pathway_table = convertResults$table
 #'
 #' metamat <- Metadata[, -1]
 #' sampleinfo <- Metadata$Label
 #' names(sampleinfo) <- rownames(Metadata)
 #' grouporder <- unique(Metadata$Label)
-#' lilikoi.KEGGplot(metamat, sampleinfo, grouporder, pathid = '00250',
-#'   specie = 'hsa',filesuffix = 'GSE16873')
+#' options(bitmapType='cairo')
+#' lilikoi.KEGGplot(metamat = metamat, sampleinfo = sampleinfo, grouporder = grouporder,
+#' pathid = '00250', specie = 'hsa',filesuffix = 'GSE16873',Metabolite_pathway_table = Metabolite_pathway_table)
 #' }
 
 lilikoi.KEGGplot <- function(metamat, sampleinfo, grouporder, pathid = '00250', specie = 'hsa',
                              filesuffix = 'GSE16873',
                              Metabolite_pathway_table = Metabolite_pathway_table){
 
-  meta_table <- Metabolite_pathway_table[, c("Query", "KEGG", "pathway")]
+  meta_table <- Metabolite_pathway_table$table[, c("Query", "KEGG", "pathway")]
 
   for(i in 1:ncol(meta_table)){
 
@@ -55,8 +57,6 @@ lilikoi.KEGGplot <- function(metamat, sampleinfo, grouporder, pathid = '00250', 
   mergedat <- as.data.frame(metamat)
   mergedat$KEGG <- keggmets$KEGG
   mergedat <- mergedat[c('KEGG', colnames(metamat))]
-
-
 
   mergekegg <- function(sub){
 
@@ -91,13 +91,12 @@ lilikoi.KEGGplot <- function(metamat, sampleinfo, grouporder, pathid = '00250', 
 
   mergedat <- mergedat[,pd$samplename]
 
-
   design <- model.matrix(~ samplegroup, data = pd)
 
   fit1 <- lmFit(mergedat, design)
   fit2 <- eBayes(fit1)
 
-  logfcres <- topTable(fit2, coef = 2, number = nrow(fit2))
+  logfcres <- topTable(fit2, coef = 2, n = nrow(fit2))
   logfcres <- data.frame(samplename = row.names(logfcres), logFC = logfcres$logFC,
                          stringsAsFactors = FALSE)
   row.names(logfcres) <- logfcres$samplename
@@ -107,7 +106,7 @@ lilikoi.KEGGplot <- function(metamat, sampleinfo, grouporder, pathid = '00250', 
 
   pv.out <- pathview(cpd.data = logfcres, pathway.id = pathid, species = specie, out.suffix = filesuffix)
 
-  # print(pv.out)
+  print(pv.out)
 
   return(pv.out)
 
