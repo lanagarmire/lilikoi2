@@ -17,6 +17,8 @@ Previously we developed Lilikoi, a personalized pathway-based method to classify
 
 ## Install Lilikoi
 
+Please make sure you have installed these packages (‘impute’, ‘limma’, ‘M3C’, ‘pathifier’, ‘pathview’, ‘preprocessCore’, ‘RCy3’) before installing lilikoi.
+
 ```{r message=FALSE, warning=FALSE}
 # github install for most updated version of lilikoi.
 library(remotes)
@@ -94,7 +96,7 @@ selected_Pathways_Weka= lilikoi.featuresSelection(PDSmatrix,threshold= 0.54,meth
 
 ## Metabolites-pathway regression
 
-Before running this function, users need to download Cytoscape from http://www.cytoscape.org/download.php. Keep Cytoscape running, then you can connect to R package RCy3. For more info, please refer to vignettes of RCy3. If run multiple times, there will be notifications from Cytoscape asking you to overwrite the former graph.
+Before running this function, users need to download Cytoscape from http://www.cytoscape？org/download.php. Keep Cytoscape running, then you can connect to R package RCy3. For more info, please refer to vignettes of RCy3. If run multiple times, there will be notifications from Cytoscape asking you to overwrite the former graph.
 
 ```{r}
 lilikoi.meta_path(PDSmatrix = PDSmatrix, selected_Pathways_Weka = selected_Pathways_Weka, Metabolite_pathway_table = Metabolite_pathway_table, pathway = "Alanine, Aspartate And Glutamate Metabolism")
@@ -209,7 +211,6 @@ lilikoi.prognosis(event, time, exprdata, percent=percent, alpha=0, nfold=5, meth
 ## KEGG (pathview) plot
 
 ```{r}
-# ER162 dataset
 
 dt = lilikoi.Loaddata(file=system.file("extdata","plasma_breast_cancer.csv", package = "lilikoi"))
 Metadata <- dt$Metadata
