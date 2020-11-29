@@ -1,228 +1,537 @@
-"Query","Match","HMDB","PubChem","KEGG","Comment","pathway"
-"Oxaloacetate","Oxalacetic acid","HMDB00223","970","C00036","1","Alanine Metabolism"
-"Arachidonic acid","Arachidonic acid","HMDB01043","444899","C00219","1","Alpha Linolenic Acid and Linoleic Acid Metabolism"
-"Tetracosahexaenoic acid","Tetracosahexaenoic acid","HMDB02007","11792612","","1","Alpha Linolenic Acid and Linoleic Acid Metabolism"
-"N-Acetylneuraminic acid","N-Acetylneuraminic acid","HMDB00230","445063","C19910","1","Amino Sugar Metabolism"
-"Asparagine","L-Asparagine","HMDB00168","6267","C00152","1","Ammonia Recycling"
-"Glutamine","L-Glutamine","HMDB00641","5961","C00064","1","Ammonia Recycling"
-"Androstenedione","Androstenedione","HMDB00053","6128","C00280","1","Androgen and Estrogen Metabolism"
-"4-Hydroxy-2-oxoglutaric acid","4-Hydroxy-2-oxoglutaric acid","HMDB02070","599","C01127","1","Arginine and Proline Metabolism"
-"Urea","Urea","HMDB00294","1176","C00086","1","Arginine and Proline Metabolism"
-"1-Pyrroline-2-carboxylic acid","1-Pyrroline-2-carboxylic acid","HMDB06875","440046","C03564","1","Arginine and Proline Metabolism"
-"Citrulline","Citrulline","HMDB00904","9750","C00327","1","Arginine and Proline Metabolism"
-"Aspartate","L-Aspartic acid","HMDB00191","5960","C00049","1","Beta-Alanine Metabolism"
-"Uracil","Uracil","HMDB00300","1174","C00106","1","Beta-Alanine Metabolism"
-"Carnosine","Carnosine","HMDB00033","439224","C00386","1","Beta-Alanine Metabolism"
-"Beta-alanine","Beta-Alanine","HMDB00056","239","C00099","1","Beta-Alanine Metabolism"
-"Caproic acid","Caproic acid","HMDB00535","8892","C01585","1","Beta Oxidation of Very Long Chain Fatty Acids"
-"Dodecanoic acid","Dodecanoic acid","HMDB00638","3893","C02679","1","Beta Oxidation of Very Long Chain Fatty Acids"
-"Deoxycholic acid","Deoxycholic acid","HMDB00626","222528","C04483","1","Bile Acid Biosynthesis"
-"5-Acetylamino-6-formylamino-3-methyluracil","5-Acetylamino-6-formylamino-3-methyluracil","HMDB11105","108214","","1","Caffeine Metabolism"
-"Dehydroascorbic acid","Dehydroascorbic acid","HMDB01264","210328","C00425","1","Catecholamine Biosynthesis"
-"Succinate","Succinic acid","HMDB00254","1110","C00042","1","Citric Acid Cycle"
-"Citric acid","Citric acid","HMDB00094","311","C00158","1","Citric Acid Cycle"
-"3-Hydroxybutyric acid","3-Hydroxybutyric acid","HMDB00357","441","C01089","1","Fatty Acid Biosynthesis"
-"Myristic acid","Myristic acid","HMDB00806","11005","C06424","1","Fatty Acid Biosynthesis"
-"D-Fructose","D-Fructose","HMDB00660","439709","C02336","1","Galactose Metabolism"
-"5-Oxoproline","Pyroglutamic acid","HMDB00267","7405","C01879","1","Glutathione Metabolism"
-"Hexadecanoic acid","Palmitic acid","HMDB00220","985","C00249","1","Glycerolipid Metabolism"
-"Glycerol","Glycerol","HMDB00131","753","C00116","1","Glycerolipid Metabolism"
-"Glyceraldehyde","Glyceraldehyde","HMDB01051","751","C02154","1","Glycerolipid Metabolism"
-"Glyoxylic acid","Glyoxylic acid","HMDB00119","760","C00048","1","Glycine and Serine Metabolism"
-"Pyruvate","Pyruvic acid","HMDB00243","1060","C00022","1","Glycine and Serine Metabolism"
-"Aminoacetone","Aminoacetone","HMDB02134","215","C01888","1","Glycine and Serine Metabolism"
-"L-methionine","L-Methionine","HMDB00696","6137","C00073","1","Glycine and Serine Metabolism"
-"Threonine","L-Threonine","HMDB00167","6288","C00188","1","Glycine and Serine Metabolism"
-"Glycine","Glycine","HMDB00123","750","C00037","1","Glycine and Serine Metabolism"
-"Cystathionine","L-Cystathionine","HMDB00099","439258","C02291","1","Glycine and Serine Metabolism"
-"Phosphoserine","Phosphoserine","HMDB00272","68841","C01005","1","Glycine and Serine Metabolism"
-"Ornithine","Ornithine","HMDB00214","6262","C00077","1","Glycine and Serine Metabolism"
-"Arginine","L-Arginine","HMDB00517","6322","C00062","1","Glycine and Serine Metabolism"
-"Guanidineacetic acid","Guanidoacetic acid","HMDB00128","763","C00581","1","Glycine and Serine Metabolism"
-"Serine","L-Serine","HMDB00187","5951","C00065","1","Glycine and Serine Metabolism"
-"sarcosine","Sarcosine","HMDB00271","1088","C00213","1","Glycine and Serine Metabolism"
-"L-Ornithine","Ornithine","HMDB00214","6262","C00077","1","Glycine and Serine Metabolism"
-"Creatine","Creatine","HMDB00064","586","C00300","1","Glycine and Serine Metabolism"
-"Myo-Inositol","Myoinositol","HMDB00211",NA,"C00137","1","Inositol Metabolism"
-"D-Glucuronic acid","D-Glucuronic acid","HMDB00127","444791","C00191","1","Inositol Metabolism"
-"a-Aminoadipic acid","Aminoadipic acid","HMDB00510","469","C00956","1","Lysine Degradation"
-"L-Homoserine","L-Homoserine","HMDB00719","12647","C00263","1","Methionine Metabolism"
-"Stearoylcarnitine","Stearoylcarnitine","HMDB00848","6426855","","1","Mitochondrial Beta-Oxidation of Long Chain Saturated Fatty Acids"
-"Octanoic acid","L-Octanoylcarnitine","HMDB00791","11953814","C02838","1","Mitochondrial Beta-Oxidation of Short Chain Saturated Fatty Acids"
-"Octanoylcarnitine","L-Octanoylcarnitine","HMDB00791","11953814","C02838","1","Mitochondrial Beta-Oxidation of Short Chain Saturated Fatty Acids"
-"Nicotinic acid","Nicotinic acid","HMDB01488","938","C00253","1","Nicotinate and Nicotinamide Metabolism"
-"Glucose 6-phosphate","Glucose 6-phosphate","HMDB01401","5958","C00092","1","Nucleotide Sugars Metabolism"
-"d-Galactose","D-Galactose","HMDB00143","439357","C00124","1","Nucleotide Sugars Metabolism"
-"Propionylcarnitine","Propionylcarnitine","HMDB00824","107738","C03017","1","Oxidation of Branched Chain Fatty Acids"
-"4,8 dimethylnonanoyl carnitine","4,8 Dimethylnonanoyl carnitine","HMDB06202","53477801","","1","Oxidation of Branched Chain Fatty Acids"
-"Acetylcarnitine","L-Acetylcarnitine","HMDB00201","1","C02571","1","Oxidation of Branched Chain Fatty Acids"
-"6-Phosphogluconic acid","6-Phosphogluconic acid","HMDB01316","91493","C00345","1","Pentose Phosphate Pathway"
-"Glyceraldehyde 3-phosphate","D-Glyceraldehyde 3-phosphate","HMDB01112","3418","C00118","1","Pentose Phosphate Pathway"
-"Phenylalanine","L-Phenylalanine","HMDB00159","6140","C00079","1","Phenylalanine and Tyrosine Metabolism"
-"Choline","Choline","HMDB00097","305","C00114","1","Phospholipid Biosynthesis"
-"Glycerylphosphorylethanolamine","Glycerylphosphorylethanolamine","HMDB00114","22833510","C01233","1","Phospholipid Biosynthesis"
-"Dihydroxyacetone phosphate","Dihydroxyacetone phosphate","HMDB01473","668","C00111","1","Phospholipid Biosynthesis"
-"Octadecanoic acid","Stearic acid","HMDB00827","5281","C01530","1","Plasmalogen Synthesis"
-"Bilirubin","Bilirubin","HMDB00054","5280352","C00486","1","Porphyrin Metabolism"
-"Valine","L-Valine","HMDB00883","6287","C00183","1","Propanoate Metabolism"
-"Hypoxanthine","Hypoxanthine","HMDB00157","790","C00262","1","Purine Metabolism"
-"Uric acid","Uric acid","HMDB00289","1175","C00366","1","Purine Metabolism"
-"5-Phosphoribosylamine","5-Phosphoribosylamine","HMDB01128","439905","C03090","1","Purine Metabolism"
-"Guanine","Guanine","HMDB00132","764","C00242","1","Purine Metabolism"
-"Lactate","L-Lactic acid","HMDB00190","107689","C00186","1","Pyruvate Metabolism"
-"Sphingosine 1-phosphate","Sphingosine 1-phosphate","HMDB00277","5353956","C06124","1","Sphingolipid Metabolism"
-"Sphingosine","Sphingosine","HMDB00252","5353955","C00319","1","Sphingolipid Metabolism"
-"Cholesterol","Cholesterol","HMDB00067","11025495","C00187","1","Steroid Biosynthesis"
-"Isopentenyl pyrophosphate","Isopentenyl pyrophosphate","HMDB01347","1195","C00129","1","Steroid Biosynthesis"
-"Progesterone","Progesterone","HMDB01830","5994","C00410","1","Steroidogenesis"
-"18-Hydroxycorticosterone","18-Hydroxycorticosterone","HMDB00319","11222","C01124","1","Steroidogenesis"
-"Hypotaurine","Hypotaurine","HMDB00965","107812","C00519","1","Taurine and Hypotaurine Metabolism"
-"Thiamine","Thiamine","HMDB00235","1130","C00378","1","Thiamine Metabolism"
-"Lysine","L-Lysine","HMDB00182","5962","C00047","1","Transcription/Translation"
-"L-Lysine","L-Lysine","HMDB00182","5962","C00047","1","Transcription/Translation"
-"Proline","L-Proline","HMDB00162","145742","C00148","1","Transcription/Translation"
-"L-Tryptophan","L-Tryptophan","HMDB00929","6305","C00078","1","Transcription/Translation"
-"L-Leucine","L-Leucine","HMDB00687","6106","C00123","1","Transcription/Translation"
-"5-Hydroxy-tryptophan","5-Hydroxy-L-tryptophan","HMDB00472","144","C01017","1","Tryptophan Metabolism"
-"5-Hydroxyindoleacetic acid","5-Hydroxyindoleacetic acid","HMDB00763","1826","C05635","1","Tryptophan Metabolism"
-"1H-Indole-3-acetic acid","Indoleacetic acid","HMDB00197","802","C00954","1","Tryptophan Metabolism"
-"Anthranilic acid","2-Aminobenzoic acid","HMDB01123","227","C00108","1","Tryptophan Metabolism"
-"Epinephrine","Epinephrine","HMDB00068","5816","C00788","1","Tyrosine Metabolism"
-"L-Tyrosine","L-Tyrosine","HMDB00158","6057","C00082","1","Tyrosine Metabolism"
-"2-oxo-4-methylvaleric acid","Ketoleucine","HMDB00695","70","C00233","1","Valine, Leucine and Isoleucine Degradation"
-"3-methyl-2-oxo-butanoic acid","Alpha-ketoisovaleric acid","HMDB00019","49","C00141","1","Valine, Leucine and Isoleucine Degradation"
-"Glycolaldehyde","Glycolaldehyde","HMDB03344","756","C00266","1","Vitamin B6 Metabolism"
-"Cysteine","Cysteine","METPA0075",NA,"C00736","1",NA
-"Glycerolphosphate","NA","NA","NA","NA","0",NA
-"Glycerophosphocholine","Glycerophosphocholine","HMDB00086","71920","C00670","1",NA
-"Glutamate","D-Glutamic acid","HMDB03339","23327","C00217","1",NA
-"Quinic acid","Quinic acid","HMDB03072",NA,"C06746","1",NA
-"Cystine","L-Cystine","HMDB00192","67678","C00491","1",NA
-"Isoleucine","(+/-)-erythro-Isoleucine","HMDB33923","791","C16434","1",NA
-"Pentosidine","Pentosidine","HMDB03933","119593","","1",NA
-"Nicotinuric acid","Nicotinuric acid","HMDB03269","68499","C05380","1",NA
-"alpha-ketoglutarate","NA","NA","NA","NA","0",NA
-"Malate","NA","NA","NA","NA","0",NA
-"N-acetyl-glutamine","NA","NA","NA","NA","0",NA
-"Pseudo uridine","NA","NA","NA","NA","0",NA
-"Butyrylcarnitine","Butyrylcarnitine","HMDB02013","439829","C02862","1",NA
-"3-amino-2-Piperidone","3-Amino-2-piperidone","HMDB00323","5200225","","1",NA
-"Homocysteic acid","NA","NA","NA","NA","0",NA
-"Hydroxyacetic acid","Glycolic acid","HMDB00115","757","C00160","1",NA
-"Delta-hydroxylysine","5-Hydroxylysine","HMDB00450","3032849","C16741","1",NA
-"Myristoleic acid","Myristoleic acid","HMDB02000","5281119","C08322","1",NA
-"Epinephrine glucuronide","Epinephrine glucuronide","HMDB10336","53480450","C03033","1",NA
-"3-Pyridylacetic acid","3-Pyridylacetic acid","HMDB01538","108","","1",NA
-"Parabanic acid","NA","NA","NA","NA","0",NA
-"Glyceric acid, TMS","NA","NA","NA","NA","0",NA
-"5-Hydroxylysine","5-Hydroxylysine","HMDB00450","3032849","C16741","1",NA
-"3-hydroxyoxyisovaleric acid","NA","NA","NA","NA","0",NA
-"2,4-bishydroxybutanoic acid","NA","NA","NA","NA","0",NA
-"Pyrrole-2-carboxylic acid","Pyrrole-2-carboxylic acid","HMDB04230","12473","C05942","1",NA
-"Methionine","NA","NA","NA","NA","0",NA
-"Picolinic acid","Picolinic acid","HMDB02243","1018","C10164","1",NA
-"Isovalerylcarnitine","Isovalerylcarnitine","HMDB00688","6426851","","1",NA
-"glycol","Polyethylene glycol","HMDB37790","173","C01092","1",NA
-"Benzoic acid","Benzoic acid","HMDB01870","243","C00180","1",NA
-"Palmitoleic acid","Palmitoleic acid","HMDB03229","445638","C08362","1",NA
-"2-aminobutyric acid","NA","NA","NA","NA","0",NA
-"4-hydroxy-proline","NA","NA","NA","NA","0",NA
-"Succinyladenosine","Succinyladenosine","HMDB00912","20849086","","1",NA
-"Benzocaine","Benzocaine","HMDB04992","2337","C07527","1",NA
-"2-methyl-butyric acid","NA","NA","NA","NA","0",NA
-"Bisnorcholic acid","Bisnorcholic acid","HMDB02082","9547705","","1",NA
-"N-Acetyl glucosamine","NA","NA","NA","NA","0",NA
-"Threitol","D-Threitol","HMDB04136","169019","C16884","1",NA
-"Palmitoylcarnitine","NA","NA","NA","NA","0",NA
-"3-Hydroxydodecanedioic acid","3-Hydroxydodecanedioic acid","HMDB00413","16663321","","1",NA
-"Proline betaine","Proline betaine","HMDB04827","115244","C10172","1",NA
-"L-phenylalanyl-L-proline","NA","NA","NA","NA","0",NA
-"Phenyllactic acid","Phenyllactic acid","HMDB00779","3848","C01479","1",NA
-"Sorbose","L-Sorbose","HMDB01266","441484","C08356","1",NA
-"Oxanilic acid","NA","NA","NA","NA","0",NA
-"Decanoic acid","CE(10:0)","HMDB03603","4225619","C02530","1",NA
-"3-Indolepropionic acid","3-Indolepropionic acid","HMDB02302","3744","","1",NA
-"3-Phosphoglyceric acid, TMS","NA","NA","NA","NA","0",NA
-"N-acetyl-glycine","Acetylglycine","HMDB00532","10972","","1",NA
-"Hexanoylglycine","Hexanoylglycine","HMDB00701","99463","","1",NA
-"Arabinofuranose","Arabinofuranose","HMDB12325","440921","C06115","1",NA
-"Glycylprolylhydroxyproline","Glycylprolylhydroxyproline","HMDB02171","21252274","","1",NA
-"2,3'-Dipyridyl","NA","NA","NA","NA","0",NA
-"Phenylglyoxylic acid","Phenylglyoxylic acid","HMDB01587","11915","C02137","1",NA
-"Homoanserine","Homoanserine","HMDB05767","20849429","","1",NA
-"2-Butenedioic acid","Maleic acid","HMDB00176","444266","C01384","1",NA
-"beta-D-Glucopyranuronic acid","Beta-D-Glucopyranuronic acid","HMDB10314","168876","","1",NA
-"Benzaldehyde","Benzaldehyde","HMDB06115","240","C00193","1",NA
-"Hordenine","Hordenine","HMDB04366","68313","C06199","1",NA
-"3-hydroxypyridine","NA","NA","NA","NA","0",NA
-"Xylitol","D-Xylitol","HMDB02917","6912","C00379","1",NA
-"Methylguanidine","Methylguanidine","HMDB01522","10111","C02294","1",NA
-"3,4-bishydroxybutanoic acid","NA","NA","NA","NA","0",NA
-"cis-3-Hexenyllactate","NA","NA","NA","NA","0",NA
-"Tiglylglycine","Tiglylglycine","HMDB00959","6441567","","1",NA
-"Nonanoic acid","Pelargonic acid","HMDB00847","8158","C01601","1",NA
-"N6-Acetyl-L-lysine","N6-Acetyl-L-lysine","HMDB00206","92832","C02727","1",NA
-"2-amino-6-methylaminohexanoic acid","NA","NA","NA","NA","0",NA
-"2-oxo-3-methyl-pentanoic acid","NA","NA","NA","NA","0",NA
-"Methylcysteine","Methylcysteine","HMDB02108","24417","","1",NA
-"d-Xylose","D-Xylose","HMDB00098","135191","C00181","1",NA
-"L-Threonic acid","NA","NA","NA","NA","0",NA
-"Mannitol","Mannitol","HMDB00765","6251","C00392","1",NA
-"Glucopyranose","NA","NA","NA","NA","0",NA
-"Aminomalonic acid","Aminomalonic acid","HMDB01147","100714","C00872","1",NA
-"Trimethylamine N-oxide","Trimethylamine N-oxide","HMDB00925","1145","C01104","1",NA
-"trans-Hexadec-2-enoyl carnitine","trans-Hexadec-2-enoyl carnitine","HMDB06317","53477817","","1",NA
-"3, 4 dehydroproline","NA","NA","NA","NA","0",NA
-"Linoleyl carnitine","Linoleyl carnitine","HMDB06469","6450015","","1",NA
-"6-Dehydrotestosterone glucuronide","6-Dehydrotestosterone glucuronide","HMDB10337","5460852","C03033","1",NA
-"Indoleacrylic acid","Indoleacrylic acid","HMDB00734","15030923","C00331","1",NA
-"2,2'-Bipyridine","NA","NA","NA","NA","0",NA
-"Inositol","NA","NA","NA","NA","0",NA
-"Undecanoic acid","Undecanoic acid","HMDB00947","8180","C17715","1",NA
-"Linoelaidic acid","Linoelaidic acid","HMDB06270","5282457","","1",NA
-"Galactonic acid","Galactonic acid","HMDB00565","128869","C00880","1",NA
-"4-Deoxypyridoxine","NA","NA","NA","NA","0",NA
-"Decanoylcarnitine","Decanoylcarnitine","HMDB00651","10245190","","1",NA
-"5-Methoxytryptophol","5-Methoxytryptophol","HMDB01896","12835","","1",NA
-"Cadaverine","Cadaverine","HMDB02322","273","C01672","1",NA
-"Erythrose","Erythrose","HMDB02649","439574","C01796","1",NA
-"cis-2-Methylaconitate","cis-2-Methylaconitate","HMDB06357","3080625","C04225","1",NA
-"Alloisoleucine","NA","NA","NA","NA","0",NA
-"Nicotine","Nicotine","HMDB14330","942","C16150","1",NA
-"2-Piperidinecarboxylic acid","Pipecolic acid","HMDB00070","849","C00408","1",NA
-"Heneicosanoic acid","Heneicosanoic acid","HMDB02345","16898","","1",NA
-"oleoylcarnitine","Oleoylcarnitine","HMDB05065","53477789","","1",NA
-"N-formyl-glycine","NA","NA","NA","NA","0",NA
-"3-Succinoylpyridine","3-Succinoylpyridine","HMDB00992","437","C19569","1",NA
-"9,12-Octadecadienoic acid (Z,Z)-","NA","NA","NA","NA","0",NA
-"Cyclohexanone","Cyclohexanone","HMDB03315","7967","C00414","1",NA
-"2,3-Diaminopropionic acid","2,3-Diaminopropionic acid","HMDB02006","97328","C03401","1",NA
-"Ribitol","Ribitol","HMDB00508",NA,"C00474","1",NA
-"Oxalic acid","Oxalic acid","HMDB02329","971","C00209","1",NA
-"2-hydroxypyridine","2-Hydroxypyridine","HMDB13751","8871","C02502","1",NA
-"D-Ribofuranose","NA","NA","NA","NA","0",NA
-"Olic acid","NA","NA","NA","NA","0",NA
-"Gluticol","NA","NA","NA","NA","0",NA
-"Hydroxycarbamic acid","NA","NA","NA","NA","0",NA
-"Alanine","Alanine","METPA0179",NA,"C01401","1",NA
-"1,2-dimethylpropanol","3-Methyl-2-butanol","HMDB33777","11732","","1",NA
-"Hexanoylcarnitine","Hexanoylcarnitine","HMDB00705","6426853","","1",NA
-"Maleimide","NA","NA","NA","NA","0",NA
-"3-Aminosalicylic acid, TMS","NA","NA","NA","NA","0",NA
-"6-deoxy-mannose","Rhamnose","HMDB00849","25310","C00507","1",NA
-"Norleucine","L-Norleucine","HMDB01645","21236","C01933","1",NA
-"Calcidiol","Calcidiol","HMDB03550","5283731","C01561","1",NA
-"2-Hydroxycinnamic acid","2-Hydroxycinnamic acid","HMDB02641","637540","C01772","1",NA
-"2,3-Dihydroxybutanoic acid","4-Deoxyerythronic acid","HMDB00498","13120901","","1",NA
-"N,N-Dimethyl-2-isopropoxyethylamine","NA","NA","NA","NA","0",NA
-"1-hydroxy-1-cyclohexen","NA","NA","NA","NA","0",NA
-"3,6-Dioxa-2,7-disilaoctane, 2,2,4,7,7-pentamethyl-","NA","NA","NA","NA","0",NA
-"4-Aminohippuric acid","4-Aminohippuric acid","HMDB01867","2148","D06890 ","1",NA
-"a-Amino isobutyric acid","NA","NA","NA","NA","0",NA
-"Tetradecanoylcarnitine","Tetradecanoylcarnitine","HMDB05066","53477791","","1",NA
-"a-Hydroxyisobutyric acid","Alpha-Hydroxyisobutyric acid","HMDB00729","11671","","1",NA
-"Carnitine","Carnitine","METPA0048",NA,"C00487","1",NA
-"Cyclohexyloxy","NA","NA","NA","NA","0",NA
-"Dodecanoylcarnitine","Dodecanoylcarnitine","HMDB02250","168381","","1",NA
-"Elaidic acid","Elaidic acid","HMDB00573","445639","C00712","1",NA
-"o-Tyrosine","o-Tyrosine","HMDB06050","91482","","1",NA
+"Query","Match","HMDB","PubChem","ChEBI","KEGG","Comment","pathway"
+"N-acetylglucosamine","N-Acetyl-D-glucosamine","HMDB00215","439174","506227","C00140","1","Amino Sugar Metabolism"
+"N-acetylmannosamine","N-Acetylmannosamine","HMDB01129","11096158","63154","C00645","1","Amino Sugar Metabolism"
+"asparagine","L-Asparagine","HMDB00168","6267","17196","C00152","1","Ammonia Recycling"
+"glutamine","L-Glutamine","HMDB00641","5961","18050","C00064","1","Ammonia Recycling"
+"histidine","L-Histidine","HMDB00177","6274","15971","C00135","1","Ammonia Recycling"
+"androsterone sulfate","Androsterone sulfate","HMDB02759","159663",NA,"C04555","1","Androgen and Estrogen Metabolism"
+"citrulline","Citrulline","HMDB00904","9750","16349","C00327","1","Arginine and Proline Metabolism"
+"urea","Urea","HMDB00294","1176","16199","C00086","1","Arginine and Proline Metabolism"
+"5,6-dihydrouracil","Dihydrouracil","HMDB00076","649","15901","C00429","1","Beta-Alanine Metabolism"
+"aspartate","L-Aspartic acid","HMDB00191","5960","17053","C00049","1","Beta-Alanine Metabolism"
+"beta-alanine","Beta-Alanine","HMDB00056","239","16958","C00099","1","Beta-Alanine Metabolism"
+"pantothenate","Pantothenic acid","HMDB00210","988","7916","C00864","1","Beta-Alanine Metabolism"
+"uracil","Uracil","HMDB00300","1174","17568","C00106","1","Beta-Alanine Metabolism"
+"glycochenodeoxycholate","Chenodeoxycholic acid glycine conjugate","HMDB00637","22833540",NA,"C05466","1","Bile Acid Biosynthesis"
+"glycocholate","Glycocholic acid","HMDB00138","23617285","29746","C01921","1","Bile Acid Biosynthesis"
+"glycodeoxycholate","Deoxycholic acid glycine conjugate","HMDB00631","22833539","27471","C05464 ","1","Bile Acid Biosynthesis"
+"taurochenodeoxycholate","Taurochenodesoxycholic acid","HMDB00951","387316","16525","C05465","1","Bile Acid Biosynthesis"
+"taurocholate","Taurocholic acid","HMDB00036","440567","28865","C05122","1","Bile Acid Biosynthesis"
+"deoxycarnitine","4-Trimethylammoniobutanoic acid","HMDB01161","134","1941","C01181","1","Carnitine Synthesis"
+"citrate","Citric acid","HMDB00094","311","30769","C00158","1","Citric Acid Cycle"
+"succinate","Succinic acid","HMDB00254","1110","15741","C00042","1","Citric Acid Cycle"
+"fucose","L-Fucose","HMDB00174","17106","2181","C01019","1","Fructose and Mannose Degradation"
+"mannose-6-phosphate","Mannose 6-phosphate","HMDB01078","439198","49728","C00275","1","Fructose and Mannose Degradation"
+"fructose","D-Fructose","HMDB00660","439709","28645","C02336","1","Galactose Metabolism"
+"maltotriose","Maltotriose","HMDB01262","439586",NA,"C01835","1","Galactose Metabolism"
+"mannose","D-Mannose","HMDB00169","18950","4208","C00159","1","Galactose Metabolism"
+"sorbitol","Sorbitol","HMDB00247","5780","17924","C00794","1","Galactose Metabolism"
+"5-oxoproline","Pyroglutamic acid","HMDB00267","7405","18183","C01879","1","Glutathione Metabolism"
+"glycerol","Glycerol","HMDB00131","753","17522","C00116","1","Glycerolipid Metabolism"
+"3-phosphoglycerate","3-Phosphoglyceric acid","HMDB00807","724","17050","C00597","1","Glycine and Serine Metabolism"
+"arginine","L-Arginine","HMDB00517","6322","16467","C00062","1","Glycine and Serine Metabolism"
+"betaine","Betaine","HMDB00043","247","17750","C00719","1","Glycine and Serine Metabolism"
+"creatine","Creatine","HMDB00064","586","16919","C00300","1","Glycine and Serine Metabolism"
+"cystathionine","L-Cystathionine","HMDB00099","439258","17482","C02291","1","Glycine and Serine Metabolism"
+"glycerate","Glyceric acid","HMDB00139","439194","32398","C00258","1","Glycine and Serine Metabolism"
+"glycine","Glycine","HMDB00123","750","15428","C00037","1","Glycine and Serine Metabolism"
+"homocysteine","Homocysteine","HMDB00742","778","17230","C05330","1","Glycine and Serine Metabolism"
+"ornithine","Ornithine","HMDB00214","6262","15729","C00077","1","Glycine and Serine Metabolism"
+"pyruvate","Pyruvic acid","HMDB00243","1060","32816","C00022","1","Glycine and Serine Metabolism"
+"serine","L-Serine","HMDB00187","5951","17115","C00065","1","Glycine and Serine Metabolism"
+"threonine","L-Threonine","HMDB00167","6288","16857","C00188","1","Glycine and Serine Metabolism"
+"glucose","D-Glucose","HMDB00122","5793","4167","C00031","1","Glycolysis"
+"histamine","Histamine","HMDB00870","774","18295","C00388","1","Histidine Metabolism"
+"glucuronate","D-Glucuronic acid","HMDB00127","444791","42717","C00191","1","Inositol Metabolism"
+"myo-inositol","Myoinositol","HMDB00211",NA,"17268","C00137","1","Inositol Metabolism"
+"2-aminoadipate","Aminoadipic acid","HMDB00510","469","37024","C00956","1","Lysine Degradation"
+"methionine sulfoxide","Methionine sulfoxide","HMDB02005","847","49033","","1","Methionine Metabolism"
+"putrescine","Putrescine","HMDB01414","1045","17148","C00134","1","Methionine Metabolism"
+"spermidine","Spermidine","HMDB01257","1102","16610","C00315","1","Methionine Metabolism"
+"stearoylcarnitine","Stearoylcarnitine","HMDB00848","6426855",NA,"","1","Mitochondrial Beta-Oxidation of Long Chain Saturated Fatty Acids"
+"octanoylcarnitine","L-Octanoylcarnitine","HMDB00791","11953814","18102","C02838","1","Mitochondrial Beta-Oxidation of Short Chain Saturated Fatty Acids"
+"1-methylnicotinamide","1-Methylnicotinamide","HMDB00699","457","16797","C02918","1","Nicotinate and Nicotinamide Metabolism"
+"nicotinamide","Niacinamide","HMDB01406","936","17154","C00153","1","Nicotinate and Nicotinamide Metabolism"
+"nicotinate","Nicotinic acid","HMDB01488","938","15940","C00253","1","Nicotinate and Nicotinamide Metabolism"
+"quinolinate","Quinolinic acid","HMDB00232","1066","16675","C03722","1","Nicotinate and Nicotinamide Metabolism"
+"galactose","D-Galactose","HMDB00143","439357","28061","C00124","1","Nucleotide Sugars Metabolism"
+"UDP-glucuronate","Uridine diphosphate glucuronic acid","HMDB00935","17473","17200","C00167","1","Nucleotide Sugars Metabolism"
+"acetylcarnitine","L-Acetylcarnitine","HMDB00201","1",NA,"C02571","1","Oxidation of Branched Chain Fatty Acids"
+"propionylcarnitine","Propionylcarnitine","HMDB00824","107738","28867","C03017","1","Oxidation of Branched Chain Fatty Acids"
+"6-phosphogluconate","6-Phosphogluconic acid","HMDB01316","91493","48928","C00345","1","Pentose Phosphate Pathway"
+"fructose-6-phosphate","Fructose 6-phosphate","HMDB00124","69507","15946","C00085","1","Pentose Phosphate Pathway"
+"ribose","D-Ribose","HMDB00283","5779","16988","C00121","1","Pentose Phosphate Pathway"
+"sedoheptulose-7-phosphate","D-Sedoheptulose 7-phosphate","HMDB01068","22833559","15721","C00281","1","Pentose Phosphate Pathway"
+"phenylacetylglutamine","Alpha-N-Phenylacetyl-L-glutamine","HMDB06344","92258","17884","C04148","1","Phenylacetate Metabolism"
+"phenylalanine","L-Phenylalanine","HMDB00159","6140","17295","C00079","1","Phenylalanine and Tyrosine Metabolism"
+"phenylpyruvate","Phenylpyruvic acid","HMDB00205","997","30851","C00166","1","Phenylalanine and Tyrosine Metabolism"
+"choline","Choline","HMDB00097","305","15354","C00114","1","Phospholipid Biosynthesis"
+"cytidine 5'-diphosphocholine","Citicoline","HMDB01413","13804","16436","C00307","1","Phospholipid Biosynthesis"
+"ethanolamine","Ethanolamine","HMDB00149","700","16000","C00189","1","Phospholipid Biosynthesis"
+"heme","Heme","HMDB03178",NA,"17627","C00032","1","Porphyrin Metabolism"
+"valine","L-Valine","HMDB00883","6287","16414","C00183","1","Propanoate Metabolism"
+"folate","Folic acid","HMDB00121","6037","27470","C00504","1","Pterine Biosynthesis"
+"2'-deoxyguanosine","Deoxyguanosine","HMDB00085","187790","17172","C00330","1","Purine Metabolism"
+"2'-deoxyinosine","Deoxyinosine","HMDB00071","65058","28997","C05512","1","Purine Metabolism"
+"adenine","Adenine","HMDB00034","190","16708","C00147","1","Purine Metabolism"
+"adenosine","Adenosine","HMDB00050","60961","16335","C00212","1","Purine Metabolism"
+"guanine","Guanine","HMDB00132","764","16235","C00242","1","Purine Metabolism"
+"guanosine","Guanosine","HMDB00133","6802","16750","C00387","1","Purine Metabolism"
+"hypoxanthine","Hypoxanthine","HMDB00157","790","17368","C00262","1","Purine Metabolism"
+"inosine","Inosine","HMDB00195","6021","17596","C00294","1","Purine Metabolism"
+"urate","Uric acid","HMDB00289","1175","17775","C00366","1","Purine Metabolism"
+"xanthine","Xanthine","HMDB00292","1188","17712","C00385","1","Purine Metabolism"
+"xanthosine","Xanthosine","HMDB00299","64959","18107","C01762","1","Purine Metabolism"
+"3-aminoisobutyrate","3-Aminoisobutanoic acid","HMDB03911","64956","27389","C05145","1","Pyrimidine Metabolism"
+"cytidine","Cytidine","HMDB00089","6175","17562","C00475","1","Pyrimidine Metabolism"
+"thymine","Thymine","HMDB00262","1135","17821","C00178","1","Pyrimidine Metabolism"
+"uridine","Uridine","HMDB00296","6029","16704","C00299","1","Pyrimidine Metabolism"
+"lactate","L-Lactic acid","HMDB00190","107689","422","C00186","1","Pyruvate Metabolism"
+"spermine","Spermine","HMDB01256","1103","15746","C00750","1","Spermidine and Spermine Biosynthesis"
+"phosphoethanolamine","O-Phosphoethanolamine","HMDB00224","1015","17553","C00346","1","Sphingolipid Metabolism"
+"sphinganine","Sphinganine","HMDB00269","91486","16566","C00836","1","Sphingolipid Metabolism"
+"sphingosine","Sphingosine","HMDB00252","5353955","16393","C00319","1","Sphingolipid Metabolism"
+"maltose","D-Maltose","HMDB00163","10991489","47937","C00208","1","Starch and Sucrose Metabolism"
+"cholesterol","Cholesterol","HMDB00067","11025495","1307929","C00187","1","Steroid Biosynthesis"
+"squalene","Squalene","HMDB00256","11975273","15440","C00751","1","Steroid Biosynthesis"
+"cortisol","Cortisol","HMDB00063","657311",NA,"C00735","1","Steroidogenesis"
+"taurine","Taurine","HMDB00251","1123","15891","C00245","1","Taurine and Hypotaurine Metabolism"
+"leucine","L-Leucine","HMDB00687","6106","15603","C00123","1","Transcription/Translation"
+"lysine","L-Lysine","HMDB00182","5962","18019","C00047","1","Transcription/Translation"
+"proline","L-Proline","HMDB00162","145742","17203","C00148","1","Transcription/Translation"
+"kynurenine","L-Kynurenine","HMDB00684","161166","16946","C00328","1","Tryptophan Metabolism"
+"4-hydroxyphenylpyruvate","4-Hydroxyphenylpyruvic acid","HMDB00707","979","15999","C01179","1","Tyrosine Metabolism"
+"fumarate","Fumaric acid","HMDB00134","444972","18012","C00122","1","Tyrosine Metabolism"
+"tyrosine","L-Tyrosine","HMDB00158","6057","17895","C00082","1","Tyrosine Metabolism"
+"3-methyl-2-oxobutyrate","Alpha-ketoisovaleric acid","HMDB00019","49","16530","C00141","1","Valine, Leucine and Isoleucine Degradation"
+"3-methyl-2-oxovalerate","3-Methyl-2-oxovaleric acid","HMDB00491","47","35932","C03465","1","Valine, Leucine and Isoleucine Degradation"
+"1-arachidonoylglycerophosphoethanolamine","NA","NA","NA","NA","NA","0",NA
+"1-arachidonoylglycerophosphoinositol","NA","NA","NA","NA","NA","0",NA
+"1-linoleoylglycerophosphocholine","NA","NA","NA","NA","NA","0",NA
+"1-methylimidazoleacetate","NA","NA","NA","NA","NA","0",NA
+"1-myristoylglycerophosphocholine","NA","NA","NA","NA","NA","0",NA
+"1-oleoylglycerol (1-monoolein)","NA","NA","NA","NA","NA","0",NA
+"1-oleoylglycerophosphocholine","LysoPC(18:1(9Z))","HMDB02815","16081932",NA,"C04230","1",NA
+"1-oleoylglycerophosphoethanolamine","NA","NA","NA","NA","NA","0",NA
+"1-palmitoylglycerol (1-monopalmitin)","NA","NA","NA","NA","NA","0",NA
+"1-palmitoylglycerophosphocholine","NA","NA","NA","NA","NA","0",NA
+"1-stearoylglycerol (1-monostearin)","NA","NA","NA","NA","NA","0",NA
+"1-stearoylglycerophosphocholine","NA","NA","NA","NA","NA","0",NA
+"1-stearoylglycerophosphoethanolamine","NA","NA","NA","NA","NA","0",NA
+"1-stearoylglycerophosphoinositol","NA","NA","NA","NA","NA","0",NA
+"1,3-dihydroxyacetone","Dihydroxyacetone","HMDB01882","670","16016","C00184","1",NA
+"1,5-anhydroglucitol (1,5-AG)","NA","NA","NA","NA","NA","0",NA
+"10-heptadecenoate (17:1n7)","NA","NA","NA","NA","NA","0",NA
+"10-nonadecenoate (19:1n9)","NA","NA","NA","NA","NA","0",NA
+"2'-O-methylguanosine","NA","NA","NA","NA","NA","0",NA
+"2-aminobutyrate","L-Alpha-aminobutyric acid","HMDB00452","80283","35619","C02356","1",NA
+"2-arachidonoylglycerophosphocholine","NA","NA","NA","NA","NA","0",NA
+"2-arachidonoylglycerophosphoethanolamine","NA","NA","NA","NA","NA","0",NA
+"2-docosahexaenoylglycerophosphoethanolamine","NA","NA","NA","NA","NA","0",NA
+"2-docosapentaenoylglycerophosphoethanolamine","NA","NA","NA","NA","NA","0",NA
+"2-hydroxyacetaminophen sulfate","NA","NA","NA","NA","NA","0",NA
+"2-hydroxybutyrate (AHB)","NA","NA","NA","NA","NA","0",NA
+"2-hydroxyglutarate","2-Hydroxyglutarate","HMDB59655","43","17084","C02630","1",NA
+"2-hydroxyhippurate (salicylurate)","NA","NA","NA","NA","NA","0",NA
+"2-hydroxypalmitate","NA","NA","NA","NA","NA","0",NA
+"2-hydroxystearate","NA","NA","NA","NA","NA","0",NA
+"2-linoleoylglycerophosphocholine","NA","NA","NA","NA","NA","0",NA
+"2-linoleoylglycerophosphoethanolamine","NA","NA","NA","NA","NA","0",NA
+"2-methoxyacetaminophen sulfate","NA","NA","NA","NA","NA","0",NA
+"2-methylbutyroylcarnitine","2-Methylbutyroylcarnitine","HMDB00378","6426901",NA,"","1",NA
+"2-methylmalonyl carnitine","NA","NA","NA","NA","NA","0",NA
+"2-myristoylglycerophosphocholine","NA","NA","NA","NA","NA","0",NA
+"2-oleoylglycerol (2-monoolein)","NA","NA","NA","NA","NA","0",NA
+"2-oleoylglycerophosphocholine","NA","NA","NA","NA","NA","0",NA
+"2-oleoylglycerophosphoethanolamine","NA","NA","NA","NA","NA","0",NA
+"2-palmitoleoylglycerophosphocholine","NA","NA","NA","NA","NA","0",NA
+"2-palmitoleoylglycerophosphoethanolamine","NA","NA","NA","NA","NA","0",NA
+"2-palmitoylglycerol (2-monopalmitin)","NA","NA","NA","NA","NA","0",NA
+"2-palmitoylglycerophosphocholine","NA","NA","NA","NA","NA","0",NA
+"3-(4-hydroxyphenyl)lactate","3-(4-Hydroxyphenyl)lactate","METPA0425",NA,NA,"C03672","1",NA
+"3-carboxy-4-methyl-5-propyl-2-furanpropanoate (CMPF)","NA","NA","NA","NA","NA","0",NA
+"3-dehydrocarnitine","3-Dehydrocarnitine","HMDB12154","6991982","57885","C02636","1",NA
+"3-hydroxybutyrate (BHBA)","NA","NA","NA","NA","NA","0",NA
+"3-hydroxydecanoate","3-Hydroxycapric acid","HMDB02203","26612",NA,"","1",NA
+"3-methylhistidine","3-Methylhistidine","HMDB00479","64969","27596","C01152","1",NA
+"3-phenylpropionate (hydrocinnamate)","NA","NA","NA","NA","NA","0",NA
+"4-acetaminophen sulfate","NA","NA","NA","NA","NA","0",NA
+"4-androsten-3beta,17beta-diol disulfate 1","NA","NA","NA","NA","NA","0",NA
+"4-hydroxybutyrate (GHB)","NA","NA","NA","NA","NA","0",NA
+"4-methyl-2-oxopentanoate","4-Methyl-2-oxopentanoate","METPA0020",NA,NA,"C00233","1",NA
+"4-octenedioate","NA","NA","NA","NA","NA","0",NA
+"5-aminovalerate","5-Aminopentanoic acid","HMDB03355","138","15887","C00431","1",NA
+"5-methylthioadenosine (MTA)","NA","NA","NA","NA","NA","0",NA
+"5alpha-pregnan-3beta,20alpha-diol disulfate","NA","NA","NA","NA","NA","0",NA
+"7-alpha-hydroxy-3-oxo-4-cholestenoate (7-Hoca)","NA","NA","NA","NA","NA","0",NA
+"7-beta-hydroxycholesterol","NA","NA","NA","NA","NA","0",NA
+"adenosine 2'-monophosphate (2'-AMP)","NA","NA","NA","NA","NA","0",NA
+"adenosine 3'-monophosphate (3'-AMP)","NA","NA","NA","NA","NA","0",NA
+"adenosine 5'-monophosphate (AMP)","NA","NA","NA","NA","NA","0",NA
+"adenosine 5'diphosphoribose","NA","NA","NA","NA","NA","0",NA
+"adrenate (22:4n6)","NA","NA","NA","NA","NA","0",NA
+"ADSGEGDFXAEGGGVR","NA","NA","NA","NA","NA","0",NA
+"alanine","Alanine","METPA0179",NA,NA,"C01401","1",NA
+"alanylhistidine","NA","NA","NA","NA","NA","0",NA
+"alanylleucine","NA","NA","NA","NA","NA","0",NA
+"allo-threonine","NA","NA","NA","NA","NA","0",NA
+"alpha-ketoglutarate","NA","NA","NA","NA","NA","0",NA
+"alpha-tocopherol","Alpha-Tocopherol","HMDB01893","14985","18145","C02477","1",NA
+"andro steroid monosulfate 1","NA","NA","NA","NA","NA","0",NA
+"andro steroid monosulfate 2","NA","NA","NA","NA","NA","0",NA
+"arachidonate (20:4n6)","NA","NA","NA","NA","NA","0",NA
+"ascorbate (Vitamin C)","NA","NA","NA","NA","NA","0",NA
+"aspartylphenylalanine","L-Aspartyl-L-phenylalanine","HMDB00706","93078","385866","","1",NA
+"behenate (22:0)","NA","NA","NA","NA","NA","0",NA
+"beta-tocopherol","Beta-tocopherol","HMDB06335","6857447","47771","C14152","1",NA
+"bilirubin (E,E)","NA","NA","NA","NA","NA","0",NA
+"butyrylcarnitine","Butyrylcarnitine","HMDB02013","439829",NA,"C02862","1",NA
+"C-glycosyltryptophan","NA","NA","NA","NA","NA","0",NA
+"caproate (6:0)","NA","NA","NA","NA","NA","0",NA
+"carnitine","Carnitine","METPA0048",NA,NA,"C00487","1",NA
+"catechol sulfate","NA","NA","NA","NA","NA","0",NA
+"choline phosphate","Phosphorylcholine","HMDB01565","1014","18132","C00588","1",NA
+"cis-vaccenate (18:1n7)","NA","NA","NA","NA","NA","0",NA
+"conjugated linoleate (18:2n7; 9Z,11E)","NA","NA","NA","NA","NA","0",NA
+"creatinine","Creatinine","HMDB00562","588","16737","C00791","1",NA
+"cysteine","Cysteine","METPA0075",NA,NA,"C00736","1",NA
+"cysteine-glutathione disulfide","Cysteineglutathione disulfide","HMDB00656","53477713",NA,"","1",NA
+"cystine","L-Cystine","HMDB00192","67678","16283","C00491","1",NA
+"cytidine 5'-monophosphate (5'-CMP)","NA","NA","NA","NA","NA","0",NA
+"dehydroisoandrosterone sulfate (DHEA-S)","NA","NA","NA","NA","NA","0",NA
+"desmethylnaproxen sulfate","NA","NA","NA","NA","NA","0",NA
+"dihomo-linoleate (20:2n6)","NA","NA","NA","NA","NA","0",NA
+"dihomo-linolenate (20:3n3 or n6)","NA","NA","NA","NA","NA","0",NA
+"dimethylarginine (SDMA + ADMA)","NA","NA","NA","NA","NA","0",NA
+"docosadienoate (22:2n6)","NA","NA","NA","NA","NA","0",NA
+"docosahexaenoate (DHA; 22:6n3)","NA","NA","NA","NA","NA","0",NA
+"docosapentaenoate (n3 DPA; 22:5n3)","NA","NA","NA","NA","NA","0",NA
+"docosatrienoate (22:3n3)","NA","NA","NA","NA","NA","0",NA
+"eicosapentaenoate (EPA; 20:5n3)","NA","NA","NA","NA","NA","0",NA
+"eicosenoate (20:1n9 or 11)","NA","NA","NA","NA","NA","0",NA
+"epiandrosterone sulfate","NA","NA","NA","NA","NA","0",NA
+"erythronate","Erythronic acid","HMDB00613","2781043","37655","","1",NA
+"flavin adenine dinucleotide (FAD)","NA","NA","NA","NA","NA","0",NA
+"fluoxitine","NA","NA","NA","NA","NA","0",NA
+"gamma-aminobutyrate (GABA)","NA","NA","NA","NA","NA","0",NA
+"gamma-glutamylalanine","5-L-Glutamyl-L-alanine","HMDB06248","440103","50619","C03740","1",NA
+"gamma-glutamylglutamate","Gamma Glutamylglutamic acid","HMDB11737","92865",NA,"C05282","1",NA
+"gamma-glutamylglutamine","Gamma-Glutamyl Glutamine","HMDB11738","150914",NA,"C05283","1",NA
+"gamma-glutamylisoleucine","L-gamma-glutamyl-L-isoleucine ","HMDB11170","14253342",NA,"","1",NA
+"gamma-glutamylleucine","L-gamma-glutamyl-L-leucine ","HMDB11171","4524287",NA,"","1",NA
+"gamma-glutamylmethionine","NA","NA","NA","NA","NA","0",NA
+"gamma-glutamyltyrosine","Gamma-Glutamyltyrosine","HMDB11741","94340",NA,"","1",NA
+"gamma-tocopherol","Gamma-Tocopherol","HMDB01492","14986","298402","","1",NA
+"gluconate","Gluconic acid","HMDB00625","10690","33198","C00257","1",NA
+"glucose-6-phosphate (G6P)","NA","NA","NA","NA","NA","0",NA
+"glutamate","D-Glutamic acid","HMDB03339","23327","15966","C00217","1",NA
+"glutathione, oxidized (GSSG)","NA","NA","NA","NA","NA","0",NA
+"glutathione, reduced (GSH)","NA","NA","NA","NA","NA","0",NA
+"glycerol 2-phosphate","NA","NA","NA","NA","NA","0",NA
+"glycerol 3-phosphate (G3P)","NA","NA","NA","NA","NA","0",NA
+"glycerophosphorylcholine (GPC)","NA","NA","NA","NA","NA","0",NA
+"glycolithocholate sulfate","Sulfolithocholylglycine","HMDB02639","53477756",NA,"C11301","1",NA
+"glycylglycine","NA","NA","NA","NA","NA","0",NA
+"glycylleucine","Glycyl-L-leucine","HMDB00759","92843","185298","C02155","1",NA
+"glycylproline","Glycylproline","HMDB00721","79101","356660","","1",NA
+"glycylvaline","NA","NA","NA","NA","NA","0",NA
+"hexanoylcarnitine","Hexanoylcarnitine","HMDB00705","6426853",NA,"","1",NA
+"hippurate","Hippuric acid","HMDB00714","464","18089","C01586","1",NA
+"homocarnosine","Homocarnosine","HMDB00745","10243361","491179","C00884","1",NA
+"hydroxyisovaleroyl carnitine","NA","NA","NA","NA","NA","0",NA
+"ibuprofen","Ibuprofen","HMDB01925","3672","5855","C01588","1",NA
+"inositol 1-phosphate (I1P)","NA","NA","NA","NA","NA","0",NA
+"Isobar: fructose 1,6-diphosphate, glucose 1,6-diphosphate","NA","NA","NA","NA","NA","0",NA
+"Isobar: ribulose 5-phosphate, xylulose 5-phosphate","NA","NA","NA","NA","NA","0",NA
+"isobutyrylcarnitine","NA","NA","NA","NA","NA","0",NA
+"isoleucine","(+/-)-erythro-Isoleucine","HMDB33923","791","38264","C16434","1",NA
+"isovalerylcarnitine","Isovalerylcarnitine","HMDB00688","6426851",NA,"","1",NA
+"laurate (12:0)","NA","NA","NA","NA","NA","0",NA
+"laurylcarnitine","NA","NA","NA","NA","NA","0",NA
+"lidocaine","Lidocaine","HMDB14426","3676","6456","C07073","1",NA
+"linoleate (18:2n6)","NA","NA","NA","NA","NA","0",NA
+"linolenate [alpha or gamma; (18:3n3 or 6)]","NA","NA","NA","NA","NA","0",NA
+"malate","NA","NA","NA","NA","NA","0",NA
+"malonate (propanedioate)","NA","NA","NA","NA","NA","0",NA
+"maltopentaose","Maltopentaose","HMDB12254","13489094","61952","","1",NA
+"maltotetraose","Maltotetraose","HMDB01296","439639",NA,"C02052","1",NA
+"mannitol","Mannitol","HMDB00765","6251","16899","C00392","1",NA
+"margarate (17:0)","NA","NA","NA","NA","NA","0",NA
+"methionine","NA","NA","NA","NA","NA","0",NA
+"methyl-4-hydroxybenzoate","NA","NA","NA","NA","NA","0",NA
+"methylphosphate","NA","NA","NA","NA","NA","0",NA
+"metoprolol","Metoprolol","HMDB01932","4171","6904","C07202","1",NA
+"metoprolol acid metabolite","NA","NA","NA","NA","NA","0",NA
+"myristate (14:0)","NA","NA","NA","NA","NA","0",NA
+"myristoleate (14:1n5)","NA","NA","NA","NA","NA","0",NA
+"N-acetyl-aspartyl-glutamate (NAAG)","NA","NA","NA","NA","NA","0",NA
+"N-acetylalanine","N-Acetyl-L-alanine","HMDB00766","88064","40992","C00624","1",NA
+"N-acetylaspartate (NAA)","NA","NA","NA","NA","NA","0",NA
+"N-acetylglucosamine 6-phosphate","N-Acetylglucosamine 6-phosphate","HMDB02817","439219",NA,"","1",NA
+"N-acetylisoleucine","NA","NA","NA","NA","NA","0",NA
+"N-acetylmethionine","N-Acetyl-L-methionine","HMDB11745","6180","165927","C02712","1",NA
+"N-acetylneuraminate","NA","NA","NA","NA","NA","0",NA
+"N-acetylornithine","N-Acetylornithine","HMDB03357","439232","16543","C00437","1",NA
+"N-acetylserine","N-Acetylserine","HMDB02931","65249",NA,"","1",NA
+"N-acetylthreonine","NA","NA","NA","NA","NA","0",NA
+"N-acetyltryptophan","NA","NA","NA","NA","NA","0",NA
+"N-ethylglycinexylidide","NA","NA","NA","NA","NA","0",NA
+"N-formylmethionine","NA","NA","NA","NA","NA","0",NA
+"N1-methyladenosine","1-Methyladenosine","HMDB03331","27476","16020","C02494","1",NA
+"N1-methylguanosine","1-Methylguanosine","HMDB01563","96373","19062","C04545","1",NA
+"N2,N2-dimethylguanosine","N2,N2-Dimethylguanosine","HMDB04824","92919","19289","","1",NA
+"N6-acetyllysine","N6-Acetyl-L-lysine","HMDB00206","92832","17752","C02727","1",NA
+"naproxen","Naproxen","HMDB01923","156391","7476","C01517","1",NA
+"nicotinamide adenine dinucleotide (NAD+)","NA","NA","NA","NA","NA","0",NA
+"oleate (18:1n9)","NA","NA","NA","NA","NA","0",NA
+"oleoylcarnitine","Oleoylcarnitine","HMDB05065","53477789",NA,"","1",NA
+"ophthalmate","NA","NA","NA","NA","NA","0",NA
+"p-acetamidophenylglucuronide","NA","NA","NA","NA","NA","0",NA
+"p-cresol sulfate","p-Cresol sulfate","HMDB11635","4615423",NA,"","1",NA
+"palmitate (16:0)","NA","NA","NA","NA","NA","0",NA
+"palmitoleate (16:1n7)","NA","NA","NA","NA","NA","0",NA
+"palmitoylcarnitine","NA","NA","NA","NA","NA","0",NA
+"phenol red","NA","NA","NA","NA","NA","0",NA
+"phenol sulfate","NA","NA","NA","NA","NA","0",NA
+"phenylacetylglycine","Phenylacetylglycine","HMDB00821","68144","27480","C05598","1",NA
+"phenyllactate (PLA)","NA","NA","NA","NA","NA","0",NA
+"phosphate","Phosphate","HMDB01429","1061","18367","C00009","1",NA
+"phosphoenolpyruvate (PEP)","NA","NA","NA","NA","NA","0",NA
+"phytosphingosine","Phytosphingosine","HMDB04610","122121","46961","C12144","1",NA
+"pipecolate","Pipecolic acid","HMDB00070","849","17964","C00408","1",NA
+"pregn steroid monosulfate","NA","NA","NA","NA","NA","0",NA
+"pregnen-diol disulfate","NA","NA","NA","NA","NA","0",NA
+"pseudouridine","Pseudouridine","HMDB00767","15047","17802","C02067","1",NA
+"pyridoxate","NA","NA","NA","NA","NA","0",NA
+"pyridoxine (Vitamin B6)","NA","NA","NA","NA","NA","0",NA
+"pyroglutamine","NA","NA","NA","NA","NA","0",NA
+"pyroglutamylvaline","NA","NA","NA","NA","NA","0",NA
+"pyrophosphate (PPi)","NA","NA","NA","NA","NA","0",NA
+"ribitol","Ribitol","HMDB00508",NA,"15963","C00474","1",NA
+"riboflavin (Vitamin B2)","NA","NA","NA","NA","NA","0",NA
+"ribulose","L-Ribulose","HMDB03371","439204","16880","C00310","1",NA
+"S-adenosylhomocysteine (SAH)","NA","NA","NA","NA","NA","0",NA
+"S-adenosylmethionine (SAM)","NA","NA","NA","NA","NA","0",NA
+"salicylate","Salicylic acid","HMDB01895","338","16914","C00805","1",NA
+"sarcosine (N-Methylglycine)","NA","NA","NA","NA","NA","0",NA
+"scyllo-inositol","Scyllitol","HMDB06088",NA,"23927","C06153","1",NA
+"sebacate (decanedioate)","NA","NA","NA","NA","NA","0",NA
+"stachydrine","Proline betaine","HMDB04827","115244","35280","C10172","1",NA
+"stearate (18:0)","NA","NA","NA","NA","NA","0",NA
+"stearidonate (18:4n3)","NA","NA","NA","NA","NA","0",NA
+"stearoyl sphingomyelin","NA","NA","NA","NA","NA","0",NA
+"suberylglycine","Suberylglycine","HMDB00953","6453952",NA,"","1",NA
+"succinylcarnitine","NA","NA","NA","NA","NA","0",NA
+"taurolithocholate 3-sulfate","Taurolithocholic acid 3-sulfate","HMDB02580","440071","17864","C03642","1",NA
+"threonate","Threonic acid","HMDB00943","151152","49059","C01620","1",NA
+"thymol sulfate","NA","NA","NA","NA","NA","0",NA
+"trans-4-hydroxyproline","4-Hydroxyproline","HMDB00725","5810","18095","C01157","1",NA
+"tryptophan","D-Tryptophan","HMDB13609","9060","16296","C00525","1",NA
+"tryptophan betaine","NA","NA","NA","NA","NA","0",NA
+"ursodeoxycholate","Ursodeoxycholic acid","HMDB00946","31401","9907","C07880","1",NA
+"valerylcarnitine","Valerylcarnitine","HMDB13128","53481619",NA,"","1",NA
+"xylitol","D-Xylitol","HMDB02917","6912","1305691","C00379","1",NA
+"xylulose","D-Xylulose","HMDB01644","5289590","17140","C00310","1",NA
+"X - 02249_201   (X indicates unknown)","NA","NA","NA","NA","NA","0",NA
+"X - 02269_201","NA","NA","NA","NA","NA","0",NA
+"X - 03056_200","NA","NA","NA","NA","NA","0",NA
+"X - 10346_201","NA","NA","NA","NA","NA","0",NA
+"palmitoyl sphinomyelin (prev. X - 10419)","NA","NA","NA","NA","NA","0",NA
+"X - 10445_200","NA","NA","NA","NA","NA","0",NA
+"X - 10500","NA","NA","NA","NA","NA","0",NA
+"X - 10593_200","NA","NA","NA","NA","NA","0",NA
+"X - 11315","NA","NA","NA","NA","NA","0",NA
+"X - 11437","NA","NA","NA","NA","NA","0",NA
+"X - 11516","NA","NA","NA","NA","NA","0",NA
+"X - 11530","NA","NA","NA","NA","NA","0",NA
+"X - 11538","NA","NA","NA","NA","NA","0",NA
+"X - 11540","NA","NA","NA","NA","NA","0",NA
+"glycoursodeoxycholate (prev. X - 11546)","NA","NA","NA","NA","NA","0",NA
+"X - 11550","NA","NA","NA","NA","NA","0",NA
+"13(S)-HODE (prev. X - 11560)","NA","NA","NA","NA","NA","0",NA
+"X - 11561","NA","NA","NA","NA","NA","0",NA
+"ergothioneine (prev. X - 11568)","NA","NA","NA","NA","NA","0",NA
+"X - 11575","NA","NA","NA","NA","NA","0",NA
+"X - 11576","NA","NA","NA","NA","NA","0",NA
+"X - 11578","NA","NA","NA","NA","NA","0",NA
+"X - 11580_201","NA","NA","NA","NA","NA","0",NA
+"X - 11581","NA","NA","NA","NA","NA","0",NA
+"X - 11586","NA","NA","NA","NA","NA","0",NA
+"X - 11591","NA","NA","NA","NA","NA","0",NA
+"X - 11596","NA","NA","NA","NA","NA","0",NA
+"X - 11611","NA","NA","NA","NA","NA","0",NA
+"X - 11613","NA","NA","NA","NA","NA","0",NA
+"X - 11615","NA","NA","NA","NA","NA","0",NA
+"X - 11616","NA","NA","NA","NA","NA","0",NA
+"X - 11617","NA","NA","NA","NA","NA","0",NA
+"X - 11621","NA","NA","NA","NA","NA","0",NA
+"X - 11641","NA","NA","NA","NA","NA","0",NA
+"X - 11644","NA","NA","NA","NA","NA","0",NA
+"X - 11687","NA","NA","NA","NA","NA","0",NA
+"X - 11725","NA","NA","NA","NA","NA","0",NA
+"X - 11787","NA","NA","NA","NA","NA","0",NA
+"X - 11838","NA","NA","NA","NA","NA","0",NA
+"X - 11858","NA","NA","NA","NA","NA","0",NA
+"X - 11860","NA","NA","NA","NA","NA","0",NA
+"X - 11861","NA","NA","NA","NA","NA","0",NA
+"X - 11866","NA","NA","NA","NA","NA","0",NA
+"X - 11886","NA","NA","NA","NA","NA","0",NA
+"X - 12010","NA","NA","NA","NA","NA","0",NA
+"X - 12051","NA","NA","NA","NA","NA","0",NA
+"X - 12056","NA","NA","NA","NA","NA","0",NA
+"X - 12100","NA","NA","NA","NA","NA","0",NA
+"X - 12104","NA","NA","NA","NA","NA","0",NA
+"X - 12127","NA","NA","NA","NA","NA","0",NA
+"X - 12216","NA","NA","NA","NA","NA","0",NA
+"X - 12423","NA","NA","NA","NA","NA","0",NA
+"X - 12442","NA","NA","NA","NA","NA","0",NA
+"X - 12462","NA","NA","NA","NA","NA","0",NA
+"X - 12465","NA","NA","NA","NA","NA","0",NA
+"X - 12565","NA","NA","NA","NA","NA","0",NA
+"X - 12627","NA","NA","NA","NA","NA","0",NA
+"X - 12660","NA","NA","NA","NA","NA","0",NA
+"X - 12663","NA","NA","NA","NA","NA","0",NA
+"X - 12728","NA","NA","NA","NA","NA","0",NA
+"X - 12741","NA","NA","NA","NA","NA","0",NA
+"X - 12742","NA","NA","NA","NA","NA","0",NA
+"X - 12748","NA","NA","NA","NA","NA","0",NA
+"ranitidine (prev. X - 12761)","NA","NA","NA","NA","NA","0",NA
+"X - 12770","NA","NA","NA","NA","NA","0",NA
+"X - 12776","NA","NA","NA","NA","NA","0",NA
+"X - 12780","NA","NA","NA","NA","NA","0",NA
+"X - 12786","NA","NA","NA","NA","NA","0",NA
+"X - 12792","NA","NA","NA","NA","NA","0",NA
+"X - 12794","NA","NA","NA","NA","NA","0",NA
+"X - 12797","NA","NA","NA","NA","NA","0",NA
+"X - 12799","NA","NA","NA","NA","NA","0",NA
+"X - 12800","NA","NA","NA","NA","NA","0",NA
+"aspartylleucine (prev. X - 12801)","NA","NA","NA","NA","NA","0",NA
+"X - 12824","NA","NA","NA","NA","NA","0",NA
+"X - 12854","NA","NA","NA","NA","NA","0",NA
+"X - 12855","NA","NA","NA","NA","NA","0",NA
+"X - 12856","NA","NA","NA","NA","NA","0",NA
+"X - 12859","NA","NA","NA","NA","NA","0",NA
+"X - 12860","NA","NA","NA","NA","NA","0",NA
+"X - 12862","NA","NA","NA","NA","NA","0",NA
+"X - 12870","NA","NA","NA","NA","NA","0",NA
+"docosapentaenoate (n6 DPA, 22:5n6) (prev. X - 12990)","NA","NA","NA","NA","NA","0",NA
+"X - 13007","NA","NA","NA","NA","NA","0",NA
+"penicillin  G (prev. X - 13066)","NA","NA","NA","NA","NA","0",NA
+"X - 13068","NA","NA","NA","NA","NA","0",NA
+"X - 13082","NA","NA","NA","NA","NA","0",NA
+"X - 13086","NA","NA","NA","NA","NA","0",NA
+"X - 13098","NA","NA","NA","NA","NA","0",NA
+"X - 13110","NA","NA","NA","NA","NA","0",NA
+"1-palmitoylplasmenylethanolamine (prev. X - 13134)","NA","NA","NA","NA","NA","0",NA
+"X - 13143","NA","NA","NA","NA","NA","0",NA
+"X - 13145","NA","NA","NA","NA","NA","0",NA
+"X - 13150","NA","NA","NA","NA","NA","0",NA
+"X - 13159","NA","NA","NA","NA","NA","0",NA
+"X - 13161","NA","NA","NA","NA","NA","0",NA
+"X - 13162","NA","NA","NA","NA","NA","0",NA
+"cytosine-2',3'cyclic monophosphate (prev. X - 13188)","NA","NA","NA","NA","NA","0",NA
+"X - 13191","NA","NA","NA","NA","NA","0",NA
+"X - 13230","NA","NA","NA","NA","NA","0",NA
+"X - 13372","NA","NA","NA","NA","NA","0",NA
+"X - 13391","NA","NA","NA","NA","NA","0",NA
+"X - 13396","NA","NA","NA","NA","NA","0",NA
+"X - 13411","NA","NA","NA","NA","NA","0",NA
+"X - 13413","NA","NA","NA","NA","NA","0",NA
+"X - 13414","NA","NA","NA","NA","NA","0",NA
+"X - 13417","NA","NA","NA","NA","NA","0",NA
+"X - 13418","NA","NA","NA","NA","NA","0",NA
+"X - 13421","NA","NA","NA","NA","NA","0",NA
+"X - 13422","NA","NA","NA","NA","NA","0",NA
+"X - 13423","NA","NA","NA","NA","NA","0",NA
+"X - 13445","NA","NA","NA","NA","NA","0",NA
+"X - 13494","NA","NA","NA","NA","NA","0",NA
+"X - 13503","NA","NA","NA","NA","NA","0",NA
+"X - 13510","NA","NA","NA","NA","NA","0",NA
+"X - 13512","NA","NA","NA","NA","NA","0",NA
+"X - 13516","NA","NA","NA","NA","NA","0",NA
+"X - 13519","NA","NA","NA","NA","NA","0",NA
+"X - 13520","NA","NA","NA","NA","NA","0",NA
+"X - 13529","NA","NA","NA","NA","NA","0",NA
+"X - 13543","NA","NA","NA","NA","NA","0",NA
+"X - 13555","NA","NA","NA","NA","NA","0",NA
+"X - 13557","NA","NA","NA","NA","NA","0",NA
+"X - 13560","NA","NA","NA","NA","NA","0",NA
+"X - 13621","NA","NA","NA","NA","NA","0",NA
+"X - 13671","NA","NA","NA","NA","NA","0",NA
+"X - 13673","NA","NA","NA","NA","NA","0",NA
+"6-sialyl-N-acetyllactosamine (prev. X - 13701)","NA","NA","NA","NA","NA","0",NA
+"X - 13743","NA","NA","NA","NA","NA","0",NA
+"X - 13819","NA","NA","NA","NA","NA","0",NA
+"X - 13871","NA","NA","NA","NA","NA","0",NA
+"X - 13872","NA","NA","NA","NA","NA","0",NA
+"X - 13891","NA","NA","NA","NA","NA","0",NA
+"X - 13975","NA","NA","NA","NA","NA","0",NA
+"X - 14097","NA","NA","NA","NA","NA","0",NA
+"X - 14099","NA","NA","NA","NA","NA","0",NA
+"leucylglutamate (prev. X - 14103)","NA","NA","NA","NA","NA","0",NA
+"histidylisoleucine (prev. X - 14119)","NA","NA","NA","NA","NA","0",NA
+"histidylleucine (prev. X - 14123)","NA","NA","NA","NA","NA","0",NA
+"X - 14132","NA","NA","NA","NA","NA","0",NA
+"lysylleucine (prev. X - 14139)","NA","NA","NA","NA","NA","0",NA
+"X - 14141","NA","NA","NA","NA","NA","0",NA
+"X - 14147","NA","NA","NA","NA","NA","0",NA
+"isoleucylglycine (prev. X - 14186)","NA","NA","NA","NA","NA","0",NA
+"phenylalanylserine (prev. X - 14208)","NA","NA","NA","NA","NA","0",NA
+"X - 14234","NA","NA","NA","NA","NA","0",NA
+"X - 14241","NA","NA","NA","NA","NA","0",NA
+"X - 14248","NA","NA","NA","NA","NA","0",NA
+"X - 14256","NA","NA","NA","NA","NA","0",NA
+"serylleucine (prev. X - 14258)","NA","NA","NA","NA","NA","0",NA
+"X - 14272","NA","NA","NA","NA","NA","0",NA
+"serylphenylalanine (prev. X - 14284)","NA","NA","NA","NA","NA","0",NA
+"histidylleucine (prev. X - 14296)","NA","NA","NA","NA","NA","0",NA
+"X - 14314","NA","NA","NA","NA","NA","0",NA
+"X - 14346","NA","NA","NA","NA","NA","0",NA
+"tyrosylleucine (prev. X - 14353)","NA","NA","NA","NA","NA","0",NA
+"X - 14364","NA","NA","NA","NA","NA","0",NA
+"X - 14384","NA","NA","NA","NA","NA","0",NA
+"X - 14388","NA","NA","NA","NA","NA","0",NA
+"X - 14590","NA","NA","NA","NA","NA","0",NA
+"X - 14591","NA","NA","NA","NA","NA","0",NA
+"X - 14596","NA","NA","NA","NA","NA","0",NA
+"X - 14600","NA","NA","NA","NA","NA","0",NA
+"X - 14606","NA","NA","NA","NA","NA","0",NA
+"X - 14611","NA","NA","NA","NA","NA","0",NA
+"X - 14613","NA","NA","NA","NA","NA","0",NA
+"X - 14919","NA","NA","NA","NA","NA","0",NA
+"X - 14952","NA","NA","NA","NA","NA","0",NA
+"X - 15117","NA","NA","NA","NA","NA","0",NA
+"X - 15149","NA","NA","NA","NA","NA","0",NA
+"X - 15150","NA","NA","NA","NA","NA","0",NA
+"X - 15151","NA","NA","NA","NA","NA","0",NA
+"X - 15158","NA","NA","NA","NA","NA","0",NA
+"X - 15159","NA","NA","NA","NA","NA","0",NA
+"X - 15161","NA","NA","NA","NA","NA","0",NA
+"X - 15163","NA","NA","NA","NA","NA","0",NA
+"X - 15164","NA","NA","NA","NA","NA","0",NA
+"X - 15165","NA","NA","NA","NA","NA","0",NA
+"X - 15166","NA","NA","NA","NA","NA","0",NA
+"X - 15168","NA","NA","NA","NA","NA","0",NA
+"X - 15169","NA","NA","NA","NA","NA","0",NA
+"tryptophylasparagine (prev. X - 15170)","NA","NA","NA","NA","NA","0",NA
+"X - 15173","NA","NA","NA","NA","NA","0",NA
+"X - 15174","NA","NA","NA","NA","NA","0",NA
+"X - 15175","NA","NA","NA","NA","NA","0",NA
+"X - 15197","NA","NA","NA","NA","NA","0",NA
+"X - 3094","NA","NA","NA","NA","NA","0",NA
+"X - 4015","NA","NA","NA","NA","NA","0",NA
+"X - 4051","NA","NA","NA","NA","NA","0",NA
+"X - 4357","NA","NA","NA","NA","NA","0",NA
+"X - 4507","NA","NA","NA","NA","NA","0",NA
+"X - 4523","NA","NA","NA","NA","NA","0",NA
+"1,2-propanediol (prev. X - 4796)","NA","NA","NA","NA","NA","0",NA
+"X - 5228","NA","NA","NA","NA","NA","0",NA
+"X - 5229","NA","NA","NA","NA","NA","0",NA
+"X - 5907","NA","NA","NA","NA","NA","0",NA
+"X - 6227","NA","NA","NA","NA","NA","0",NA
+"X - 6650","NA","NA","NA","NA","NA","0",NA
+"X - 8791","NA","NA","NA","NA","NA","0",NA
+"X - 8889","NA","NA","NA","NA","NA","0",NA
+"X - 8890","NA","NA","NA","NA","NA","0",NA
+"X - 8988","NA","NA","NA","NA","NA","0",NA
+"X - 8994","NA","NA","NA","NA","NA","0",NA

@@ -98,6 +98,8 @@ selected_Pathways_Weka= lilikoi.featuresSelection(PDSmatrix,threshold= 0.54,meth
 
 Before running this function, users need to download Cytoscape from http://www.cytoscape？org/download.php. Keep Cytoscape running, then you can connect to R package RCy3. For more info, please refer to vignettes of RCy3. If run multiple times, there will be notifications from Cytoscape asking you to overwrite the former graph.
 
+If you see error like: Error in commandsPOST("vizmap apply styles=\"default\"", base.url = base.url) : No network views selected., please re-run the code and the error will disappear.
+
 ```{r}
 lilikoi.meta_path(PDSmatrix = PDSmatrix, selected_Pathways_Weka = selected_Pathways_Weka, Metabolite_pathway_table = Metabolite_pathway_table, pathway = "Alanine, Aspartate And Glutamate Metabolism")
 ```
