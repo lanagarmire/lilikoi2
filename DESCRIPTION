@@ -9,41 +9,17 @@ Authors@R: c(
  person("Fadhl", "Alakwaa", email = "falakwaa@hawaii.edu", role = "aut"),
  person("Sijia", "Huang", email = "scarlettcanny@gmail.com", role = "aut"),
  person("Lana", "Garmire", email = "lana.garmire.group@gmail.com", role = c("aut","cre")))
-Description:  A personalized metabolites and pathway analysis tool. With the metabolites data provided by users, lilikoi maps the metabolites data into pathways and calculates pathway deregulation scores. It enables users to perform exploratory analysis, classification and prognosis analysis on both metabolites and pathways. References: Fadhl M AlAkwaa, Breck Yunits, Sijia Huang, Hassam Alhajaji, Lana X Garmire <doi.org/10.1093/gigascience/giy136> H. Paul Benton <http://www.metabolomics-forum.com/index.php?topic=281.0> Jeff Xia <https://github.com/cangfengzhe/Metabo/blob/master/MetaboAnalyst/website/name_match.R> Travers Ching, Xun Zhu, Lana X. Garmire (2018) <doi:10.1371/journal.pcbi.1006076>.
+Description: Lilikoi is a comprehensive analysis tool for metabolomics data.  It consists a variety of functional modules, including It also has several new modules, including a pre-processing module for normalization and imputation, an exploratory data analysis module for dimension reduction and source of variation analysis, a classification module with the new deep-learning method and other machine-learning methods, a prognosis module with cox-PH and neural-network based Cox-nnet methods, and pathway analysis module to visualize the pathway and interpret metabolite-pathway relationships. References: H. Paul Benton <http://www.metabolomics-forum.com/index.php?topic=281.0> Jeff Xia <https://github.com/cangfengzhe/Metabo/blob/master/MetaboAnalyst/website/name_match.R> Travers Ching, Xun Zhu, Lana X. Garmire (2018) <doi:10.1371/journal.pcbi.1006076>.
 biocViews:
 Depends: R (>= 3.5.0)
-Imports:
-  car,
-	caret,
-  dplyr,
-  gbm,
-  ggplot2,
-  glmnet,
-  graphics,
-  h2o,
-  impute,
-  infotheo,
-  limma,
-  Metrics,
-  MLmetrics,
-  parallel,
-  plyr,
-  preprocessCore,
-  pROC,
-  RCy3,
-  reticulate,
-  reshape,
-  RWeka,
-  scales,
-  stringr,
-  survminer,
-  survival,
-  pathview,
-  M3C,
-  pathifier
+Imports: car, caret, dplyr, gbm, ggplot2, glmnet, h2o, impute,
+        infotheo, limma, M3C, Metrics, MLmetrics, parallel, pathifier,
+        pathview, plyr, preprocessCore, pROC, RCy3, reticulate,
+        reshape, RWeka, scales, stats, stringr, survminer, survival
 License: GPL-2
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.0.2
 VignetteBuilder: knitr
 Suggests: knitr, rmarkdown
+
