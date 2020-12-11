@@ -1,0 +1,9 @@
+"Metabolites","Pathways","Association","P-values"
+"temp1.4","Succinate","Alanine, Aspartate And Glutamate Metabolism",-0.434823600295099,0.00185575706280685
+"temp1.3","Aspartate","Alanine, Aspartate And Glutamate Metabolism",-0.268551556647957,2.3548208428166e-36
+"temp1.5","Citric acid","Alanine, Aspartate And Glutamate Metabolism",0.043089068769843,0.0150016216260423
+"temp1.6","Pyruvate","Alanine, Aspartate And Glutamate Metabolism",0.0461084725671203,7.8472638448355e-08
+"temp1.7","5-Phosphoribosylamine","Alanine, Aspartate And Glutamate Metabolism",0.0488312712474231,0.00166076293130146
+"temp1.2","Glutamine","Alanine, Aspartate And Glutamate Metabolism",0.377602464236484,8.09325368233023e-36
+"temp1","Oxaloacetate","Alanine, Aspartate And Glutamate Metabolism",0.574765060973482,0.00108477167501329
+"temp1.1","Asparagine","Alanine, Aspartate And Glutamate Metabolism",0.996658749802946,3.56322944573373e-17

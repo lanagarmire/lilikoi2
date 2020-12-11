@@ -1,0 +1,207 @@
+"Metabolites","Pathways","Association","P-values"
+"temp1.4","Succinate","Alanine, Aspartate And Glutamate Metabolism",-0.434823600295099,0.00185575706280685
+"temp1.3","Aspartate","Alanine, Aspartate And Glutamate Metabolism",-0.268551556647957,2.3548208428166e-36
+"temp1.5","Citric acid","Alanine, Aspartate And Glutamate Metabolism",0.043089068769843,0.0150016216260423
+"temp1.6","Pyruvate","Alanine, Aspartate And Glutamate Metabolism",0.0461084725671203,7.8472638448355e-08
+"temp1.7","5-Phosphoribosylamine","Alanine, Aspartate And Glutamate Metabolism",0.0488312712474231,0.00166076293130146
+"temp1.2","Glutamine","Alanine, Aspartate And Glutamate Metabolism",0.377602464236484,8.09325368233023e-36
+"temp1","Oxaloacetate","Alanine, Aspartate And Glutamate Metabolism",0.574765060973482,0.00108477167501329
+"temp1.1","Asparagine","Alanine, Aspartate And Glutamate Metabolism",0.996658749802946,3.56322944573373e-17
+"temp1.21","Aspartate","Aminoacyl-tRNA Biosynthesis",-0.359754252135491,1.53757529643818e-32
+"temp1.9","Phenylalanine","Aminoacyl-tRNA Biosynthesis",-0.128558275928105,0.000322915619266606
+"temp1.14","L-Tryptophan","Aminoacyl-tRNA Biosynthesis",-0.074898138260244,0.065858585416216
+"temp1.41","Threonine","Aminoacyl-tRNA Biosynthesis",-0.0700230611293743,0.000132995606898641
+"temp1.8","Serine","Aminoacyl-tRNA Biosynthesis",-0.0406876627307216,0.020027023808116
+"temp1.31","L-methionine","Aminoacyl-tRNA Biosynthesis",-0.0377702507270871,0.662477690613322
+"temp1.16","L-Tyrosine","Aminoacyl-tRNA Biosynthesis",-0.0298431060190715,0.0647515402182258
+"temp1.12","L-Lysine","Aminoacyl-tRNA Biosynthesis",-0.0250473616329456,0.166363395607994
+"temp1.15","L-Leucine","Aminoacyl-tRNA Biosynthesis",-0.0116980487227519,0.0845705994246959
+"temp1.51","Glycine","Aminoacyl-tRNA Biosynthesis",-0.010961275896387,0.0256345556462271
+"temp1.13","Proline","Aminoacyl-tRNA Biosynthesis",-0.0015779897708199,0.543255334024296
+"temp1.10","Valine","Aminoacyl-tRNA Biosynthesis",0.0752173896732635,0.112283071928078
+"temp1.17","Glutamine","Aminoacyl-tRNA Biosynthesis",0.330962939574555,3.30054980621105e-12
+"temp1.11","Lysine","Aminoacyl-tRNA Biosynthesis",0.745976530916318,2.51031555516773e-12
+"temp11","Asparagine","Aminoacyl-tRNA Biosynthesis",1.43048389082989,2.54153916601441e-18
+"temp1.71","Arginine","Aminoacyl-tRNA Biosynthesis",2.10000416482428,1.33663246317323e-17
+"temp1.61","Phosphoserine","Aminoacyl-tRNA Biosynthesis",7.34340546686688,0.211276437760572
+"temp1.52","Beta-alanine","Aspartate Metabolism",-0.812202338204513,0.0773124508091236
+"temp1.42","Aspartate","Aspartate Metabolism",-0.243049157393074,1.20257070436224e-28
+"temp1.22","Glutamine","Aspartate Metabolism",0.348014390821956,1.24078718965285e-29
+"temp1.32","Citrulline","Aspartate Metabolism",0.366991556176358,0.0389569083389035
+"temp12","Oxaloacetate","Aspartate Metabolism",0.682800864120952,7.71240189318245e-05
+"temp1.18","Asparagine","Aspartate Metabolism",0.855468292383698,8.35587650115778e-13
+"temp1.62","Arginine","Aspartate Metabolism",1.18423989672668,5.29757144507e-11
+"temp1.171","L-Homoserine","Biosynthesis Of Amino Acids",-1.70161509387647,0.0600034747734064
+"temp13","Oxaloacetate","Biosynthesis Of Amino Acids",-0.480976122172057,0.0535570524954668
+"temp1.43","Aspartate","Biosynthesis Of Amino Acids",-0.334370176219938,2.42507607660732e-26
+"temp1.27","Anthranilic acid","Biosynthesis Of Amino Acids",-0.289983407801879,0.858067452597317
+"temp1.19","Phenylalanine","Biosynthesis Of Amino Acids",-0.0833833161235353,0.0218513517600762
+"temp1.81","Threonine","Biosynthesis Of Amino Acids",-0.0531561567706523,0.00429544848796945
+"temp1.121","Ornithine","Biosynthesis Of Amino Acids",-0.0236240161974755,0.824933534505887
+"temp1.141","Serine","Biosynthesis Of Amino Acids",-0.0230812515879297,0.192487980718573
+"temp1.28","L-Tyrosine","Biosynthesis Of Amino Acids",-0.00888533206759636,0.586737988102346
+"temp1.91","Glycine","Biosynthesis Of Amino Acids",-0.00705288601561797,0.15570150962273
+"temp1.26","L-Leucine","Biosynthesis Of Amino Acids",-0.000593051870691765,0.931110787936742
+"temp1.25","L-Tryptophan","Biosynthesis Of Amino Acids",-0.00047988121251517,0.990708432735562
+"temp1.24","Proline","Biosynthesis Of Amino Acids",0.00215010207611606,0.410975532097769
+"temp1.23","L-Lysine","Biosynthesis Of Amino Acids",0.00537713428323787,0.768644159911734
+"temp1.151","L-Ornithine","Biosynthesis Of Amino Acids",0.0370126135438081,0.0453122104499815
+"temp1.53","Citric acid","Biosynthesis Of Amino Acids",0.0425782717072818,0.0882028029513575
+"temp1.72","L-methionine","Biosynthesis Of Amino Acids",0.0580976883944036,0.505149907825075
+"temp1.63","Pyruvate","Biosynthesis Of Amino Acids",0.0656792076116195,4.9686654255486e-08
+"temp1.211","Valine","Biosynthesis Of Amino Acids",0.0962491715535618,0.043371077878224
+"temp1.161","a-Aminoadipic acid","Biosynthesis Of Amino Acids",0.158031710450322,0.288591133672219
+"temp1.181","Glyceraldehyde 3-phosphate","Biosynthesis Of Amino Acids",0.253737463357672,0.282961061768897
+"temp1.210","Glutamine","Biosynthesis Of Amino Acids",0.303447198103725,3.67538528628686e-10
+"temp1.101","Cystathionine","Biosynthesis Of Amino Acids",0.536862428354598,1.05324449554634e-14
+"temp1.221","Lysine","Biosynthesis Of Amino Acids",0.699728228655167,1.03346683248308e-10
+"temp1.33","Citrulline","Biosynthesis Of Amino Acids",0.765137179658882,0.00231954331966633
+"temp1.29","2-oxo-4-methylvaleric acid","Biosynthesis Of Amino Acids",0.980633954323895,0.000823321313080853
+"temp1.110","Asparagine","Biosynthesis Of Amino Acids",1.51171860471389,2.17565595179035e-20
+"temp1.131","Arginine","Biosynthesis Of Amino Acids",1.81541022029251,9.22982437084097e-13
+"temp1.20","Dihydroxyacetone phosphate","Biosynthesis Of Amino Acids",2.13213425957937,0.411065256314134
+"temp1.30","3-methyl-2-oxo-butanoic acid","Biosynthesis Of Amino Acids",7.13325586766595,0.000234849344837928
+"temp1.111","Phosphoserine","Biosynthesis Of Amino Acids",12.7225193180716,0.0310008351649149
+"temp1.54","Beta-alanine","Canavan Disease",-0.812202338204513,0.0773124508091236
+"temp1.44","Aspartate","Canavan Disease",-0.243049157393074,1.20257070436224e-28
+"temp1.212","Glutamine","Canavan Disease",0.348014390821956,1.24078718965285e-29
+"temp1.34","Citrulline","Canavan Disease",0.366991556176358,0.0389569083389035
+"temp14","Oxaloacetate","Canavan Disease",0.682800864120952,7.71240189318245e-05
+"temp1.112","Asparagine","Canavan Disease",0.855468292383698,8.35587650115778e-13
+"temp1.64","Arginine","Canavan Disease",1.18423989672668,5.29757144507e-11
+"temp1.122","L-Homoserine","Glycine, Serine And Threonine Metabolism",-1.78535326235754,0.0397307505019638
+"temp1.152","N-acetyl-glycine","Glycine, Serine And Threonine Metabolism",-0.514122626798579,0.544106884116974
+"temp1.132","Choline","Glycine, Serine And Threonine Metabolism",-0.380448177647436,0.0199139479929111
+"temp15","Aspartate","Glycine, Serine And Threonine Metabolism",-0.333076541437912,6.47370139144441e-29
+"temp1.113","Creatine","Glycine, Serine And Threonine Metabolism",-0.0831488120878488,0.104882992092426
+"temp1.45","Threonine","Glycine, Serine And Threonine Metabolism",-0.0691730020696471,9.50839387985042e-05
+"temp1.92","Serine","Glycine, Serine And Threonine Metabolism",-0.0376465250693545,0.0262698919199143
+"temp1.35","Aminoacetone","Glycine, Serine And Threonine Metabolism",-0.0171855736405716,0.460755634504019
+"temp1.55","Glycine","Glycine, Serine And Threonine Metabolism",-0.00815890568415199,0.0868904952530923
+"temp1.142","L-Tryptophan","Glycine, Serine And Threonine Metabolism",-0.00674574554082691,0.86464223842819
+"temp1.213","Pyruvate","Glycine, Serine And Threonine Metabolism",0.053643662916273,4.44781061088645e-06
+"temp1.102","sarcosine","Glycine, Serine And Threonine Metabolism",0.361340351548127,3.69238463764387e-06
+"temp1.82","Guanidineacetic acid","Glycine, Serine And Threonine Metabolism",0.413887948703324,0.932574803263569
+"temp1.65","Cystathionine","Glycine, Serine And Threonine Metabolism",0.635589710481221,1.94721491638144e-23
+"temp1.114","Glyoxylic acid","Glycine, Serine And Threonine Metabolism",1.56179461665289,2.80162427439456e-12
+"temp1.73","Phosphoserine","Glycine, Serine And Threonine Metabolism",14.2364104534922,0.0117828849111862
+"temp1.56","Beta-alanine","Hypoacetylaspartia",-0.812202338204513,0.0773124508091236
+"temp1.46","Aspartate","Hypoacetylaspartia",-0.243049157393074,1.20257070436224e-28
+"temp1.214","Glutamine","Hypoacetylaspartia",0.348014390821956,1.24078718965285e-29
+"temp1.36","Citrulline","Hypoacetylaspartia",0.366991556176358,0.0389569083389035
+"temp16","Oxaloacetate","Hypoacetylaspartia",0.682800864120952,7.71240189318245e-05
+"temp1.115","Asparagine","Hypoacetylaspartia",0.855468292383698,8.35587650115778e-13
+"temp1.66","Arginine","Hypoacetylaspartia",1.18423989672668,5.29757144507e-11
+"temp1.116","Arachidonic acid","Metabolic Pathways",-2.5181309168067,7.82281067748152e-07
+"temp1.641","Anthranilic acid","Metabolic Pathways",-1.43148000082611,0.37745894800874
+"temp1.341","L-Homoserine","Metabolic Pathways",-0.991086281837587,0.27525763101653
+"temp1.38","6-Phosphogluconic acid","Metabolic Pathways",-0.922383333803844,0.191067750191152
+"temp1.117","Succinate","Metabolic Pathways",-0.840037001238586,1.5408107157752e-05
+"temp17","Oxaloacetate","Metabolic Pathways",-0.391725350638406,0.116893451662366
+"temp1.710","Aspartate","Metabolic Pathways",-0.329659036613284,2.34571289011998e-25
+"temp1.103","Beta-alanine","Metabolic Pathways",-0.222031265818058,0.735367124596831
+"temp1.76","Benzoic acid","Metabolic Pathways",-0.18199875423234,2.35480710568684e-06
+"temp1.411","Choline","Metabolic Pathways",-0.175627962730371,0.305182675906345
+"temp1.78","d-Xylose","Metabolic Pathways",-0.171079013761585,0.38610906323029
+"temp1.77","Xylitol","Metabolic Pathways",-0.106464243034897,0.941709430750077
+"temp1.711","Glutamate","Metabolic Pathways",-0.0923215553707451,3.40142704192932e-20
+"temp1.351","Nicotinic acid","Metabolic Pathways",-0.0788901699924853,0.0782158539243778
+"temp1.201","Threonine","Metabolic Pathways",-0.0600053098349074,0.00124351361931706
+"temp1.731","Delta-hydroxylysine","Metabolic Pathways",-0.0442921601749153,0.302488253199935
+"temp1.451","Uric acid","Metabolic Pathways",-0.0417817549157973,0.150210583119215
+"temp1.40","Phenylalanine","Metabolic Pathways",-0.0361677911378086,0.323032047257648
+"temp1.271","Serine","Metabolic Pathways",-0.0254649386376411,0.150767775676029
+"temp1.215","Glycine","Metabolic Pathways",-0.0129766062847196,0.00867554006039189
+"temp1.153","Hexadecanoic acid","Metabolic Pathways",-0.00430364976116009,0.247567081677434
+"temp1.162","Glycerol","Metabolic Pathways",-0.00430106610060508,0.72507937673477
+"temp1.48","Lactate","Metabolic Pathways",-0.000180320728025566,0.289560975917389
+"temp1.84","Oxalic acid","Metabolic Pathways",-0.000171534680661756,0.244278020317092
+"temp1.133","3-Hydroxybutyric acid","Metabolic Pathways",0.000311719001146303,0.895765697278056
+"temp1.510","Urea","Metabolic Pathways",0.00240533473600761,0.000454976666775871
+"temp1.59","Proline","Metabolic Pathways",0.00441977933088182,0.0905231662364347
+"temp1.611","L-Leucine","Metabolic Pathways",0.00995749295306456,0.146076968414827
+"temp1.60","L-Tryptophan","Metabolic Pathways",0.0166473826391498,0.686504470529535
+"temp1.661","L-Tyrosine","Metabolic Pathways",0.0178226185348044,0.275605276261856
+"temp1.461","5-Phosphoribosylamine","Metabolic Pathways",0.0192624137566935,0.382935632999921
+"temp1.821","2-Piperidinecarboxylic acid","Metabolic Pathways",0.0243881673044848,0.590058925480964
+"temp1.58","L-Lysine","Metabolic Pathways",0.0252184957854445,0.167273748346846
+"temp1.143","D-Fructose","Metabolic Pathways",0.0269196560702605,0.185195053853484
+"temp1.301","Creatine","Metabolic Pathways",0.030960264623847,0.563552317060061
+"temp1.321","D-Glucuronic acid","Metabolic Pathways",0.0326691227109748,0.927612491777489
+"temp1.241","Ornithine","Metabolic Pathways",0.0487076439579462,0.648651704727497
+"temp1.511","Cholesterol","Metabolic Pathways",0.0568067904333688,0.00012484048275047
+"temp1.291","L-Ornithine","Metabolic Pathways",0.0597381011414889,0.00114208946180725
+"temp1.361","Glucose 6-phosphate","Metabolic Pathways",0.0690221457589637,0.330668487337039
+"temp1.75","glycol","Metabolic Pathways",0.0717639317716378,0.265672609264056
+"temp1.182","Pyruvate","Metabolic Pathways",0.0866328300074604,1.37254891641873e-13
+"temp1.331","a-Aminoadipic acid","Metabolic Pathways",0.0934052663760126,0.531348382094047
+"temp1.123","Citric acid","Metabolic Pathways",0.0977929008367127,7.09767694141621e-05
+"temp1.431","Valine","Metabolic Pathways",0.118078070953098,0.013076534644151
+"temp1.79","6-Dehydrotestosterone glucuronide","Metabolic Pathways",0.140221670404893,0.356453068936385
+"temp1.83","Ribitol","Metabolic Pathways",0.172060099548344,0.156722194668645
+"temp1.191","L-methionine","Metabolic Pathways",0.180344835644049,0.0378918580224516
+"temp1.311","Myo-Inositol","Metabolic Pathways",0.20696663119912,0.000223845805385724
+"temp1.69","Glycolaldehyde","Metabolic Pathways",0.212588094175946,7.77711508495885e-07
+"temp1.441","Hypoxanthine","Metabolic Pathways",0.236065389259364,0.17372280872137
+"temp1.222","Cystathionine","Metabolic Pathways",0.255201841901511,0.000522098572364782
+"temp1.93","Carnosine","Metabolic Pathways",0.277376554303568,0.00255633602649931
+"temp1.39","Glyceraldehyde 3-phosphate","Metabolic Pathways",0.359557553987415,0.128041666524881
+"temp1.310","Glutamine","Metabolic Pathways",0.379262018422524,7.41910570732528e-16
+"temp1.80","Galactonic acid","Metabolic Pathways",0.38949762091134,0.00198236327738744
+"temp1.281","sarcosine","Metabolic Pathways",0.41821339232671,2.32926921829503e-07
+"temp1.37","d-Galactose","Metabolic Pathways",0.444563500948143,0.0829459124110644
+"temp1.631","1H-Indole-3-acetic acid","Metabolic Pathways",0.54817702665414,0.0010932434326419
+"temp1.74","5-Hydroxylysine","Metabolic Pathways",0.549530292462897,0.202037702643135
+"temp1.251","Arginine","Metabolic Pathways",0.561483122725152,0.0369266414134319
+"temp1.651","Epinephrine","Metabolic Pathways",0.698286398907466,0.206340697319564
+"temp1.610","Citrulline","Metabolic Pathways",0.791475356430071,0.00163495234478125
+"temp1.57","Lysine","Metabolic Pathways",0.825869907720077,6.76762094635258e-15
+"temp1.67","2-oxo-4-methylvaleric acid","Metabolic Pathways",1.27377955294229,1.17649391144571e-05
+"temp1.70","Cysteine","Metabolic Pathways",1.472874301822,4.10675225435884e-16
+"temp1.172","Glyoxylic acid","Metabolic Pathways",1.59398664121715,8.95598410046071e-12
+"temp1.49","Sphingosine 1-phosphate","Metabolic Pathways",1.62812848846132,1.97592410969159e-09
+"temp1.216","Asparagine","Metabolic Pathways",1.69416561164588,1.02448556253029e-26
+"temp1.811","Cadaverine","Metabolic Pathways",1.9431065323086,0.00556210580948587
+"temp1.410","Androstenedione","Metabolic Pathways",2.1394436126296,0.000137961742522794
+"temp1.541","18-Hydroxycorticosterone","Metabolic Pathways",2.28745562777849,0.00447776638442046
+"temp1.50","Sphingosine","Metabolic Pathways",2.54591593795761,0.00261455111531025
+"temp1.721","Hydroxyacetic acid","Metabolic Pathways",2.80357546012045,0.00142475483394931
+"temp1.531","Progesterone","Metabolic Pathways",2.9392941785592,0.000497574967532667
+"temp1.85","Calcidiol","Metabolic Pathways",3.31985478541462,2.4201968701404e-06
+"temp1.86","Uracil","Metabolic Pathways",3.53558126268044,1.40398280385778e-08
+"temp1.47","Guanine","Metabolic Pathways",3.68366825990979,0.00313846579558435
+"temp1.621","5-Hydroxyindoleacetic acid","Metabolic Pathways",3.82553951395545,0.258481461170186
+"temp1.261","Guanidineacetic acid","Metabolic Pathways",4.70130318975979,0.356109822477039
+"temp1.561","Thiamine","Metabolic Pathways",5.20182965528164,3.05806374942182e-10
+"temp1.421","Dihydroxyacetone phosphate","Metabolic Pathways",6.27597327320569,0.0150020539578469
+"temp1.68","3-methyl-2-oxo-butanoic acid","Metabolic Pathways",9.3731475268136,1.01718004289231e-06
+"temp1.551","Hypotaurine","Metabolic Pathways",9.5552176220497,8.52654149013924e-15
+"temp1.231","Phosphoserine","Metabolic Pathways",18.8788410197053,0.00128451485469835
+"temp1.521","Isopentenyl pyrophosphate","Metabolic Pathways",19.3898583097617,0.0146573695852138
+"temp1.612","2-Butenedioic acid","Nicotinate And Nicotinamide Metabolism",-1.08981945812616,0.000824659382324557
+"temp1.712","Nicotine","Nicotinate And Nicotinamide Metabolism",-0.498318750184363,0.827959907584403
+"temp1.118","Aspartate","Nicotinate And Nicotinamide Metabolism",-0.314806341417869,7.81327718944011e-49
+"temp1.512","Nicotinuric acid","Nicotinate And Nicotinamide Metabolism",-0.178815213264224,0.582378828600669
+"temp1.312","Nicotinic acid","Nicotinate And Nicotinamide Metabolism",-0.0985587490636663,0.00349684894877106
+"temp1.217","Pyruvate","Nicotinate And Nicotinamide Metabolism",0.0402407177585774,1.40728953109733e-05
+"temp18","Glutamine","Nicotinate And Nicotinamide Metabolism",0.38166597170243,6.85704162160386e-31
+"temp1.412","Dihydroxyacetone phosphate","Nicotinate And Nicotinamide Metabolism",6.18197763939273,0.00149766498231043
+"temp1.313","Beta-alanine","Protein Digestion And Absorption",-0.827213520583676,0.202195752097954
+"temp1.218","Aspartate","Protein Digestion And Absorption",-0.357782575318719,3.20229848680186e-32
+"temp1.94","Phenylalanine","Protein Digestion And Absorption",-0.125728230605786,0.000429297061342772
+"temp1.144","L-Tryptophan","Protein Digestion And Absorption",-0.0711095360129941,0.0803006371942793
+"temp1.513","Threonine","Protein Digestion And Absorption",-0.0675934980019204,0.000223486118339365
+"temp1.87","Serine","Protein Digestion And Absorption",-0.0367743157357279,0.0354148675577354
+"temp1.413","L-methionine","Protein Digestion And Absorption",-0.0299291043067874,0.728966483859606
+"temp1.163","L-Tyrosine","Protein Digestion And Absorption",-0.0284694404204915,0.0776246349307237
+"temp1.124","L-Lysine","Protein Digestion And Absorption",-0.0225565639074457,0.21197187194012
+"temp1.154","L-Leucine","Protein Digestion And Absorption",-0.0106659226150927,0.115349211725744
+"temp1.613","Glycine","Protein Digestion And Absorption",-0.0101838792897148,0.0379275278910435
+"temp1.134","Proline","Protein Digestion And Absorption",-0.00125765693125241,0.627443336930733
+"temp1.104","Valine","Protein Digestion And Absorption",0.0688049627308405,0.145765449530366
+"temp1.119","Glutamine","Protein Digestion And Absorption",0.321869583525792,1.34424013524987e-11
+"temp1.183","Cadaverine","Protein Digestion And Absorption",0.627393026475315,0.369510609434596
+"temp1.1110","Lysine","Protein Digestion And Absorption",0.742676762943562,2.89785262648751e-12
+"temp1.173","Cystine","Protein Digestion And Absorption",1.40368663996638,7.4901977886637e-08
+"temp19","Asparagine","Protein Digestion And Absorption",1.44072253874075,1.0813636813319e-18
+"temp1.713","Arginine","Protein Digestion And Absorption",2.06108701548,5.75112703371554e-17

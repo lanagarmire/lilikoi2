@@ -1,4 +1,5 @@
 
+# For the generation of the supplementary figure, I attached the code in this R file.
 # For the generation of Figure 2, 3, 5A and 5B, please refer to the Lilikoi2 User Guide at
 # https://github.com/lanagarmire/lilikoi2/blob/master/Lilikoi2%20User%20Guide.Rmd
 
