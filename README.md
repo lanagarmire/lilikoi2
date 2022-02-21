@@ -25,11 +25,11 @@ convertResults=lilikoi.MetaTOpathway('name')
 Metabolite_pathway_table = convertResults$table
 head(Metabolite_pathway_table)
 
-# Transform metabolites into pathway using Pathifier algorithm
+# Transform metabolites into pathway using pathtracer algorithm
 PDSmatrix=lilikoi.PDSfun(Metabolite_pathway_table)
 
 # Select the most signficant pathway related to phenotype.
-selected_Pathways_Weka= lilikoi.featuresSelection(PDSmatrix,threshold= 0.54,method="gain")
+selected_Pathways_Weka= lilikoi.featuresSelection(PDSmatrix,threshold= 0.50,method="gain")
 
 # Machine learning
 lilikoi.machine_learning(MLmatrix = Metadata, measurementLabels = Metadata$Label,
@@ -42,7 +42,7 @@ lilikoi.prognosis(event, time, exprdata, percent=percent, alpha=0, nfold=5, meth
           cvlambda=cvlambda,python.path=NULL,coxnnet=FALSE,coxnnet_method="gradient")
           
 # Metabolites-pathway regression
-lilikoi.meta_path(PDSmatrix = PDSmatrix, selected_Pathways_Weka = selected_Pathways_Weka, Metabolite_pathway_table = Metabolite_pathway_table, pathway = "Alanine, Aspartate And Glutamate Metabolism")
+lilikoi.meta_path(PDSmatrix = PDSmatrix, selected_Pathways_Weka = selected_Pathways_Weka, Metabolite_pathway_table = Metabolite_pathway_table, pathway = "Pyruvate Metabolism")
 
 # KEGG plot
 lilikoi.KEGGplot(metamat = metamat, sampleinfo = sampleinfo, grouporder = grouporder,

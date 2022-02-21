@@ -9,7 +9,7 @@ knitr::opts_chunk$set(
 #  library(lilikoi)
 
 ## ----eval=FALSE, include=TRUE-------------------------------------------------
-#  dt <- lilikoi.Loaddata(file=system.file("extdata", "plasma_breast_cancer.csv", package = "lilikoi"))
+#  dt <- lilikoi.Loaddata(file=system.file("extdata", "plasma_breast_cancer.csv", package = "lilikoi2"))
 #  Metadata <- dt$Metadata
 #  dataSet <- dt$dataSet
 
@@ -17,9 +17,6 @@ knitr::opts_chunk$set(
 #  convertResults=lilikoi.MetaTOpathway('name')
 #  Metabolite_pathway_table = convertResults$table
 #  head(Metabolite_pathway_table)
-
-## ----eval=FALSE, include=TRUE-------------------------------------------------
-#  PDSmatrix=lilikoi.PDSfun(Metabolite_pathway_table)
 
 ## ----eval=FALSE, include=TRUE-------------------------------------------------
 #  selected_Pathways_Weka= lilikoi.featuresSelection(PDSmatrix,threshold= 0.54,method="gain")
@@ -41,8 +38,7 @@ knitr::opts_chunk$set(
 ## ----eval=FALSE, include=TRUE-------------------------------------------------
 #  lilikoi.machine_learning(MLmatrix = Metadata, measurementLabels = Metadata$Label,
 #                                significantPathways = 0,
-#                                trainportion = 0.8, cvnum = 10, dlround=50,nrun=10, Rpart=TRUE,
-#                                LDA=TRUE,SVM=TRUE,RF=TRUE,GBM=TRUE,PAM=FALSE,LOG=TRUE,DL=TRUE)
+#                                trainportion = 0.8, cvnum = 10)
 
 ## ----eval=FALSE, include=TRUE-------------------------------------------------
 #  # Set up prognosis function arguments

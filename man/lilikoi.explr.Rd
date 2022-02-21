@@ -23,6 +23,6 @@ Performs source of variation test and build PCA and t-SNE plots to visualize imp
 }
 \examples{
 \donttest{
-lilikoi.explr(data, demo.data, pca=TRUE, tsne=FALSE)
+# lilikoi.explr(data, demo.data, pca=TRUE, tsne=FALSE)
 }
 }

@@ -4,7 +4,7 @@
 #' @param PDSmatrix from PDSfun function
 #' @param threshold to select the top pathways
 #' @param method information gain ("info") or gain ratio ("gain")
-#' @import caret RWeka infotheo ggplot2 pathifier
+#' @import caret RWeka infotheo ggplot2
 #' @importFrom stats reorder
 #' @importFrom graphics plot
 #' @keywords features selection

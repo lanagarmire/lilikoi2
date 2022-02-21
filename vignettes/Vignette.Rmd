@@ -29,7 +29,7 @@ install.packages("lilikoi")
 library(lilikoi)
 ```
 
-For certain functions, users need to install packages "M3C", 'pathifier' and 'pathview' by themselves.
+For certain functions, users need to install packages "M3C", 'princurve' and 'pathview' by themselves.
 
 ## Load data
 
@@ -61,7 +61,7 @@ PDSmatrix=lilikoi.PDSfun(Metabolite_pathway_table)
 ## Select the most signficant pathway related to phenotype.
 
 ```{r eval=FALSE, include=TRUE}
-selected_Pathways_Weka= lilikoi.featuresSelection(PDSmatrix,threshold= 0.54,method="gain")
+selected_Pathways_Weka= lilikoi.featuresSelection(PDSmatrix,threshold= 0.50,method="gain")
 selected_Pathways_Weka
 ```
 
@@ -162,7 +162,7 @@ lilikoi.KEGGplot(metamat = metamat, sampleinfo = sampleinfo, grouporder = groupo
 
 We use single variate regression to reveal the relationship between pathways and their corresponding metabolites. All pathway features and their significantly associated metabolites are visualized by a bipartite graph with Cytoscape style.
 
-Before running this function, users need to download Cytoscape from https://cytoscape.org/download.php. Keep Cytoscape running, then you can connect to R package RCy3. For more info, please refer to vignettes of RCy3. If run multiple times, there will be notifications from Cytoscape asking you to overwrite the former graph.
+Before running this function, users need to download Cytoscape from http://www.cytoscape.org/download.php. Keep Cytoscape running, then you can connect to R package RCy3. For more info, please refer to vignettes of RCy3. If run multiple times, there will be notifications from Cytoscape asking you to overwrite the former graph.
 
 ```{r eval=FALSE, include=TRUE}
 lilikoi.meta_path(PDSmatrix = PDSmatrix, selected_Pathways_Weka = selected_Pathways_Weka, Metabolite_pathway_table = Metabolite_pathway_table)

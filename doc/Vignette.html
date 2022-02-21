@@ -12,7 +12,7 @@
 
 <meta name="author" content="Xinying" />
 
-<meta name="date" content="2020-10-13" />
+<meta name="date" content="2020-06-30" />
 
 <title>Lilikoi V2.0</title>
 
@@ -95,7 +95,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <h1 class="title toc-ignore">Lilikoi V2.0</h1>
 <h4 class="author">Xinying</h4>
-<h4 class="date">2020-10-13</h4>
+<h4 class="date">2020-06-30</h4>
 
 
 
@@ -107,11 +107,10 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h2>Installation</h2>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;lilikoi&quot;</span>)
 <span class="kw">library</span>(lilikoi)</code></pre></div>
-<p>For certain functions, users need to install packages “M3C”, ‘pathifier’ and ‘pathview’ by themselves.</p>
 </div>
 <div id="load-data" class="section level2">
 <h2>Load data</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dt &lt;-<span class="st"> </span><span class="kw">lilikoi.Loaddata</span>(<span class="dt">file=</span><span class="kw">system.file</span>(<span class="st">&quot;extdata&quot;</span>, <span class="st">&quot;plasma_breast_cancer.csv&quot;</span>, <span class="dt">package =</span> <span class="st">&quot;lilikoi&quot;</span>))
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dt &lt;-<span class="st"> </span><span class="kw">lilikoi.Loaddata</span>(<span class="dt">file=</span><span class="kw">system.file</span>(<span class="st">&quot;extdata&quot;</span>, <span class="st">&quot;plasma_breast_cancer.csv&quot;</span>, <span class="dt">package =</span> <span class="st">&quot;lilikoi2&quot;</span>))
 Metadata &lt;-<span class="st"> </span>dt<span class="op">$</span>Metadata
 dataSet &lt;-<span class="st"> </span>dt<span class="op">$</span>dataSet</code></pre></div>
 </div>
@@ -122,13 +121,9 @@ dataSet &lt;-<span class="st"> </span>dt<span class="op">$</span>dataSet</code><
 Metabolite_pathway_table =<span class="st"> </span>convertResults<span class="op">$</span>table
 <span class="kw">head</span>(Metabolite_pathway_table)</code></pre></div>
 </div>
-<div id="calculate-the-pathway-dysregulation-score" class="section level2">
-<h2>Calculate the Pathway Dysregulation score</h2>
-<p>A specific pathway dysregulation score (PDS) is inferred to measure the abnormity for each sample in each pathway. For each pathway, the samples are mapped in a high dimensional principal component space and a principal curve is constructed along the samples and smoothed. The PDS score measures the distance from the projected dot along the curve to the centroid of normal samples (origin point of the curve).</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">PDSmatrix=<span class="kw">lilikoi.PDSfun</span>(Metabolite_pathway_table)</code></pre></div>
-</div>
 <div id="select-the-most-signficant-pathway-related-to-phenotype." class="section level2">
 <h2>Select the most signficant pathway related to phenotype.</h2>
+<p>A specific pathway dysregulation score (PDS) is inferred to measure the abnormity for each sample in each pathway. For each pathway, the samples are mapped in a high dimensional principal component space and a principal curve is constructed along the samples and smoothed. The PDS score measures the distance from the projected dot along the curve to the centroid of normal samples (origin point of the curve).</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">selected_Pathways_Weka=<span class="st"> </span><span class="kw">lilikoi.featuresSelection</span>(PDSmatrix,<span class="dt">threshold=</span> <span class="fl">0.54</span>,<span class="dt">method=</span><span class="st">&quot;gain&quot;</span>)
 selected_Pathways_Weka</code></pre></div>
 </div>
@@ -153,8 +148,7 @@ selected_Pathways_Weka</code></pre></div>
 <p>We include deep learning for classifciation in this version of lilikoi based on the h2o package.It used multi-layer Neural Network and Stochastic Gradient Descent to predict the diagnosis results. In order to reduce redundancy in setting parameters, we only open the configuration for general machine learning setting. If users want to change the settings of the deep learning feature, they would need to change it in the source code.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">lilikoi.machine_learning</span>(<span class="dt">MLmatrix =</span> Metadata, <span class="dt">measurementLabels =</span> Metadata<span class="op">$</span>Label,
                               <span class="dt">significantPathways =</span> <span class="dv">0</span>,
-                              <span class="dt">trainportion =</span> <span class="fl">0.8</span>, <span class="dt">cvnum =</span> <span class="dv">10</span>, <span class="dt">dlround=</span><span class="dv">50</span>,<span class="dt">nrun=</span><span class="dv">10</span>, <span class="dt">Rpart=</span><span class="ot">TRUE</span>,
-                              <span class="dt">LDA=</span><span class="ot">TRUE</span>,<span class="dt">SVM=</span><span class="ot">TRUE</span>,<span class="dt">RF=</span><span class="ot">TRUE</span>,<span class="dt">GBM=</span><span class="ot">TRUE</span>,<span class="dt">PAM=</span><span class="ot">FALSE</span>,<span class="dt">LOG=</span><span class="ot">TRUE</span>,<span class="dt">DL=</span><span class="ot">TRUE</span>)</code></pre></div>
+                              <span class="dt">trainportion =</span> <span class="fl">0.8</span>, <span class="dt">cvnum =</span> <span class="dv">10</span>)</code></pre></div>
 </div>
 <div id="prognosis-prediction" class="section level2">
 <h2>Prognosis prediction</h2>
@@ -202,7 +196,6 @@ grouporder &lt;-<span class="st"> </span><span class="kw">unique</span>(Metadata
 <div id="metabolites-pathway-relationship" class="section level3">
 <h3>Metabolites-pathway relationship</h3>
 <p>We use single variate regression to reveal the relationship between pathways and their corresponding metabolites. All pathway features and their significantly associated metabolites are visualized by a bipartite graph with Cytoscape style.</p>
-<p>Before running this function, users need to download Cytoscape from <a href="https://cytoscape.org/download.php" class="uri">https://cytoscape.org/download.php</a>. Keep Cytoscape running, then you can connect to R package RCy3. For more info, please refer to vignettes of RCy3. If run multiple times, there will be notifications from Cytoscape asking you to overwrite the former graph.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">lilikoi.meta_path</span>(<span class="dt">PDSmatrix =</span> PDSmatrix, <span class="dt">selected_Pathways_Weka =</span> selected_Pathways_Weka, <span class="dt">Metabolite_pathway_table =</span> Metabolite_pathway_table)</code></pre></div>
 </div>
 </div>

@@ -17,8 +17,6 @@ Previously we developed Lilikoi, a personalized pathway-based method to classify
 
 ## Install Lilikoi
 
-Please make sure you have installed these packages (‘impute’, ‘limma’, ‘M3C’, ‘pathifier’, ‘pathview’, ‘preprocessCore’, ‘RCy3’) before installing lilikoi.
-
 ```{r message=FALSE, warning=FALSE}
 # github install for most updated version of lilikoi.
 library(remotes)
@@ -68,7 +66,7 @@ head(Metabolite_pathway_table)
 ```
 
 
-## Transform metabolites into pathway using Pathifier algorithm
+## Transform metabolites into pathway using Pathtracer algorithm
 
 A specific pathway dysregulation score (PDS) is inferred to measure the abnormity for each sample in each pathway. For each pathway, the samples are mapped in a high dimensional principal component space and a principal curve is constructed along the samples and smoothed. The PDS score measures the distance from the projected dot along the curve to the centroid of normal samples (origin point of the curve).
 
@@ -89,19 +87,17 @@ dim(t(PDSmatrix))
 
 ```{r}
 
-selected_Pathways_Weka= lilikoi.featuresSelection(PDSmatrix,threshold= 0.54,method="gain")
+selected_Pathways_Weka= lilikoi.featuresSelection(PDSmatrix,threshold= 0.50,method="gain")
 
 ```
 
 
 ## Metabolites-pathway regression
 
-Before running this function, users need to download Cytoscape from http://www.cytoscape？org/download.php. Keep Cytoscape running, then you can connect to R package RCy3. For more info, please refer to vignettes of RCy3. If run multiple times, there will be notifications from Cytoscape asking you to overwrite the former graph.
-
-If you see error like: Error in commandsPOST("vizmap apply styles=\"default\"", base.url = base.url) : No network views selected., please re-run the code and the error will disappear.
+Before running this function, users need to download Cytoscape from http://www.cytoscape.org/download.php. Keep Cytoscape running, then you can connect to R package RCy3. For more info, please refer to vignettes of RCy3. If run multiple times, there will be notifications from Cytoscape asking you to overwrite the former graph.
 
 ```{r}
-lilikoi.meta_path(PDSmatrix = PDSmatrix, selected_Pathways_Weka = selected_Pathways_Weka, Metabolite_pathway_table = Metabolite_pathway_table, pathway = "Alanine, Aspartate And Glutamate Metabolism")
+lilikoi.meta_path(PDSmatrix = PDSmatrix, selected_Pathways_Weka = selected_Pathways_Weka, Metabolite_pathway_table = Metabolite_pathway_table, pathway = "Pyruvate Metabolism")
 ```
 
 
@@ -112,7 +108,8 @@ Datasets below are available on the GitHub Site: https://github.com/lanagarmire/
 We updated the lilikoi.machine_learning function so that users can choose which methods they would like to use. The new function of lilikoi.machine_learning is available at: https://github.com/lanagarmire/lilikoi2/blob/master/R/lilikoi.machine_learning.r
 
 ```{r}
-dt = lilikoi.Loaddata(file="er_162.csv")
+# system.file("extdata", "er_162.csv", package = "lilikoi")
+dt = lilikoi.Loaddata(file=system.file("extdata", "er_162.csv", package = "lilikoi"))
 Metadata <- dt$Metadata
 dataSet <- dt$dataSet
 # library(h2o)
@@ -128,9 +125,9 @@ lilikoi.machine_learning(MLmatrix = Metadata, measurementLabels = Metadata$Label
 
 
 ```{r}
-dt <- lilikoi.Loaddata(file = "/Users/rrrrrita/Desktop/lilikoi.temp/JCI71180sd2_processed_lilikoi.csv")
 
-# dt <- lilikoi.Loaddata(file = "JCI71180sd2_processed_tumor.xlsx")
+filepath <- system.file("extdata", "JCI71180sd2_processed_lilikoi.csv", package = "lilikoi")
+dt <- lilikoi.Loaddata(file = filepath)
 
 Metadata <- dt$Metadata
 dataSet <- dt$dataSet
@@ -147,7 +144,8 @@ PDSmatrix= lilikoi.PDSfun(Metabolite_pathway_table)
 
 # Extract event and survival time information from the dataset
 library(readxl)
-jc = read_excel("/Users/rrrrrita/Desktop/lilikoi.temp/JCI71180sd2_processed_tumor.xlsx")
+filepath <- system.file("extdata", "JCI71180sd2_processed_tumor.xlsx", package = "lilikoi")
+jc = read_excel(filepath)
 
 jc <- jc[-27,]
 jctime<-jc$TIME
@@ -213,6 +211,7 @@ lilikoi.prognosis(event, time, exprdata, percent=percent, alpha=0, nfold=5, meth
 ## KEGG (pathview) plot
 
 ```{r}
+# ER162 dataset
 
 dt = lilikoi.Loaddata(file=system.file("extdata","plasma_breast_cancer.csv", package = "lilikoi"))
 Metadata <- dt$Metadata
@@ -233,6 +232,8 @@ metamat <- log2(metamat)
 grouporder <- c('Normal', 'Cancer')
 
 # install.packages("pathview")
+# If encounter error: .onLoad failed in loadNamespace() for 'org.Hs.eg.db', run this line first:
+# options(connectionObserver = NULL)
 library(pathview)
 options(bitmapType='cairo') # Run this line if in linux
 lilikoi.KEGGplot(metamat = metamat, sampleinfo = sampleinfo, grouporder = grouporder,

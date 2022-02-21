@@ -39,7 +39,7 @@ names in the column names.}
 
 \item{python.path}{saved path for python3}
 
-\item{path}{saved path for the inst file in lilikoi2}
+\item{path}{saved path for the L2cross_nopercent.py and L2cross.py files in lilikoi}
 
 \item{coxnnet}{if TRUE, coxnnet will be used.}
 
@@ -55,11 +55,12 @@ to predict survival results.
 }
 \examples{
 \donttest{
-inst.path = path.package('lilikoi2', quiet = FALSE) # path = "lilikoi/inst/", use R to run
-inst.path = file.path(inst.path, 'inst')
-python.path = "/Library/Frameworks/Python.framework/Versions/3.8/bin/python3"
-lilikoi.prognosis(event, time, exprdata, percent=NULL, alpha=0, nfold=5, method="median",
-  cvlambda=NULL,python.path=NULL, path=inst.path, python.path=python.path,
-  coxnnet=FALSE,coxnnet_method="gradient")
+# inst.path = path.package('lilikoi', quiet = FALSE) # path = "lilikoi/inst/", use R to run
+# inst.path = file.path(inst.path, 'inst')
+# python.path = "/Library/Frameworks/Python.framework/Versions/3.8/bin/python3"
+# Prepare survival event, survival time and exprdata from your dataset.
+# lilikoi.prognosis(event, time, exprdata, percent=NULL, alpha=0, nfold=5, method="median",
+#   cvlambda=NULL,python.path=NULL, path=inst.path, python.path=python.path,
+#   coxnnet=FALSE,coxnnet_method="gradient")
 }
 }
