@@ -1,0 +1,42 @@
+citHeader("To cite lilikoi in publications use:")
+
+citEntry(entry = "Article",
+  title        = "Lilikoi V2.0: a deep-learning enabled, personalized pathway-based R package for diagnosis and prognosis predictions using metabolomics data",
+  author       = personList(as.person("Xinying Fang"),
+                   as.person("Yu Liu"),
+                   as.person("Zhijie Ren"),
+		   as.person("Yuheng Du"),
+		   as.person("Qianhui Huang"),
+                   as.person("Lana X. Garmire")),
+  journal      = "bioRxiv",
+  year         = "2020",
+  doi          = "10.1101/2020.07.09.195677",
+  url          = "https://doi.org/10.1101/2020.07.09.195677",
+
+  textVersion  =
+  paste("Xinying Fang, Yu Liu, Zhijie Ren, Yuheng Du, Qianhui Huang,  Lana X. Garmire (2020).",
+        "Lilikoi V2.0: a deep-learning enabled, personalized pathway-based R package for diagnosis and prognosis predictions using metabolomics data.",
+        "bioRxiv.",
+        "https://doi.org/10.1101/2020.07.09.195677.")
+)
+
+citEntry(entry = "Article",
+  title        = "Lilikoi: an R package for personalized pathway-based classification modeling using metabolomics data",
+  author       = personList(as.person("Fadhl M. AlAkwaa"),
+                   as.person("Breck Yunits"),
+                   as.person("Sijia Huang"),
+                   as.person("Hassam Alhajaji"),
+		   as.person("Lana X. Garmire")),
+  journal      = "GigaScience",
+  year         = "2018",
+  volume       = "7",
+  number       = "12",
+  url          = "https://doi.org/10.1093/gigascience/giy136",
+
+  textVersion  =
+  paste("Fadhl M. AlAkwaa, Breck Yunits, Sijia Huang, Hassam Alhajaji, Lana X. Garmire (2018).",
+        "Lilikoi: an R package for personalized pathway-based classification modeling using metabolomics data.",
+        "GigaScience, 7(12).",
+        "URL https://doi.org/10.1093/gigascience/giy136.")
+)
+

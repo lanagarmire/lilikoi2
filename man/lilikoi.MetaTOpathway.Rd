@@ -43,7 +43,7 @@ dt <- lilikoi.Loaddata(file=system.file("extdata",
   "plasma_breast_cancer.csv", package = "lilikoi"))
 Metadata <- dt$Metadata
 dataSet <- dt$dataSet
-Metabolite_pathway_table=lilikoi.MetaTOpathway('name')
+# Metabolite_pathway_table=lilikoi.MetaTOpathway('name')
 }
 
 }

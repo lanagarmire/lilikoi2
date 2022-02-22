@@ -1,3 +1,3 @@
-# lilikoi 2.0.3
+# lilikoi 2.1.0
 
-*   second release
+*   Replace pathifier with pathtracer

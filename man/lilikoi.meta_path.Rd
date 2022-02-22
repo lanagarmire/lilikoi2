@@ -8,7 +8,7 @@ lilikoi.meta_path(
   PDSmatrix,
   selected_Pathways_Weka,
   Metabolite_pathway_table,
-  pathway = "Alanine, Aspartate And Glutamate Metabolism"
+  pathway = "Pyruvate Metabolism"
 )
 }
 \arguments{

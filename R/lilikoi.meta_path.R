@@ -13,7 +13,7 @@
 #' @export
 
 
-lilikoi.meta_path <- function(PDSmatrix, selected_Pathways_Weka, Metabolite_pathway_table, pathway="Alanine, Aspartate And Glutamate Metabolism"){
+lilikoi.meta_path <- function(PDSmatrix, selected_Pathways_Weka, Metabolite_pathway_table, pathway="Pyruvate Metabolism"){
 
   regression <- function(input, PDSmatrix, selected_Pathways_Weka, Metabolite_pathway_table){
     tPDSmatrix <- t(PDSmatrix)

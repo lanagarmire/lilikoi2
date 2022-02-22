@@ -9,6 +9,7 @@
 #' @return Source of variation test results and PCA and t-SNE plot
 #' @import parallel
 #' @importFrom stats as.formula
+#' @importFrom M3C tsne pca
 #' @importFrom car Anova
 #' @export
 #' @examples

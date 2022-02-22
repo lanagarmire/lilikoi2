@@ -33,10 +33,10 @@
 #' \donttest{
 #' dt = lilikoi.Loaddata(file=system.file("extdata","plasma_breast_cancer.csv", package = "lilikoi"))
 #' Metadata <- dt$Metadata
-#' lilikoi.machine_learning(MLmatrix = Metadata, measurementLabels = Metadata$Label,
-#' significantPathways = 0,
-#' trainportion = 0.8, cvnum = 10, dlround=50,Rpart=TRUE,
-#' LDA=FALSE,SVM=FALSE,RF=FALSE,GBM=FALSE,PAM=FALSE,LOG=FALSE,DL=FALSE)
+#' # lilikoi.machine_learning(MLmatrix = Metadata, measurementLabels = Metadata$Label,
+#' # significantPathways = 0,
+#' # trainportion = 0.8, cvnum = 10, dlround=50,Rpart=TRUE,
+#' # LDA=FALSE,SVM=FALSE,RF=FALSE,GBM=FALSE,PAM=FALSE,LOG=FALSE,DL=FALSE)
 #' }
 
 lilikoi.machine_learning <- function (MLmatrix = PDSmatrix, measurementLabels = Label,

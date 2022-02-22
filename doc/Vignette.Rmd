@@ -29,13 +29,12 @@ install.packages("lilikoi")
 library(lilikoi)
 ```
 
-## Load data
-The recommended format of dataset is csv. Columns are metabolites and rows are samples. Case and control labels should be saved in the second column. 
+For certain functions, users need to install packages "M3C", 'princurve' and 'pathview' by themselves.
 
-The Loaddata function will load the dataset. For the convenience of further analysis, we extract the output to be a dataset called "Metadata" and a list of compound names called "dataSet". 
+## Load data
 
 ```{r eval=FALSE, include=TRUE}
-dt <- lilikoi.Loaddata(file=system.file("extdata", "plasma_breast_cancer.csv", package = "lilikoi2"))
+dt <- lilikoi.Loaddata(file=system.file("extdata", "plasma_breast_cancer.csv", package = "lilikoi"))
 Metadata <- dt$Metadata
 dataSet <- dt$dataSet
 ```
@@ -51,11 +50,18 @@ Metabolite_pathway_table = convertResults$table
 head(Metabolite_pathway_table)
 ```
 
-## Select the most signficant pathway related to phenotype.
+## Calculate the Pathway Dysregulation score
+
 A specific pathway dysregulation score (PDS) is inferred to measure the abnormity for each sample in each pathway. For each pathway, the samples are mapped in a high dimensional principal component space and a principal curve is constructed along the samples and smoothed. The PDS score measures the distance from the projected dot along the curve to the centroid of normal samples (origin point of the curve).
 
 ```{r eval=FALSE, include=TRUE}
-selected_Pathways_Weka= lilikoi.featuresSelection(PDSmatrix,threshold= 0.54,method="gain")
+PDSmatrix=lilikoi.PDSfun(Metabolite_pathway_table)
+```
+
+## Select the most signficant pathway related to phenotype.
+
+```{r eval=FALSE, include=TRUE}
+selected_Pathways_Weka= lilikoi.featuresSelection(PDSmatrix,threshold= 0.50,method="gain")
 selected_Pathways_Weka
 ```
 
@@ -96,7 +102,8 @@ We include deep learning for classifciation in this version of lilikoi based on 
 ```{r eval=FALSE, include=TRUE}
 lilikoi.machine_learning(MLmatrix = Metadata, measurementLabels = Metadata$Label,
                               significantPathways = 0,
-                              trainportion = 0.8, cvnum = 10)
+                              trainportion = 0.8, cvnum = 10, dlround=50,nrun=10, Rpart=TRUE,
+                              LDA=TRUE,SVM=TRUE,RF=TRUE,GBM=TRUE,PAM=FALSE,LOG=TRUE,DL=TRUE)
 ```
 
 
@@ -154,6 +161,8 @@ lilikoi.KEGGplot(metamat = metamat, sampleinfo = sampleinfo, grouporder = groupo
 ### Metabolites-pathway relationship
 
 We use single variate regression to reveal the relationship between pathways and their corresponding metabolites. All pathway features and their significantly associated metabolites are visualized by a bipartite graph with Cytoscape style.
+
+Before running this function, users need to download Cytoscape from https://cytoscape.org/download.php. Keep Cytoscape running, then you can connect to R package RCy3. For more info, please refer to vignettes of RCy3. If run multiple times, there will be notifications from Cytoscape asking you to overwrite the former graph.
 
 ```{r eval=FALSE, include=TRUE}
 lilikoi.meta_path(PDSmatrix = PDSmatrix, selected_Pathways_Weka = selected_Pathways_Weka, Metabolite_pathway_table = Metabolite_pathway_table)
